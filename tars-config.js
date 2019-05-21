@@ -13,6 +13,8 @@ module.exports = {
         options: {
             path: "./dev/static/img/minified-svg"
         }
+    },{
+        name: 'postcss-object-fit-images'
     }],
     "svg": {
         "active": true,
