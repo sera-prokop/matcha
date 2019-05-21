@@ -8,7 +8,7 @@
     src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Custom-Font.woff') format('woff'),
          url('../fonts/Custom-Font.svg#custom_font') format('svg');
-    font-weight: 400;       // For normal width. It could has another value   
+    font-weight: 400;       // For normal width. It could has another value
     font-style: normal;     // Also could has another value
     }
 
@@ -16,3 +16,60 @@
 // Var for using custom font
 $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
+
+// Geometria font
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria.woff2') format('woff2'),
+  url('../fonts/Geometria.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$geometria: 'Geometria', Helvetica, Arial, sans-serif;
+
+
+// Proxima Nova fonts
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Light.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Black.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$proxima: 'Proxima Nova', Helvetica, Arial, sans-serif;
