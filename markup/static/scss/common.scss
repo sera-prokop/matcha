@@ -16,7 +16,6 @@ html, body {
 .page {
     font-family: $proxima;
     font-weight: 400;
-    @include container()
 }
 
 .page__wrapper {
