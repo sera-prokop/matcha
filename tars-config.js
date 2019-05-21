@@ -1,8 +1,22 @@
 module.exports = {
-    "postcss": [],
+    "postcss": [{
+        name: 'postcss-pxtorem',
+        options: {
+            rootValue: 16,
+            propList: ["*", "!*border*"],
+            selectorBlackList: [/^html$/]
+        }
+    },{
+        name: 'postcss-rgb'
+    },{
+        name: 'postcss-inline-svg',
+        options: {
+            path: "./dev/static/img/minified-svg"
+        }
+    }],
     "svg": {
         "active": true,
-        "workflow": "sprite",
+        "workflow": "symbols",
         "symbolsConfig": {
             "loadingType": "inject",
             "usePolyfillForExternalSymbols": true,
@@ -47,7 +61,7 @@ module.exports = {
     "generateStaticPath": true,
     "devPath": "./dev/",
     "buildPath": "./builds/",
-    "useBuildVersioning": true,
+    "useBuildVersioning": false,
     "useArchiver": true,
     "ulimit": 4096,
     "templater": "pug",
