@@ -1,19 +1,25 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../components/head/head.pug
-    include ../components/footer/footer.pug
+    include ../components/header/header
+    include ../components/main-nav/main-nav
+    include ../components/burger/burger
+    include ../components/header-sticky/header-sticky
+    include ../components/footer/footer
 
     head
-        +head(head.defaults)
+        block head
+        //-+head(head.defaults)
     body.page
         |%=symbols=%
 
         section.page__wrapper
+            +header()
+            +header-sticky()
 
             //- Include your components here
 
-            .page__buffer
+            block content
 
         .page__footer
             +footer()

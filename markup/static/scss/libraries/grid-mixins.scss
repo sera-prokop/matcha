@@ -28,8 +28,8 @@
   $sm-grid-gutter:  $grid-gutter-width,
   $md-grid-gutter:  $grid-gutter-width,
   $lg-grid-gutter:  $grid-gutter-width,
-  $xl-grid-gutter:  $grid-gutter-width,
-  $xxl-grid-gutter: $grid-gutter-width
+  $xl-grid-gutter:  $grid-gutter-width
+  //$xxl-grid-gutter: $grid-gutter-width
 ) {
   display: block;
   width: 100%;
@@ -77,14 +77,14 @@
     }
   }
 
-  @media (min-width: $screen-xxl) {
-    width: $container-xxl;
-
-    @if ($xxl-grid-gutter != $xl-grid-gutter) {
-      padding-left: ($xxl-grid-gutter / 2);
-      padding-right: ($xxl-grid-gutter / 2);
-    }
-  }
+  //@media (min-width: $screen-xxl) {
+  //  width: $container-xxl;
+  //
+  //  @if ($xxl-grid-gutter != $xl-grid-gutter) {
+  //    padding-left: ($xxl-grid-gutter / 2);
+  //    padding-right: ($xxl-grid-gutter / 2);
+  //  }
+  //}
 }
 
 

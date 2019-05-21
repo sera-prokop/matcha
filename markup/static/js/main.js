@@ -2,6 +2,9 @@
 
 // LazyLoad init
 import LazyLoad from 'vanilla-lazyload';
+import 'components/header-sticky/header-sticky';
+import 'components/burger/burger';
+import ready from './documentReady.js';
 
 const lazyLoadOptions = {
     elements_selector: '.lazy'
@@ -17,13 +20,13 @@ document.addEventListener('DOMContentLoaded', createLazyLoadInstance);
 
 import objectFitImages from 'object-fit-images';
 
-const ready = function (fn) {
-    if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
-        fn();
-    } else {
-        document.addEventListener('DOMContentLoaded', fn);
-    }
-};
+// const ready = function (fn) {
+//     if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
+//         fn();
+//     } else {
+//         document.addEventListener('DOMContentLoaded', fn);
+//     }
+// };
 
 ready(
     function () {

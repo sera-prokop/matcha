@@ -1,0 +1,13 @@
+.header-sticky{
+  transform: translateY(-65px);
+  background-color: teal;
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  transition: transform 0.25s ease-in-out;
+}
+.header-sticky--pin{
+  transform: translateY(0);
+}
