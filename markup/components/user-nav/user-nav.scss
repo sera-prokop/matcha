@@ -1,1 +1,35 @@
+.user-nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 
+.user-nav__link{
+  position: relative;
+  margin-left: 15px;
+  &--search{
+    @media  (min-width: $screen-md){
+      display: none;
+    }
+  }
+}
+
+.cart__num{
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  top: -12px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #b9da61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: $white;
+
+}

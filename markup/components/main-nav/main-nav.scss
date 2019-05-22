@@ -58,7 +58,7 @@
     &--active {
 
       & > #{$block-name}__link { // stylelint-disable-line  selector-combinator-blacklist
-        color: #000;
+        color: $gray-dark;
       }
     }
 
@@ -79,14 +79,19 @@
 
   &__link {
     display: block;
-    padding: 0.5em 1em;
+    padding: 5px 30px;
     text-decoration: none;
     background-color: #fff;
+    color: $gray-light;
 
     &:hover,
     &:focus {
       text-decoration: none;
       background-color: $gray-lightest;
+    }
+
+    @media (min-width: $screen-lg){
+      padding: 5px 20px;
     }
 
     &--lvl-2 {

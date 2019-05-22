@@ -1,12 +1,15 @@
 mixin user-nav(data)
     ul.user-nav
         li.user-nav__item
+            a.user-nav__link.user-nav__link--search(href="#" aria-label="Поиск")
+                != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'user-nav__svg', iconWidth: '16', iconHeight: '15'})
+        li.user-nav__item
             a.user-nav__link(href="#" aria-label="Избранное")
-                != pugHelpers.Icon.call(locals, {iconName: 'heart', className: 'user-nav__svg', iconWidth: '22', iconHeight: '20'})
+                != pugHelpers.Icon.call(locals, {iconName: 'heart', className: 'user-nav__svg', iconWidth: '20', iconHeight: '17'})
         li.user-nav__item
             a.user-nav__link(href="#" aria-label="Личный кабинет")
-                != pugHelpers.Icon.call(locals, {iconName: 'user', className: 'user-nav__svg', iconWidth: '20', iconHeight: '23'})
+                != pugHelpers.Icon.call(locals, {iconName: 'user', className: 'user-nav__svg', iconWidth: '17', iconHeight: '19'})
         li.user-nav__item.cart
             a.user-nav__link(href="#" aria-label="Корзина")
-                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'user-nav__svg', iconWidth: '25', iconHeight: '23'})
-                span.cart__num 25
+                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'user-nav__svg', iconWidth: '22', iconHeight: '19'})
+                span.cart__num 5

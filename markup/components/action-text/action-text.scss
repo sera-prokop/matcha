@@ -1,9 +1,19 @@
 .action-text{
-  width: 160px;
-  height: 60px;
+  width: 96px;
+  height: 47px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(%=static=%assets/action-text/action.png);
+  background-image: url(%=static=%assets/action-text/action-mobile.png);
+  background-position-y: 2px;
+  background-position-x: 4px;
+  background-repeat: no-repeat;
   background-size: cover;
+  font-size: 10px;
+  font-weight: 700;
+  color: $white;
+  span{
+    font-size: 13px;
+    margin-right: 5px;
+  }
 }

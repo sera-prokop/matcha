@@ -17,7 +17,7 @@
   > span { // stylelint-disable-line  selector-combinator-blacklist
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 16px;
     height: $toggler-part-height;
     vertical-align: middle;
     font-size: 0;
@@ -38,11 +38,11 @@
     }
 
     &:before {
-      top: -10px;
+      top: -5px;
     }
 
     &:after {
-      top: 10px;
+      top: 5px;
     }
   }
 

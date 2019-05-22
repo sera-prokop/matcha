@@ -1,9 +1,44 @@
 .header{
-  @include container()
+  @include container();
+  padding-top: 15px;
 }
 
 .header__top{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.header__logo-svg{
+  @media (min-width: $screen-lg){
+    width: 185px;
+    height: 48px;
+  }
+}
+
+.header__user-mobile{
+  width: 100%;
+  @media  (min-width: $screen-md){
+    display: none;
+  }
+}
+
+.header__phone{
+  display: none;
+  @media  (min-width: $screen-md){
+    display: block;
+  }
+}
+
+.header__down{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .user-nav{
+    display: none;
+    @media  (min-width: $screen-md){
+      display: flex;
+    }
+  }
 }

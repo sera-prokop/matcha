@@ -1,1 +1,37 @@
+.menu-btn{
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  .burger{
+    width: 100%;
+    max-width: 41px;
+    background-color: $yelgreen;
+    border-left: 1px solid #aabe5f;
+    min-height: 41px;
+    &:hover, &:focus{
+      background-color: $yelgreen-dark;
+    }
+    &:active{
+      background-color: $yelgreen-darken;
+    }
+  }
+}
 
+.menu-btn__button{
+  font-size: 14px;
+  color: $white;
+  background-color: $yelgreen;
+  text-decoration: none;
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 138px;
+  &:hover, &:focus{
+    background-color: $yelgreen-dark;
+  }
+  &:active{
+    background-color: $yelgreen-darken;
+  }
+}
