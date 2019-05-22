@@ -1,0 +1,49 @@
+.header-phone{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  padding-left: 25px;
+  &:hover{
+    .header-phone__phone{
+      border-bottom: 1px solid $gray;
+    }
+    .header-phone__link-modal{
+      color: $gray-dark;
+      border-bottom: 1px dashed $gray-dark;
+    }
+  }
+}
+
+.header-phone__phone{
+  display: block;
+  margin-bottom: 2px;
+  color: $gray;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid transparent;
+  transition: $tr;
+
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    background-image: svg-load('phone.svg' fill='#c8c8c8');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 14px;
+  }
+}
+
+.header-phone__link-modal{
+  display: inline-block;
+  position: relative;
+  color: $gray-lighter;
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1px dashed $gray-lighter;
+  transition: $tr;
+}

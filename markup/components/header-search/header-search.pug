@@ -1,0 +1,5 @@
+mixin header-search(data)
+    .header-search
+        input.header-search__input(type="text" placeholder="Поиск по сайту")
+        != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'header-search__svg', iconWidth: '18', iconHeight: '18'})
+

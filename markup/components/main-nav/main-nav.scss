@@ -1,10 +1,6 @@
-// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .main-nav {
 
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
 
   position: relative;
   z-index: 10;
@@ -14,31 +10,32 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    display: none;
 
     // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
-
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s;
-
-        &--lvl-2 {
-          max-height: none;
-        }
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 1000px;
-        transition: max-height 0.6s;
-
-        &--lvl-2 {
-          max-height: none;
-        }
-      }
-    }
+    //@media (max-width: ($menu-desktop-width - 1)) {
+    //
+    //  // открытие/закрытие меню только в случае работающего JS
+    //
+    //  .js & {
+    //    max-height: 0;
+    //    overflow: hidden;
+    //    transition: max-height 0.2s;
+    //
+    //    &--lvl-2 {
+    //      max-height: none;
+    //    }
+    //  }
+    //
+    //  .js #{$block-name}--open & {
+    //    max-height: 1000px;
+    //    transition: max-height 0.6s;
+    //
+    //    &--lvl-2 {
+    //      max-height: none;
+    //    }
+    //  }
+    //}
 
     // настольный вид списка
     @media (min-width: $menu-desktop-width) {
@@ -62,6 +59,20 @@
 
       & > #{$block-name}__link { // stylelint-disable-line  selector-combinator-blacklist
         color: #000;
+      }
+    }
+
+    &--hide-desktop{
+      display: block;
+      @media (min-width: $screen-lg){
+        display: none;
+      }
+    }
+
+    &--hide{
+      display: none;
+      @media (min-width: $screen-lg){
+        display: block;
       }
     }
   }
@@ -145,21 +156,21 @@
   }
 
 
-
   // переключатель
 
-  &__toggler {
-    display: inline-block;
-    border: none;
-    padding: 0;
-    background: none;
-
-    @media (min-width: $menu-desktop-width) {
-      display: none;
-    }
-
-    .no-js & {
-      display: none;
-    }
-  }
+  //&__toggler {
+  //  display: none;
+  //  //display: inline-block;
+  //  border: none;
+  //  padding: 0;
+  //  background: none;
+  //
+  //  @media (min-width: $menu-desktop-width) {
+  //    display: none;
+  //  }
+  //
+  //  .no-js & {
+  //    display: none;
+  //  }
+  //}
 }

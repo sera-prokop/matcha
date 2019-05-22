@@ -1,2 +1,8 @@
 mixin header-sticky(data)
-    #header-sticky.header-sticky test text
+    #header-sticky.header-sticky
+        .header__logo
+            != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '185', iconHeight: '48'})
+        +menu-btn()
+        +header-search()
+        +user-nav()
+        +header-phone()

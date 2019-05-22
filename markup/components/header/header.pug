@@ -1,11 +1,19 @@
 mixin header(data)
     header.header
-        .header__wrapper
+        .header__top
             .header__logo
-                img(src="%=static=%img/assets/header/logo.png")
+                != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '185', iconHeight: '48'})
             .header__nav
-                +main-nav('1')
+                +main-nav('10')
             .header__phone
+                +header-phone()
+        .header__down
+            +menu-btn()
+            +header-search()
+            +action-text()
+            +user-nav()
+
+
 
 
 

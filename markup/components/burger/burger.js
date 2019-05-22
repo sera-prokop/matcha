@@ -6,7 +6,6 @@ ready(function () {
     let burgers = document.querySelectorAll('.burger');
 
     function showBurgerTarget() {
-        console.log(this);
         let targetId = this.getAttribute('data-target-id');
         let targetClassToggle = this.getAttribute('data-target-class-toggle');
         if (targetId && targetClassToggle) {

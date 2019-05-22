@@ -2,8 +2,8 @@
   @include container()
 }
 
-.header__wrapper{
-  //@include row()
+.header__top{
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }

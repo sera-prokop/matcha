@@ -3,15 +3,27 @@
 
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
+//$black:                       hsl(0, 0%, 0%);
+//$gray-darkest:                hsl(0, 0%, 10%);
+//$gray-darker:                 hsl(0, 0%, 20%);
+//$gray-darken:                 hsl(0, 0%, 30%);
+//$gray-dark:                   hsl(0, 0%, 40%);
+//$gray:                        hsl(0, 0%, 50%);
+//$gray-light:                  hsl(0, 0%, 60%);
+//$gray-lighten:                hsl(0, 0%, 70%);
+//$gray-lighter:                hsl(0, 0%, 80%);
+//$gray-lightest:               hsl(0, 0%, 90%);
+//$white:                       hsl(0, 0%, 100%);
+
 $black:                       hsl(0, 0%, 0%);
 $gray-darkest:                hsl(0, 0%, 10%);
 $gray-darker:                 hsl(0, 0%, 20%);
 $gray-darken:                 hsl(0, 0%, 30%);
-$gray-dark:                   hsl(0, 0%, 40%);
-$gray:                        hsl(0, 0%, 50%);
+$gray-dark:                   #404040;
+$gray:                        #747474;
 $gray-light:                  hsl(0, 0%, 60%);
-$gray-lighten:                hsl(0, 0%, 70%);
-$gray-lighter:                hsl(0, 0%, 80%);
+$gray-lighten:                #c7c7c7;
+$gray-lighter:                #aeaeae;
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
@@ -97,8 +109,10 @@ $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
-$menu-desktop-width:          $screen-lg;
+$menu-desktop-width:          $screen-md;
 $toggler-part-height:         3px;
 $toggler-part-bg-color:       #000;
 
 $z-index-modal:               100;
+
+$tr: 0.25s;
