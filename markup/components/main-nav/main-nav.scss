@@ -79,10 +79,11 @@
 
   &__link {
     display: block;
-    padding: 5px 30px;
+    padding: 5px 15px;
     text-decoration: none;
     background-color: #fff;
     color: $gray-light;
+    font-size: 13px;
 
     &:hover,
     &:focus {
@@ -91,7 +92,12 @@
     }
 
     @media (min-width: $screen-lg){
-      padding: 5px 20px;
+      // padding: 5px 20px;
+      font-size: 15px;
+    }
+
+    @media (min-width: $screen-xl){
+      padding: 5px 30px;
     }
 
     &--lvl-2 {
