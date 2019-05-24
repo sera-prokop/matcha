@@ -1,4 +1,5 @@
 .user-nav{
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -9,6 +10,7 @@
 
 .user-nav__link{
   position: relative;
+  display: inline-block;
   margin-left: 15px;
   &--search{
     @media  (min-width: $screen-md){
@@ -21,15 +23,22 @@
   position: absolute;
   font-size: 10px;
   font-weight: 700;
-  top: -12px;
+  top: -6px;
   right: -8px;
   width: 16px;
   height: 16px;
-  background-color: #b9da61;
+  background-color: $yelgreen;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   color: $white;
 
+}
+
+.user-nav__svg{
+  @media (min-width: $screen-lg){
+    width: 22px;
+    height: 22px;
+  }
 }

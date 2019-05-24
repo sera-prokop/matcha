@@ -16,7 +16,7 @@
         // Example: ['google chrome', 'firefox']
         // Avalible: safari, internet explorer, google chrome, firefox, opera
         "browser": "default",
-        "injectChanges": false
+        "injectChanges": true
     },
 
     "gulp-sass": {

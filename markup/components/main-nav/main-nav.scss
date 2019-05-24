@@ -64,8 +64,32 @@
 
     &--hide-desktop{
       display: block;
+      > .main-nav__link{
+        position: relative;
+        &:after{
+          content: '';
+          width: calc(100% - 30px);
+          position: absolute;
+          height: 1px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $gray-light;
+          bottom: 5px;
+        }
+        // border-bottom: 1px solid $gray-light;
+      }
       @media (min-width: $screen-lg){
         display: none;
+      }
+      &:before{
+        content: '';
+        height: 30px;
+        // background-color: #000;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
       }
     }
 
@@ -75,24 +99,28 @@
         display: block;
       }
     }
+    &--lvl-2{
+      border-bottom: 1px solid $gray-lighter;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
   }
 
   &__link {
     display: block;
     padding: 5px 15px;
     text-decoration: none;
-    background-color: #fff;
     color: $gray-light;
     font-size: 13px;
+    cursor: pointer;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: $gray-lightest;
     }
 
     @media (min-width: $screen-lg){
-      // padding: 5px 20px;
       font-size: 15px;
     }
 
@@ -101,7 +129,8 @@
     }
 
     &--lvl-2 {
-      min-width: 200px;
+      min-width: 150px;
+      padding: 17px 20px;      
 
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 2em;
@@ -120,12 +149,28 @@
   &__sublist-wrapper {
 
     &--lvl-2 {
+      background-color: $white;
+      margin-top: 20px;
+      
+      box-shadow: 0 0 27px rgba(0, 0, 0, 0.06);
+      &:after{
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-color: $white;
+        position: absolute;
+        top: -17px;
+        left: 50%;
+        transform: rotate(-45deg) translateX(-50%);
+        box-shadow: 0 0 27px rgba(0, 0, 0, 0.06);
+      }
 
       @media (min-width: $menu-desktop-width) {
         position: absolute;
         z-index: 1;
         top: 100%;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         height: 0;
         opacity: 0;
         overflow: hidden;

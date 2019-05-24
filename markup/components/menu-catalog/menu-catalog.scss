@@ -1,8 +1,13 @@
 .menu-catalog{
-  display: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.06);
 }
 
-.menu-catalog--open{
-  display: block;
-  position: absolute;
+.menu-down{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #f4f4f4;
 }

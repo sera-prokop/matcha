@@ -15,5 +15,14 @@
   span{
     font-size: 13px;
     margin-right: 5px;
+    @media (min-width: $screen-lg){
+      font-size: 26px;
+    }
+  }
+  @media (min-width: $screen-lg){
+    background-image: url(%=static=%assets/action-text/action.png);
+    width: 160px;
+    height: 58px;
+    font-size: 16px;
   }
 }

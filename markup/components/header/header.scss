@@ -32,13 +32,36 @@
 }
 
 .header__down{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media  (min-width: $screen-md){
+    justify-content: flex-start;
+  }
   .user-nav{
     display: none;
     @media  (min-width: $screen-md){
       display: flex;
     }
   }
+}
+
+.header__menu-btn{
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.header__search{
+  width: 100%;
+}
+
+.header__action{
+  @media  (min-width: $screen-md){
+    margin-left: 15px;
+  }
+}
+
+.header__user-nav{
+  flex-shrink: 0;
 }

@@ -10,10 +10,14 @@ mixin header(data)
             .header__phone
                 +header-phone()
         .header__down
-            +menu-btn()
-            +header-search()
-            +action-text()
-            +user-nav()
+            .header__menu-btn
+                +menu-btn()
+            .header__search
+                +header-search()
+            .header__action
+                +action-text()
+            .header__user-nav
+                +user-nav()
 
 
 

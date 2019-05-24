@@ -13,7 +13,7 @@
   font-weight: 600;
   font-size: 18px;
   border-bottom: 1px solid transparent;
-  transition: $tr;
+  transition: $transition-time;
 
   &:before{
     content: '';
@@ -39,7 +39,7 @@
   font-size: 15px;
   text-decoration: none;
   border-bottom: 1px dashed $gray-lighter;
-  transition: $tr;
+  transition: $transition-time;
   &:hover, &:focus{
     color: $gray-dark;
     border-bottom: 1px dashed $gray-dark;

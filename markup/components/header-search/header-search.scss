@@ -1,6 +1,29 @@
 .header-search{
   display: none;
+  position: relative;
+  width: 100%;
+  // max-width: 225px;
+
   @media  (min-width: $screen-md){
     display: block;
   }
+}
+
+.header-search__input{
+  width: 100%;
+  min-height: 41px;
+  padding: 0 40px 0 20px;
+  font-size: 16px;
+  @media (min-width: $screen-lg){
+    min-height: 51px;
+  }
+}
+
+.header-search__svg{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+
 }

@@ -54,7 +54,7 @@ $color-gh:                    #24292e;
 
 $text-color:                  $gray-darkest;
 $text-color-muted:            $gray;
-$body-bg:                     $white;
+$body-bg:                     #fafafa;
 
 $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);
@@ -126,4 +126,3 @@ $toggler-part-bg-color:       #fff;
 
 $z-index-modal:               100;
 
-$tr: 0.25s;

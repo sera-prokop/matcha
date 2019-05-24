@@ -1,12 +1,12 @@
 mixin menu-catalog(data)
-    ul#menu-catalog.menu-catalog
+    ul.menu-catalog
         each item in data.list
             li.menu-catalog__item
                 != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'menu-catalog__svg', iconWidth: '21', iconHeight: '21'})
                 a(href=item.link)= item.name
         ul.menu-catalog__down.menu-down
             li.menu-down__item
-                a(href="#").menu-down__link.menu-down--aktion %Акции
+                a(href="#").menu-down__link.menu-down--action %Акции
             li.menu-down__item
                 a(href="#").menu-down__link Доставка и оплата
             li.menu-down__item

@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   min-width: 180px;
+  @media (min-width: $screen-md){
+    position: relative;
+  }
+  @media (min-width: $screen-lg){
+    min-width: 256px;
+  }
   .burger{
     width: 100%;
     max-width: 41px;
@@ -13,6 +19,10 @@
     }
     &:active{
       background-color: $yelgreen-darken;
+    }
+    @media (min-width: $screen-lg){
+      min-height: 51px;
+      max-width: 68px;
     }
   }
 }
@@ -34,4 +44,25 @@
   &:active{
     background-color: $yelgreen-darken;
   }
+  @media (min-width: $screen-lg){
+      min-height: 51px;
+      max-width: 187px;
+      font-size: 17px;
+  }
+}
+
+.menu-btn__catalog{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: $transition-time;
+}
+
+.menu-btn__catalog--open{
+  opacity: 1;
+  visibility: visible;
+  height: auto;
 }
