@@ -1,14 +1,77 @@
 .header-sticky{
-  //transform: translateY(-65px);
-  //background-color: teal;
   display: none;
-  color: #FFFFFF;
-  //position: fixed;
+  background-color: white;
+  position: fixed;
   top: 0;
+  transform: translateY(-65px);
   width: 100%;
-  //height: 65px;
   transition: transform 0.25s ease-in-out;
+  @media (min-width: $screen-md) {
+    display: block;
+  }
 }
+
 .header-sticky--pin{
   transform: translateY(0);
+}
+
+.header-sticky__wrapper{
+  @include container();
+  padding-top: 10px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-sticky__logo{
+  margin-right: 15px;
+  @media  (min-width: $screen-lg){
+    margin-right: 25px;
+  }
+  @media  (min-width: $screen-xl){
+    margin-right: 30px;
+  }
+}
+
+.header-sticky__menu-btn{
+  margin-right: 15px;
+  @media  (min-width: $screen-lg){
+    margin-right: 25px;
+  }
+  @media  (min-width: $screen-xl){
+    margin-right: 30px;
+  }
+}
+
+.header-sticky__header-search{
+  flex-grow: 1;
+  display: none;
+  //margin-right: 15px;
+  @media  (min-width: $screen-lg){
+    display: block;
+  }
+}
+
+.header-sticky__user-nav{
+  .user-nav__link{
+    padding: 14px;
+  }
+  .user-nav__link--search{
+    @media  (min-width: $screen-md){
+      display: block;
+    }
+    @media  (min-width: $screen-lg){
+      display: none;
+    }
+  }
+  .cart__num{
+    top: 6px;
+    right: 6px;
+  }
+}
+
+.header-sticky__header-phone{
+  flex-shrink: 0;
+  margin-left: 15px;
 }

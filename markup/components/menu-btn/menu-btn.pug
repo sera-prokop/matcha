@@ -1,6 +1,6 @@
-mixin menu-btn(data)
+mixin menu-btn(data, menu_catalog_id)
     .menu-btn
         a(href="#").menu-btn__button Каталог товаров
-        +burger('Показать меню', 'menu-catalog', 'menu-btn__catalog--open')(class='')
-        #menu-catalog.menu-btn__catalog
+        +burger('Показать меню', menu_catalog_id, 'menu-btn__catalog--open')(class='')
+        .menu-btn__catalog(id=menu_catalog_id)
             +menu-catalog(menu_catalog)

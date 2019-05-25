@@ -12,14 +12,32 @@
   font-size: 10px;
   font-weight: 700;
   color: $white;
+  text-decoration: none;
+  &:hover{
+    b{
+      border-bottom: 2px solid white;
+    }
+  }
+  p{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 1;
+  }
   span{
     font-size: 13px;
-    margin-right: 5px;
-    @media (min-width: $screen-lg){
+    margin-right: 8px;
+    @media (min-width: $screen-xl){
       font-size: 26px;
     }
   }
-  @media (min-width: $screen-lg){
+  b{
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: border $transition-time;
+  }
+  @media (min-width: $screen-xl){
     background-image: url(%=static=%assets/action-text/action.png);
     width: 160px;
     height: 58px;

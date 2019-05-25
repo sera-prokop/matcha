@@ -1,8 +1,13 @@
 mixin header-sticky(data)
     #header-sticky.header-sticky
-        .header__logo
-            != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '130', iconHeight: '35'})
-        +menu-btn()
-        +header-search()
-        +user-nav()
-        +header-phone()
+        .header-sticky__wrapper
+            .header__logo.header-sticky__logo
+                != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '130', iconHeight: '35'})
+            .header-sticky__menu-btn
+                +menu-btn(data, 'sticky-menu-catalog')
+            .header-sticky__header-search
+                +header-search(data, 'header-sticky-search-main')
+            .header-sticky__user-nav
+                +user-nav()
+            .header-sticky__header-phone
+                +header-phone()

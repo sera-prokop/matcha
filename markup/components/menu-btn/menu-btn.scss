@@ -5,7 +5,7 @@
   @media (min-width: $screen-md){
     position: relative;
   }
-  @media (min-width: $screen-lg){
+  @media (min-width: $screen-xl){
     min-width: 256px;
   }
   .burger{
@@ -20,7 +20,7 @@
     &:active{
       background-color: $yelgreen-darken;
     }
-    @media (min-width: $screen-lg){
+    @media (min-width: $screen-xl){
       min-height: 51px;
       max-width: 68px;
     }
@@ -44,7 +44,7 @@
   &:active{
     background-color: $yelgreen-darken;
   }
-  @media (min-width: $screen-lg){
+  @media (min-width: $screen-xl){
       min-height: 51px;
       max-width: 187px;
       font-size: 17px;

@@ -100,7 +100,7 @@
       }
     }
     &--lvl-2{
-      border-bottom: 1px solid $gray-lighter;
+      border-bottom: 1px solid $gray-lightest;
       &:last-child{
         border-bottom: none;
       }
@@ -130,7 +130,7 @@
 
     &--lvl-2 {
       min-width: 150px;
-      padding: 17px 20px;      
+      padding: 17px 20px;
 
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 2em;
@@ -151,7 +151,7 @@
     &--lvl-2 {
       background-color: $white;
       margin-top: 20px;
-      
+
       box-shadow: 0 0 27px rgba(0, 0, 0, 0.06);
       &:after{
         content: '';

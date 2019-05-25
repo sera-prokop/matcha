@@ -11,9 +11,9 @@ mixin header(data)
                 +header-phone()
         .header__down
             .header__menu-btn
-                +menu-btn()
+                +menu-btn(data, 'menu-catalog')
             .header__search
-                +header-search()
+                +header-search(data, 'header-search-main')
             .header__action
                 +action-text()
             .header__user-nav
@@ -21,7 +21,8 @@ mixin header(data)
 
 
 
-
+//TODO: отстилизовать выпадающее меню burger->click
+    отстилизовать hover, active svg in user-nav
 
 
 
