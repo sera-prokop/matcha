@@ -1,0 +1,27 @@
+.main-slider-descr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-slider-descr__wrapper{
+  margin: 35px 0;
+  border-top: 2px solid $yelgreen;
+  border-bottom: 2px solid $yelgreen;
+}
+
+.main-slider-descr__title{
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.main-slider-descr__list{
+  padding: 0 30px;
+  margin: 0;
+  list-style-type: none;
+}
+
+

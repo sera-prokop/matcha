@@ -3,10 +3,14 @@ extends _template.pug
 include ../components/head/head
 
 
+
 block head
     +head(head.index)
 
 block content
+    main
+        +cart-day(cart_day)
+
 
 
 

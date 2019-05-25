@@ -17,7 +17,8 @@ html, body {
     font-family: $proxima;
     font-weight: 400;
     background-color: $body-bg;
-    height: 7000px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .page__wrapper {
@@ -26,6 +27,10 @@ html, body {
 
 * html .page__wrapper {
     height: 100%;
+}
+
+.container{
+    @include container();
 }
 
 .visually-hidden {
@@ -37,3 +42,15 @@ html, body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+// Turn Off Number Input Spinners
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
