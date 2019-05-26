@@ -1,0 +1,6 @@
+mixin popular(data)
+    section.popular
+        .popular__top
+            h2.popular__title=data.title
+            a(href="#") Все предложения
+        +slider-card(data)

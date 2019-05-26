@@ -24,3 +24,28 @@ mixin main-slider-descr()
                 li.main-slider-descr__item Скидка 10% на первую покупку
             a(href="#").main-slider-descr__btn.btn.btn--green Перейти к каталогу
 
+mixin slider-card(data)
+    .slider-card
+        .swiper-container.slider-card__container
+            .swiper-wrapper
+                .swiper-slide
+                    +cart(data.cart)
+                .swiper-slide
+                    +cart(data.cart2)
+                .swiper-slide
+                    +cart(data.cart3)
+                .swiper-slide
+                    +cart(data.cart)
+                .swiper-slide
+                    +cart(data.cart2)
+                .swiper-slide
+                    +cart(data.cart3)
+                .swiper-slide
+                    +cart(data.cart)
+                .swiper-slide
+                    +cart(data.cart2)
+                .swiper-slide
+                    +cart(data.cart3)
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
