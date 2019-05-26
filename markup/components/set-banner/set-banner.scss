@@ -1,0 +1,126 @@
+.set-banner {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  //overflow: hidden;
+  background-repeat: no-repeat;
+  @media  (min-width: $screen-md){
+    background-color: $white;
+    background-image: url(%=static=%assets/set-banner/set.png);
+    background-position: 0 0;
+    background-size: auto 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  @media  (min-width: $screen-lg){
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+  @media  (min-width: $screen-xl){
+
+  }
+
+}
+
+.set-banner__top{
+  height: 350px;
+  background-color: $white;
+  background: url(%=static=%assets/set-banner/set.png);
+  background-position: 50% 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 30px;
+  @media  (min-width: $screen-md){
+    background-image: none;
+    margin: 0 0 0 auto;
+    width: 60%;
+    height: auto;
+  }
+  @media  (min-width: $screen-lg){
+    width: 50%;
+  }
+}
+
+.set-banner__title{
+  font-size: 25px;
+  font-weight: 400;
+  color: $yelgreen;
+  margin: 0;
+
+  @media  (min-width: $screen-md){
+    font-size: 32px;
+    margin-bottom: 20px;
+    background-image: none;
+  }
+
+  @media  (min-width: $screen-lg){
+    font-size: 47px;
+  }
+}
+
+.set-banner__descr{
+  @include container();
+  @media  (min-width: $screen-md){
+    width: 60%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  @media  (min-width: $screen-lg){
+    width: 50%;
+  }
+}
+
+.set-banner__text{
+  margin: 0 0 25px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.set-banner__list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.set-banner__item{
+  color: $gray-light;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &:before{
+    content: '';
+    @include bg($leaf-mobile);
+    margin-right: 15px;
+    flex-shrink: 0;
+    @media  (min-width: $screen-xl){
+      @include bg($leaf);
+    }
+  }
+}
+
+.set-banner__buttons{
+  @media  (min-width: $screen-md){
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+  }
+}
+
+.set-banner__btn{
+  flex-shrink: 0;
+  width: 100%;
+  &--green{
+    max-width: 215px;
+    margin: 0 auto 15px;
+    @media  (min-width: $screen-md){
+      margin: 0 25px 0 0;
+    }
+  }
+  &--border{
+    max-width: 175px;
+    margin: 0 auto;
+    @media  (min-width: $screen-md){
+      margin: 0;
+    }
+  }
+}
+

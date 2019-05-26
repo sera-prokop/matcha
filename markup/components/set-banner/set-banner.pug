@@ -1,0 +1,14 @@
+mixin set-banner(data)
+    section.set-banner
+        .set-banner__wrap
+            .set-banner__top
+                h2.set-banner__title=data.title
+            .set-banner__descr
+                //-.lazy(data-bg="url(%=static=%img/assets/set-banner/bg1.png), url(%=static=%img/assets/set-banner/bg2.jpg)")
+
+                p.set-banner__text=data.text
+                ul.set-banner__list
+                    each item in data.list
+                        li.set-banner__item=item.text
+                .set-banner__buttons
+                    a(href="#").set-banner__btn.latest__btn--green.btn.btn--green Заказать дегустационный сет
