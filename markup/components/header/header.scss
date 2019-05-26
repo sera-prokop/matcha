@@ -18,7 +18,8 @@
 }
 
 .header__user-mobile{
-  width: 100%;
+  //width: 100%;
+  margin-left: auto;
   @media  (min-width: $screen-md){
     display: none;
   }

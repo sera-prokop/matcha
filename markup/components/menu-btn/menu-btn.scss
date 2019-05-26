@@ -58,6 +58,7 @@
   opacity: 0;
   visibility: hidden;
   height: 0;
+  z-index: 10;
   transition: $transition-time;
 }
 
