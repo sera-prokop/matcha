@@ -16,6 +16,7 @@ html, body {
 .page {
     font-family: $proxima;
     font-weight: 400;
+    color: $gray-dark;
     background-color: $body-bg;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -53,4 +54,10 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+main{
+    padding-top: 25px;
+}
+
+
 

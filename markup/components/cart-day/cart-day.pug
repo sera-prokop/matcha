@@ -1,4 +1,7 @@
 mixin cart-day(data)
     section.cart-day
-        +main-slider()
-        +cart(data.cart)
+        .cart-day__wrapper
+            .cart-day__slider
+                +main-slider()
+            .cart-day__cart
+                +cart(data.cart)

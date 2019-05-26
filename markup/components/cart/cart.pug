@@ -1,37 +1,45 @@
 mixin cart(data)
     .cart
         each item in data
-            if item.star
-                .cart__icon.cart__star(aria-label="Товар дня")
-            if item.new
-                .cart__icon.cart__new(aria-label="Новый товар")
-            .cart__top-link
+            .cart__wrapper(class= item.full ? 'cart__wrapper--full' : '')
+                if item.star
+                    .cart__icon.cart__icon--star(aria-label="Товар дня")
+                if item.new
+                    .cart__icon.cart__icon--new(aria-label="Новый товар")
 
-            .cart__img
-                img.lazy(data-src=`%=static=%img/assets/cart/${item.img}` alt="Товар")
+                a(href="#" aria-label="Добавить в избранное").cart__top-link
 
-                if item.discount
-                    .cart__img-discount -20%
+                .cart__img.cart-img
+                    img.cart-img__picture.lazy(data-src=`%=static=%img/assets/cart/${item.img}` alt="Товар")
 
-                if item.discount
-                    .cart__not Нет в наличии
+                    if item.discount
+                        .cart-img__text.cart-img__text--discount -20%
 
-                if item.soon
-                    .cart__soon Ожидается
+                    if item.not
+                        .cart-img__text.cart-img__text--not Нет в наличии
 
-            .cart__descr
-                h3.cart__title=item.title
-                p.cart__text=item.text
-                if item.discount
-                    p.cart__cost-discount=item.discount
-                p.cart__cost=item.cost
-                +field-num({
-                    mods: '',
-                    val: '1',
-                    attrs: {
-                        name: 'quantity',
-                        min: '1',
-                        step: '1',
-                    }
-                })
+                    if item.soon
+                        .cart-img__text.cart-img__text--soon Ожидается
+
+                .cart__descr
+                    h3.cart__title=item.title
+                    p.cart__text=item.text
+                    .cart__cost-block
+                        if item.discount
+                            p.cart__cost-discount=item.discount
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'customClass', iconWidth: '11', iconHeight: '11'})
+                        p.cart__cost=item.cost
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'customClass', iconWidth: '14', iconHeight: '14'})
+            .cart__basket
+                .cart__field-num
+                    +field-num({
+                        mods: '',
+                        val: '1',
+                        attrs: {
+                            name: 'quantity',
+                            min: '1',
+                            step: '1',
+                        }
+                    })
+                a(href="#").cart__btn.btn.btn--green.btn--cart-icon В корзину
 

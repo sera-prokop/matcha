@@ -1,1 +1,41 @@
+.cart-day{
+  @include container;
+  //@media (min-width: $screen-md){
+  //  display: flex;
+  //}
+}
 
+.cart-day__wrapper{
+  @include row;
+}
+
+.cart-day__slider{
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media  (min-width: $screen-md){
+    flex: 0 0 72%;
+    max-width: 72%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  //@include col();
+  //@include col(md, 9);
+}
+
+.cart-day__cart{
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media  (min-width: $screen-md){
+    flex: 0 0 28%;
+    max-width: 28%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  //@include col();
+  //@include col(md, 3)
+}

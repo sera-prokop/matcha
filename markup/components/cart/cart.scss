@@ -1,1 +1,170 @@
+.cart{
+  max-width: 365px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cart__wrapper{
+  position: relative;
+  padding: 20px 20px 0 20px;
+  background-color: $white;
+  &--full{
+    padding: 0;
+    .cart-img__picture{
+      width: 100%;
+    }
+    .cart__icon{
+      top: 17px;
+      left: 20px;
+      &--new{
+        background-image: svg-load('matcha-new-solid.svg');
+      }
+    }
+    .cart-img__text{
+      &--discount{
+        display: none;
+      }
+    }
+    .cart__descr{
+      padding: 0 20px;
+    }
+  }
+}
+
+.cart__icon{
+  width: 45px;
+  height: 45px;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+
+  &--star{
+    background-image: svg-load('matcha-star.svg');
+  }
+  &--new{
+    background-image: svg-load('matcha-new.svg');
+  }
+}
+
+.cart__img{
+  margin-bottom: 10px;
+}
+
+// Cart img block
+
+.cart-img{
+  position: relative;
+  text-align: center;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.cart-img__picture{
+  max-width: 100%;
+  height: auto;
+}
+
+.cart-img__text{
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  color: $white;
+  &--discount{
+    @include bg($discount-mobile);
+    font-size: 11px;
+    line-height: 26px;
+    right: 70px;
+    top: 5px;
+  }
+  &--not{
+    @include bg($not);
+    line-height: 38px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &--soon{
+    @include bg($soon);
+    line-height: 29px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.cart__descr{
+
+}
+
+.cart__title{
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: $gray-dark;
+  @media (min-width: $screen-lg){
+    font-size: 15px;
+  }
+  @media (min-width: $screen-xl){
+    font-size: 20px;
+  }
+}
+
+.cart__text{
+  font-size: 12px;
+  margin: 0;
+  color: $gray-light;
+
+  @media (min-width: $screen-xl){
+    font-size: 14px;
+  }
+}
+
+.cart__cost-block{
+  position: relative;
+  padding: 15px 0;
+  text-align: right;
+}
+
+.cart__cost-discount{
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 11px;
+  text-decoration: line-through;
+  color: $red;
+  fill: $red;
+  @media (min-width: $screen-xl){
+    font-size: 13px;
+  }
+}
+
+.cart__cost{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  @media (min-width: $screen-xl){
+    font-size: 20px;
+  }
+}
+
+.cart__basket{
+  display: flex;
+  align-items: center;
+}
+
+.cart__field-num{
+  width: 50%;
+}
+
+.cart__btn{
+  width: 50%;
+}
+
 

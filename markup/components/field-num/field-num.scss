@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: $typo-margin-vertical;
+  //margin-bottom: $typo-margin-vertical;
 
   &__name {
     //@include field-name;
@@ -20,7 +20,7 @@
   &__input-and-btns {
     position: relative;
     display: block;
-    width: 150px;
+    //width: 150px;
   }
 
   &__input {
@@ -30,6 +30,9 @@
     width: 100%;
     border: 1px solid $color-danger;
     color: $gray-dark;
+    @media (min-width: $screen-xl){
+      padding: 15px 45px;
+    }
 
     #{$block-name}:not(#{$block-name}--disabled) button:focus ~ & { // stylelint-disable-line
       //@include field-focus;
