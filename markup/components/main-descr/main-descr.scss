@@ -1,0 +1,76 @@
+.main-descr {
+  padding-top: 50px;
+  background-color: $white;
+  @media  (min-width: $screen-md){
+    padding-bottom: 50px;
+  }
+}
+
+.main-descr__wrapper{
+  @include container();
+}
+
+.main-descr__list {
+  @include row();
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-descr__item {
+  position: relative;
+  @include col();
+  @include col(md, 4);
+  @media  (min-width: $screen-md){
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $yelgreen;
+    }
+    &:first-child{
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+
+.main-descr__wrap {
+  display: flex;
+  align-items: center;
+  fill: $yelgreen;
+  margin-bottom: 45px;
+  @media  (min-width: $screen-md){
+    margin-bottom: 0;
+  }
+}
+
+.main-descr__svg{
+  margin-right: 30px;
+  @media  (min-width: $screen-md){
+    margin-right: 20px;
+  }
+  @media  (min-width: $screen-lg){
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.main-descr__text{
+  font-size: 14px;
+  line-height: 20px;
+  color: $gray-light;
+  @media  (min-width: $screen-lg){
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 240px;
+  }
+  span{
+    color: $yelgreen;
+  }
+}

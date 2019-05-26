@@ -2,6 +2,8 @@ extends _template.pug
 
 include ../components/head/head
 
+include ../components/main-descr/main-descr
+
 
 
 block head
@@ -10,6 +12,7 @@ block head
 block content
     main
         +cart-day(cart_day)
+        +main-descr(main_descr)
 
 
 

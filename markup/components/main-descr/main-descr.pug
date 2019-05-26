@@ -1,0 +1,12 @@
+mixin main-descr(data)
+    section.main-descr
+        .main-descr__wrapper
+            ul.main-descr__list
+                each item in data.list
+                    li.main-descr__item
+                        .main-descr__wrap
+                            .main-descr__icon
+                                != pugHelpers.Icon.call(locals, {iconName: item.icon, className: 'main-descr__svg', iconWidth: '45', iconHeight: '45'})
+                            .main-descr__text !{item.text}
+
+
