@@ -1,0 +1,71 @@
+.main-catalog{
+  @include container();
+}
+
+.main-catalog__list{
+  @include row();
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-catalog__item{
+  @include col();
+  @include col(sm, 6, $grid-columns, 15px);
+  @include col(md, 6, $grid-columns, 20px);
+  @include col(lg, 6, $grid-columns, 30px);
+  margin-bottom: 15px;
+  &:last-child{
+    @include col(sm, 12);
+    @include col(lg, 6)
+  }
+  &:nth-child(-n+3){
+    @include col(lg, 4)
+  }
+  @media  (min-width: $screen-md){
+    margin-bottom: 20px;
+  }
+  @media  (min-width: $screen-lg){
+    margin-bottom: 30px;
+  }
+}
+
+.main-catalog__link{
+  position: relative;
+}
+
+.main-catalog__img{
+}
+
+.main-catalog__picture{
+  vertical-align: middle;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  @media  (min-width: $screen-md){
+    height: 300px;
+  }
+  @media  (min-width: $screen-xl){
+    height: 360px;
+  }
+}
+
+.main-catalog__title{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  color: $white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  @media  (min-width: $screen-md){
+    font-size: 18px;
+    padding: 30px;
+  }
+  @media  (min-width: $screen-xl){
+    font-size: 24px;
+  }
+}
