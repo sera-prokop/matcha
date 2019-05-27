@@ -1,11 +1,14 @@
 'use strict';
 
+
+
 // LazyLoad init
 import LazyLoad from 'vanilla-lazyload';
 import 'components/header-sticky/header-sticky';
 import 'components/burger/burger';
 import 'components/sliders/sliders';
 import 'components/field-num/field-num';
+import 'components/footer/footer';
 import ready from './documentReady.js';
 
 const lazyLoadOptions = {
@@ -34,5 +37,8 @@ ready(
     function () {
         // Polyfill for object-fit init
         objectFitImages();
+
+        
+        
     }
 );
