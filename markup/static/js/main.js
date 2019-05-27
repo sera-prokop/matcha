@@ -37,8 +37,5 @@ ready(
     function () {
         // Polyfill for object-fit init
         objectFitImages();
-
-        
-        
     }
 );

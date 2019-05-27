@@ -1,12 +1,65 @@
 mixin footer(data)
     footer.footer
-        ul.akkordeon
-            li
-                p Несколько активных пунктов
-                div Окраска, особенно в речных долинах
-            li
-                p Несколько активных пунктов
-                div Окраска, особенно в речных долинах, <a href="">обрывисто формирует</a> конус выноса, так как совершенно однозначно указывает на существование и рост в период оформления <b>палеогеновой поверхности выравнивания</b>. Присоединение органического вещества, основываясь большей частью на сейсмических данных, интенсивно поступает в меловой ийолит-уртит, что лишь подтверждает то, что породные отвалы располагаются на склонахs
-            li
-                p Несколько активных пунктов
-                div Окраска, особенно в речных долинах, <a href="">обрывисто формирует</a> конус выноса, так как совершенно однозначно указывает на существование и рост в период оформления <b>палеогеновой поверхности выравнивания</b>. Присоединение органического вещества, основываясь большей частью на сейсмических данных, интенсивно поступает в меловой ийолит-уртит, что лишь подтверждает то, что породные отвалы располагаются на склонахs
+        .footer__top
+            .footer__accordion#footer-accordion
+                .footer__control О компании
+                    ul.footer__list
+                        li.footer__item
+                            a(href="#").footer__link О компании
+                        li.footer__item
+                            a(href="#").footer__link Оплата и доставка
+                        li.footer__item
+                            a(href="#").footer__link Партнерам
+                        li.footer__item
+                            a(href="#").footer__link Контакты
+                .footer__control Информация
+                    ul.footer__list
+                        li.footer__item
+                            a(href="#").footer__link Новости
+                        li.footer__item
+                            a(href="#").footer__link Статьи
+                        li.footer__item
+                            a(href="#").footer__link Обзоры
+                        li.footer__item
+                            a(href="#").footer__link Рецепты
+                .footer__control Каталог товаров
+                    ul.footer__list
+                        li.footer__item
+                            a(href="#").footer__link Матча царемониальный
+                        li.footer__item
+                            a(href="#").footer__link Матча премиальный
+                        li.footer__item
+                            a(href="#").footer__link Матча традиционный
+                        li.footer__item
+                            a(href="#").footer__link Напитики
+                        li.footer__item.footer__item--mobile
+                            a(href="#").footer__link Аксессуары
+                        li.footer__item.footer__item--mobile
+                            a(href="#").footer__link Наборы
+                        li.footer__item.footer__item--mobile
+                            a(href="#").footer__link.footer__link--action % Акции
+                ul.footer__list.footer__list--desktop
+                    li.footer__item
+                        a(href="#").footer__link Аксессуары
+                    li.footer__item
+                        a(href="#").footer__link Наборы
+                    li.footer__item
+                        a(href="#").footer__link.footer__link--action % Акции
+
+
+            .footer__contacts
+                a(href="tel:+74996538857").footer__phone +7 (499) 653-88-57
+                a(href="#").footer__feedback Обратная связь
+                a(href="mailto:info@matchavam.ru").footer__mail info@matchavam.ru
+
+                .footer__social
+                    a(href="#" aria-label="vk").footer__icon.footer__icon--vk
+                    a(href="#" aria-label="fb").footer__icon.footer__icon--fb
+                    a(href="#" aria-label="inst").footer__icon.footer__icon--inst
+
+                .footer__button
+                    a(href="#").btn.btn--green Личный кабинет
+
+        .footer__bottom
+            p.footer__copy @ 2010-2017  ООО «Матчавам» - Натуральный вьетнамский кофе, чай, продукты и аксессуары. Доставка по москве и всей россии.
+            a(href="#").footer__policy Политика конфиденциальности

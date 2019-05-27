@@ -1,27 +1,38 @@
-ul.akkordeon{
-    width: 300px;
-    border: 1px solid rgb(182, 182, 182);
+.footer{
+    @include container();
 }
-ul.akkordeon li > p{
-    cursor: pointer;
-    padding: 10px 10px;
-    margin: 0;
-    color: white;
-    text-shadow: 0px 1px 1px rgb(73, 73, 73);
-    text-align: center;
-    font-size: 12px;
-    font-family: sans-serif;
-    background: #0C0C0C -webkit-gradient(linear, left top, left bottom, from(#868585), to(#666)) no-repeat;
+
+.footer__top{
+
+    @media (min-width: $screen-md) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
-ul.akkordeon li > p:hover{
-    background: #0C0C0C -webkit-gradient(linear, left top, left bottom, from(#868585), to(#4E4B4B)) no-repeat;
+
+.footer__accordion{
+
+    @media (min-width: $screen-md) {
+        display: flex;
+    }
 }
-ul.akkordeon li > p.active{
-    background: #369 -webkit-gradient(linear, left top, left bottom, from(#86B8E9), to(#5682AE)) no-repeat;
+
+.footer__list{
+    &--desktop{
+        display: none;
+
+        @media (min-width: $screen-lg) {
+            display: block;
+        }
+    }
 }
-ul.akkordeon li > div{
-    display:  none;
-    padding: 10px;
-    font-size: 11px;
-    line-height: 15px;
+
+.footer__item{
+
+    &--mobile{
+
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+    }
 }
