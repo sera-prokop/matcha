@@ -1,0 +1,107 @@
+.action{
+    @include container();
+}
+
+.action__list{
+    @include row();
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin-bottom: 35px;
+    }
+}
+
+.action__item{
+    @include col();
+    @include col(md, 6, $grid-columns, 20px);
+    @include col(lg, 6, $grid-columns, 30px);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+        margin-bottom: 0;
+    }
+}
+
+.action__link{
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+    background-color: #fff;
+    padding: 30px 25px 60px;
+    text-decoration: none;
+
+    @media (min-width: $screen-md) {
+        padding: 35px 30px 80px; 
+    }
+
+    @media (min-width: $screen-lg) {
+        padding: 50px 35px 80px;    
+    }
+
+    @media (min-width: $screen-xl) {
+        padding: 65px 40px 80px;
+    }
+}
+
+.action__title{
+    font-size: 16px;
+    color: $yelgreen;
+    margin: 0 0 15px;
+    width: 70%;
+
+    @media (min-width: $screen-md) {
+        font-size: 19px;    
+    }
+
+    @media (min-width: $screen-xl) {
+        font-size: 27px;    
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        margin-top: 15px;
+        height: 2px;
+        width: 75px;
+        background-color: $yelgreen;
+    }
+
+}
+
+.action__text{
+    margin: 0;
+    width: 65%;
+    font-size: 13px;
+    color: $gray-dark;
+
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+    }
+}
+
+.action__button{
+    text-align: center;
+}
+
+.action__btn{
+    min-width: 160px;
+}
+
+// .action__picture{
+//     width: 45%;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+// }

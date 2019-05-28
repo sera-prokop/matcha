@@ -1,0 +1,12 @@
+mixin action(data)
+    section.action.section
+        ul.action__list
+            each item in data.list
+                li.action__item
+                    a(href="" data-bg=`url(%=static=%img/assets/action/${item.img})`).action__link.lazy
+                        //- img.action__picture.lazy(src=`%=static=%img/assets/action/${item.img}`, alt="alt")
+                        h3.action__title=item.title
+                        p.action__text=item.text
+        .action__button
+            a(href="#").action__btn.btn.btn__border.btn__border--green Все акции
+    

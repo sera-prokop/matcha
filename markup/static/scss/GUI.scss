@@ -2,7 +2,7 @@
 // For example, styles of the links, buttons and so on.
 
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -103,7 +103,7 @@
   }
 }
 
-.btn--border{
+.btn__border{
   border: 1px solid $gray-lightest;
   color: $gray;
   background-color: transparent;
@@ -114,6 +114,19 @@
   &:active{
     border-color: $gray;
     color: $gray;
+  }
+  &--green{
+    border: 1px solid $yelgreen;
+    color: $yelgreen;
+    background-color: transparent;
+    &:hover, &:focus{
+      border-color: $yelgreen-dark;
+      color: $yelgreen-dark;
+    }
+    &:active{
+      border-color: $yelgreen-darken;
+      color: $yelgreen-darken;
+    }
   }
 }
 
