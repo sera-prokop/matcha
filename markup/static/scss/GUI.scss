@@ -10,7 +10,7 @@
   overflow: hidden;
   margin: 0;
   border: 0;
-  //padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 0 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
   user-select: none;
@@ -26,27 +26,12 @@
   cursor: pointer;
   min-height: 40px;
   transition: $transition-time;
+  
   @media (min-width: $screen-xl) {
     font-size: 16px;
     min-height: 50px;
   }
 
-  //&:hover,
-  //&:focus {
-  //  text-decoration: none;
-  //  color: $text-color;
-  //  background-color: darken($gray-lightest, 10%);
-  //  // border-color: darken($gray-lighter, 12%);
-  //}
-
-  // &:visited {
-  //   color: $text-color;
-  // }
-
-  //&:active,
-  //&:focus {
-  //  @include field-focus;
-  //}
 
   &--disabled,
   &:disabled {
@@ -54,91 +39,75 @@
     cursor: not-allowed;
     color: $text-color;
     background-color: $gray-lightest;
-    // border-color: $gray-lighter;
 
     @at-root a.btn--disabled {
       pointer-events: none;
     }
+
   }
-
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
-
-
-
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   // border: 1px solid $color-main;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     // border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     // border-color: $color-main;
-  //   }
-  // }
 }
 
 
-.btn--green{
+.btn--green {
   background-color: $yelgreen;
   color: $white;
-  &:hover, &:focus{
+
+  &:hover, &:focus {
     background-color: $yelgreen-darken;
     color: $white;
   }
-  &:active{
+
+  &:active {
     background-color: $yelgreen-dark;
     color: $white;
   }
 }
 
-.btn__border{
+.btn__border {
   border: 1px solid $gray-lightest;
   color: $gray;
   background-color: transparent;
-  &:hover, &:focus{
+
+  &:hover, &:focus {
     border-color: $gray-light;
     color: $gray-dark;
   }
-  &:active{
+
+  &:active {
     border-color: $gray;
     color: $gray;
   }
-  &--green{
-    border: 1px solid $yelgreen;
-    color: $yelgreen;
+
+  &--green {
+    border: 1px solid $yelgreen-darken;
+    color: $yelgreen-dark;
     background-color: transparent;
-    &:hover, &:focus{
-      border-color: $yelgreen-dark;
-      color: $yelgreen-dark;
+
+    &:hover, &:focus {
+      border-color: $yelgreen;
+      color: $white;
+      background-color: $yelgreen;
     }
-    &:active{
+
+    &:active {
       border-color: $yelgreen-darken;
-      color: $yelgreen-darken;
+      color: $white;
+      background-color: $yelgreen-darken;
     }
   }
 }
 
-.btn--cart-icon{
+.btn--cart-icon {
   position: relative;
-  &:before{
+
+  &:before {
     content: '';
     background-image: svg-load('shopping-cart-r.svg' fill=$white);
     background-size: cover;
     width: 16px;
     height: 14px;
     margin-right: 5px;
+
     @media (min-width: $screen-xl) {
       width: 20px;
       height: 18px;

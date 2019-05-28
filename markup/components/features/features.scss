@@ -1,11 +1,29 @@
+.features{
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-bottom: 50px;
+    }
+}
+
 .features__top{
     background-image: url(%=static=%/assets/features/bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     padding: 100px 0;
+    margin-bottom: 40px;
 
     @media (min-width: $screen-md){
         padding-bottom: 130px;
+        margin-bottom: 60px;
     }
 
     @media (min-width: $screen-lg){
@@ -16,6 +34,7 @@
     @media (min-width: $screen-xl){
         padding-top: 130px;
         padding-bottom: 280px;
+        margin-bottom: 70px;
     }
 }
 
@@ -42,28 +61,74 @@
 }
 
 .features__top-button{
-    display: block;
-    position: relative;
+    padding: 0 30px;
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+
+    @media (min-width: $screen-lg){
+        max-width: 450px;
+    }
+}
+
+.features__top-link{
+    display: block;
+    position: relative;
     padding-left: 80px;
     color: $white;
     text-decoration: none;
+    font-size: 14px;
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
     &:before{
         content: '';
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 60px;
-        height: 60px;
-        // border-radius: 50%;
-        // border: 1px solid $white;
+        width: 55px;
+        height: 55px;
+        z-index: 1;
         background-image: svg-load('play-circle.svg' fill=$white);
-        background-size: 60px 60px;
+        background-size: 55px 55px;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        transition: background $transition-time;
+
+        @media (min-width: $screen-xl){
+            width: 65px;
+            height: 65px;
+            background-size: 65px 65px;
+        }
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        transition: background $transition-time;
+    }
+
+    &:hover{
+
+        &:before{
+            border-radius: 50%;
+            background-image: svg-load('play-circle-s.svg' fill=$white);
+        }
+
+        &:after{
+            background-color: $gray-dark;
+        }
+
     }
 }
 
@@ -81,6 +146,93 @@
 
 .features__item{
     @include col();
-    @include col(md, 6);
+    @include col(md, 6, $grid-columns, 60px);
+    @include col(lg, 6, $grid-columns, 80px);
     @include col(xl, 6, $grid-columns, 120px);
 }
+
+.features__item-wrapper{
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 35px;
+    @media (min-width: $screen-xl){
+        padding-left: 80px;
+    }
+}
+
+.features__icon{
+    position: absolute;
+    left: 0;
+    top: 4px;
+    fill: $yelgreen;
+}
+
+.features__svg{
+    @media (min-width: $screen-xl){
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.features__title{
+    color: $yelgreen;
+    margin: 0 0 15px;
+}
+
+.features__text{
+    font-size: 14px;
+    margin: 0;
+    color: $gray-dark;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+    }
+}
+
+.features__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $screen-md){
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    @media (min-width: $screen-lg){
+
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+}
+
+.features__btn{
+    max-width: 175px;
+    width: 100%;
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+
+    &:last-child{
+        max-width: 190px;
+        margin-top: 10px;
+
+        @media (min-width: $screen-md){
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+}
+
+

@@ -1,5 +1,5 @@
 mixin action(data)
-    section.action.section
+    section.action
         ul.action__list
             each item in data.list
                 li.action__item
@@ -9,4 +9,3 @@ mixin action(data)
                         p.action__text=item.text
         .action__button
             a(href="#").action__btn.btn.btn__border.btn__border--green Все акции
-    

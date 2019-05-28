@@ -3,12 +3,18 @@ mixin features(data)
         .features__top
             .features__top-wrapper
                 h2.features__top-title Полезные свойства чая Матча
-                a(href="#").features__top-button Узнайте об изготовлении и полезных свойствах чая Матча за 2 минуты
+                .features__top-button
+                    a(href="#").features__top-link Узнайте об изготовлении и полезных свойствах чая Матча за 2 минуты
         .features__wrapper
             ul.features__list
                 each item in data.list
                     li.features__item
-                        != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'customClass', iconWidth: '37', iconHeight: '37'})
-                        .features__descr
-                            h3.features__title=item.title
-                            p.features__text=item.text
+                        .features__item-wrapper
+                            .features__icon
+                                != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'features__svg', iconWidth: '35', iconHeight: '35'})
+                            .features__descr
+                                h3.features__title=item.title
+                                p.features__text=item.text
+        .features__buttons
+            a(href="#").features__btn.btn.btn--green Перейти к каталогу
+            a(href="#").features__btn.btn.btn__border Посмотреть рецепты

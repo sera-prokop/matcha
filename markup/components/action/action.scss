@@ -1,5 +1,14 @@
 .action{
     @include container();
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 35px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-bottom: 40px;
+    }
 }
 
 .action__list{
@@ -43,11 +52,11 @@
     text-decoration: none;
 
     @media (min-width: $screen-md) {
-        padding: 35px 30px 80px; 
+        padding: 35px 30px 80px;
     }
 
     @media (min-width: $screen-lg) {
-        padding: 50px 35px 80px;    
+        padding: 50px 35px 80px;
     }
 
     @media (min-width: $screen-xl) {
@@ -62,11 +71,11 @@
     width: 70%;
 
     @media (min-width: $screen-md) {
-        font-size: 19px;    
+        font-size: 19px;
     }
 
     @media (min-width: $screen-xl) {
-        font-size: 27px;    
+        font-size: 27px;
     }
 
     &:after{
@@ -98,10 +107,3 @@
 .action__btn{
     min-width: 160px;
 }
-
-// .action__picture{
-//     width: 45%;
-//     position: absolute;
-//     bottom: 0;
-//     right: 0;
-// }
