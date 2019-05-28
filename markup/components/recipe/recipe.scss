@@ -1,0 +1,87 @@
+.recipe{
+  background-color: $white;
+  padding-bottom: 30px;
+  padding-top: 40px;
+
+  @media (min-width: $screen-lg){
+    padding-bottom: 40px;
+    padding-top: 50px;
+  }
+
+  @media (min-width: $screen-xl){
+    padding-bottom: 50px;
+    padding-top: 70px;
+  }
+}
+
+.recipe__wrapper{
+  @include container();
+}
+
+.recipe__list{
+  @include row();
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.recipe__item{
+  @include col();
+  @include col(md, 4, $grid-columns, 20px);
+  @include col(lg, 4, $grid-columns, 25px);
+  @include col(xl, 4, $grid-columns, 30px);
+  margin-bottom: 35px;
+}
+
+.recipe__link-img{
+  display: inline-block;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-xl){
+    margin-bottom: 25px;
+  }
+}
+
+.recipe__picture{
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+
+  @media (min-width: $screen-md){
+    height: 160px;
+  }
+
+  @media (min-width: $screen-lg){
+    height: 220px;
+  }
+
+  @media (min-width: $screen-xl){
+    height: 265px;
+  }
+}
+
+.recipe__link-text{
+  text-decoration: none;
+}
+
+.recipe__text{
+  margin: 0;
+  color: $gray-darken;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  @media (min-width: $screen-xl){
+    font-size: 20px;
+  }
+}
+
+.recipe__button{
+  text-align: center;
+}
+
+.recipe__btn{
+  max-width: 150px;
+  width: 100%;
+}

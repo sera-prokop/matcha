@@ -1,0 +1,13 @@
+mixin recipe(data)
+    section.recipe
+        .recipe__wrapper
+            h2.recipe__title.title-h2 Рецепты и статьи
+            ul.recipe__list
+                each item in data.list
+                    li.recipe__item
+                        a(href="#").recipe__link-img
+                            img.recipe__picture.lazy(data-src=`%=static=%img/assets/recipe/${item.img}` alt="img")
+                        a(href="#").recipe__link-text
+                            p.recipe__text=item.text
+            .recipe__button
+                a(href="#").recipe__btn.btn.btn__border.btn__border--green Узнать больше
