@@ -1,0 +1,86 @@
+.features__top{
+    background-image: url(%=static=%/assets/features/bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 130px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-top: 110px;
+        padding-bottom: 170px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-top: 130px;
+        padding-bottom: 280px;
+    }
+}
+
+.features__top-title{
+    font-size: 25px;
+    font-weight: 400;
+    color: $white;
+    margin: 0 0 35px;
+    padding: 0 10px;
+    text-align: center;
+
+    @media (min-width: $screen-md){
+        font-size: 32px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 38px;
+        margin-bottom: 65px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 47px;
+    }
+}
+
+.features__top-button{
+    display: block;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 80px;
+    color: $white;
+    text-decoration: none;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        // border-radius: 50%;
+        // border: 1px solid $white;
+        background-image: svg-load('play-circle.svg' fill=$white);
+        background-size: 60px 60px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+}
+
+.features__wrapper{
+    @include container();
+}
+
+.features__list{
+    @include row();
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.features__item{
+    @include col();
+    @include col(md, 6);
+    @include col(xl, 6, $grid-columns, 120px);
+}

@@ -1,0 +1,14 @@
+mixin features(data)
+    section.features
+        .features__top
+            .features__top-wrapper
+                h2.features__top-title Полезные свойства чая Матча
+                a(href="#").features__top-button Узнайте об изготовлении и полезных свойствах чая Матча за 2 минуты
+        .features__wrapper
+            ul.features__list
+                each item in data.list
+                    li.features__item
+                        != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'customClass', iconWidth: '37', iconHeight: '37'})
+                        .features__descr
+                            h3.features__title=item.title
+                            p.features__text=item.text
