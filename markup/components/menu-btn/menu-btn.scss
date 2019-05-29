@@ -4,6 +4,7 @@
   min-width: 180px;
   @media (min-width: $screen-md){
     position: relative;
+    min-width: 205px;
   }
   @media (min-width: $screen-xl){
     min-width: 256px;
@@ -16,10 +17,16 @@
     min-height: 41px;
     &:hover, &:focus{
       background-color: $yelgreen-dark;
+      outline: none;
     }
     &:active{
       background-color: $yelgreen-darken;
     }
+
+    @media (min-width: $screen-md){
+      max-width: 55px;
+    }
+
     @media (min-width: $screen-xl){
       min-height: 51px;
       max-width: 68px;
@@ -37,7 +44,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 138px;
+  //max-width: 138px;
   &:hover, &:focus{
     background-color: $yelgreen-dark;
   }
@@ -46,7 +53,7 @@
   }
   @media (min-width: $screen-xl){
       min-height: 51px;
-      max-width: 187px;
+      //max-width: 187px;
       font-size: 17px;
   }
 }
@@ -60,6 +67,7 @@
   height: 0;
   z-index: 10;
   transition: $transition-time;
+  background-color: $white;
 }
 
 .menu-btn__catalog--open{

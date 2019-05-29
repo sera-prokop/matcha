@@ -2,7 +2,8 @@ mixin footer(data)
     footer.footer
         .footer__top
             .footer__accordion#footer-accordion
-                .footer__control О компании
+                .footer__wrap
+                    .footer__control О компании
                     ul.footer__list
                         li.footer__item
                             a(href="#").footer__link О компании
@@ -12,7 +13,8 @@ mixin footer(data)
                             a(href="#").footer__link Партнерам
                         li.footer__item
                             a(href="#").footer__link Контакты
-                .footer__control Информация
+                .footer__wrap
+                    .footer__control Информация
                     ul.footer__list
                         li.footer__item
                             a(href="#").footer__link Новости
@@ -22,7 +24,8 @@ mixin footer(data)
                             a(href="#").footer__link Обзоры
                         li.footer__item
                             a(href="#").footer__link Рецепты
-                .footer__control Каталог товаров
+                .footer__wrap
+                    .footer__control Каталог товаров
                     ul.footer__list
                         li.footer__item
                             a(href="#").footer__link Матча царемониальный
@@ -49,7 +52,8 @@ mixin footer(data)
 
             .footer__contacts
                 a(href="tel:+74996538857").footer__phone +7 (499) 653-88-57
-                a(href="#").footer__feedback Обратная связь
+                a(href="#").footer__feedback
+                    span Обратная связь
                 a(href="mailto:info@matchavam.ru").footer__mail info@matchavam.ru
 
                 .footer__social
@@ -58,7 +62,7 @@ mixin footer(data)
                     a(href="#" aria-label="inst").footer__icon.footer__icon--inst
 
                 .footer__button
-                    a(href="#").btn.btn--green Личный кабинет
+                    a(href="#").footer__btn.btn.btn--green Личный кабинет
 
         .footer__bottom
             p.footer__copy @ 2010-2017  ООО «Матчавам» - Натуральный вьетнамский кофе, чай, продукты и аксессуары. Доставка по москве и всей россии.

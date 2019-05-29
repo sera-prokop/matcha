@@ -6,10 +6,13 @@ mixin user-nav(data)
         li.user-nav__item
             a.user-nav__link(href="#" aria-label="Избранное")
                 != pugHelpers.Icon.call(locals, {iconName: 'heart', className: 'user-nav__svg', iconWidth: '18', iconHeight: '18'})
+                != pugHelpers.Icon.call(locals, {iconName: 'heart-s', className: 'user-nav__svg user-nav__svg--hover', iconWidth: '18', iconHeight: '18'})
         li.user-nav__item
             a.user-nav__link(href="#" aria-label="Личный кабинет")
                 != pugHelpers.Icon.call(locals, {iconName: 'user', className: 'user-nav__svg', iconWidth: '18', iconHeight: '18'})
+                //-!= pugHelpers.Icon.call(locals, {iconName: 'user-alt', className: 'user-nav__svg user-nav__svg--hover', iconWidth: '18', iconHeight: '18'})
         li.user-nav__item.cart
             a.user-nav__link(href="#" aria-label="Корзина")
                 != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'user-nav__svg', iconWidth: '18', iconHeight: '18'})
+                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart-s', className: 'user-nav__svg user-nav__svg--hover', iconWidth: '18', iconHeight: '18'})
                 span.cart__num 5

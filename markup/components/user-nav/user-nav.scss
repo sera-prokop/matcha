@@ -12,9 +12,28 @@
   display: inline-block;
   padding: 7px;
   fill: $gray;
+  width: 32px;
+  height: 36px;
+
+  //transition: $transition-time;
+
+  &:hover{
+    fill: $yelgreen-darken;
+    .user-nav__svg--hover{
+      z-index: 1;
+      fill: $yelgreen-darken;
+    }
+  }
+
   @media  (min-width: $screen-md){
     padding: 7px 15px;
   }
+
+  @media (min-width: $screen-lg){
+    width: 52px;
+    height: 40px;
+  }
+
   &--search{
     @media  (min-width: $screen-md){
       display: none;
@@ -36,12 +55,37 @@
   align-items: center;
   border-radius: 50%;
   color: $white;
+  z-index: 2;
+
+  @media (min-width: $screen-md){
+    top: 1px;
+    right: 6px;
+  }
+
+  @media (min-width: $screen-lg){
+
+  }
+
+  @media (min-width: $screen-xl){
+
+  }
 
 }
 
 .user-nav__svg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: 0.2s;
+
   @media (min-width: $screen-xl){
     width: 22px;
     height: 22px;
+  }
+
+  &--hover{
+    fill: transparent;
+    z-index: -1;
   }
 }

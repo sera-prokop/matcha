@@ -7,7 +7,7 @@ mixin menu-catalog(data)
                 a(href=item.link)= item.name
     ul.menu-catalog__down.menu-down
         li.menu-down__item
-            a(href="#").menu-down__link.menu-down--action %Акции
+            a(href="#").menu-down__link.menu-down__link--action %Акции
         li.menu-down__item
             a(href="#").menu-down__link Доставка и оплата
         li.menu-down__item
@@ -16,5 +16,6 @@ mixin menu-catalog(data)
 mixin loop-menu-catalog(list)
     each item in list
         li.menu-catalog__item
-            != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'menu-catalog__svg', iconWidth: '21', iconHeight: '21'})
-            a(href=item.link)= item.name
+            a.menu-catalog__link(href=item.link)
+                != pugHelpers.Icon.call(locals, {iconName: item.svg, className: 'menu-catalog__svg', iconWidth: '21', iconHeight: '21'})
+                span.menu-catalog__text= item.name
