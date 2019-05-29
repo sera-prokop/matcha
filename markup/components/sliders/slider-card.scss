@@ -1,0 +1,108 @@
+.slider-card {
+  position: relative;
+  //padding-bottom: 25px;
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.slider-card__container{
+  position: relative;
+}
+
+
+// Pagination
+
+.slider-card__pagination {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -35px;
+  width: 100%;
+
+  @media (min-width: $screen-xl) {
+    bottom: -45px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin-left: 25px;
+    background-color: rgba(#000, 0.15);
+    outline: none;
+
+    &:hover {
+      background-color: rgba(#000, 0.25);
+    }
+
+    &:active {
+      background-color: rgba(#000, 1);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $yelgreen;
+
+    &:hover {
+      background-color: $yelgreen-darken;
+    }
+
+    &:active {
+      background-color: $yelgreen-dark;
+    }
+  }
+}
+
+
+//Buttons
+
+.slider-card__btn {
+  height: 40px;
+  width: 40px;
+  border: 1px solid $gray-light;
+  border-radius: 50%;
+  outline: none;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: $screen-md) {
+    height: 45px;
+    width: 45px;
+  }
+
+  @media (min-width: $screen-xl){
+    height: 55px;
+    width: 55px;
+  }
+
+  &--prev {
+    background-image: svg-load('arrow-left.svg' fill=$gray-light);
+    background-size: 14px 14px;
+    left: -15px;
+
+    @media (min-width: 1250px){
+      left: -45px;
+    }
+
+    @media (min-width: 1340px){
+      left: -80px;
+      background-size: 17px 17px;
+    }
+  }
+
+  &--next {
+    background-image: svg-load('arrow-right.svg' fill=$gray-light);
+    background-size: 14px 14px;
+    right: -15px;
+
+    @media (min-width: 1250px){
+      right: -45px;
+    }
+
+    @media (min-width: 1340px){
+      right: -80px;
+      background-size: 17px 17px;
+    }
+  }
+}
+

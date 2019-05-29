@@ -2,6 +2,10 @@
   max-width: 365px;
   width: 100%;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
 }
 
 .cart__wrapper{
@@ -157,6 +161,7 @@
 .cart__basket{
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .cart__field-num{

@@ -43,6 +43,9 @@
 }
 
 .latest__title{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
   font-size: 25px;
   font-weight: 400;
   color: $yelgreen;
@@ -52,6 +55,7 @@
     font-size: 32px;
     margin-bottom: 20px;
     background-image: none;
+    padding: 0 15px;
   }
 
   @media  (min-width: $screen-lg){

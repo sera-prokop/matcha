@@ -1,6 +1,6 @@
 mixin popular(data)
     section.popular
         .popular__top
-            h2.popular__title=data.title
-            a(href="#") Все предложения
+            h2.popular__title.title-h2=data.title
+            a(href="#").popular__link Все предложения
         +slider-card(data)

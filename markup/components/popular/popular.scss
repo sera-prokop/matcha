@@ -1,3 +1,85 @@
 .popular{
   @include container();
+  padding-top: 40px;
+  padding-bottom: 55px;
+
+  @media (min-width: $screen-md){
+    padding-top: 55px;
+  }
+
+  @media (min-width: $screen-xl){
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+}
+
+.popular__top{
+  margin-bottom: 40px;
+  @media (min-width: $screen-md){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $screen-lg){
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl){
+    margin-bottom: 60px;
+  }
+
+}
+
+.popular__title{
+  text-align: left;
+  margin-bottom: 15px;
+  @media (min-width: $screen-md){
+    margin-bottom: 0;
+  }
+}
+
+.popular__link{
+  font-size: 13px;
+  color: $gray;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $screen-md){
+    font-size: 14px;
+  }
+
+  @media (min-width: $screen-xl){
+    font-size: 16px;
+  }
+
+  &:after{
+    content: '';
+    flex-shrink: 0;
+    margin-left: 10px;
+    display: inline-block;
+    background-image: svg-load('arrow-right.svg', fill=$gray);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 13px;
+    height: 14px;
+  }
+
+  &:hover, &:focus{
+    color: $gray-dark;
+
+    &:after{
+      background-image: svg-load('arrow-right.svg', fill=$gray-dark);
+    }
+  }
+
+  &:active{
+    color: $gray-darker;
+
+    &:after{
+      background-image: svg-load('arrow-right.svg', fill=$gray-darker);
+    }
+  }
 }

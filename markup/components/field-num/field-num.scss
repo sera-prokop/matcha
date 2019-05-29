@@ -30,6 +30,7 @@
     width: 100%;
     border: 1px solid $color-danger;
     color: $gray-dark;
+    box-sizing: border-box;
     @media (min-width: $screen-xl){
       padding: 15px 45px;
     }
