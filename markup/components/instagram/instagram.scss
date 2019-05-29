@@ -2,6 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
+
+  @media (min-width: $screen-md){
+    padding-top: 50px;
+  }
+
+  @media (min-width: $screen-xl){
+    padding-top: 60px;
+  }
+
   &_container {
     background: white;
   }
@@ -11,25 +21,30 @@
   &__title {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    @media (min-width: $screen-md) {
-    //   width: 195px;
-      align-items: center;
-    }
+    align-items: center;
+
     &-link {
       text-decoration: none;
       text-transform: none;
-      font-size: 16px;
-      font-weight: 500;
-      color: $black;
-      margin-top: -20px;
-      @media (min-width: $screen-md) {
-          margin: 0;
-        }
-      @media (min-width: $screen-xl) {
-        margin-top: -5px;
-        
+      font-size: 23px;
+      font-weight: 600;
+      color: $shadowGreen;
+      margin-top: 15px;
+      text-align: center;
+
+      @media (min-width: $screen-md){
+        font-size: 28px;
       }
+
+      @media (min-width: $screen-lg){
+        font-size: 33px;
+      }
+
+      @media (min-width: $screen-xl){
+        font-size: 37px;
+      }
+
+
       &:hover {
         // color: $gold;
       }
@@ -47,17 +62,17 @@
       }
     @media (min-width: $screen-xl) {
       margin-top: 0;
-      
+
     }
   }
   &__item {
-    
-    
+
+
       width: 25%;
       &:nth-child(n+5) {
         display: none;
       }
-    
+
     @media (min-width: $screen-md){
         width: calc(100%/8);
         // background: url('../img/loader2.gif') 50% no-repeat;
