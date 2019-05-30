@@ -7,13 +7,14 @@
   "dependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "closest": "0.0.1",
+    "jquery": "^3.4.1",
     "object-fit-images": "^3.2.4",
     "swiper": "^4.5.0",
     "vanilla-lazyload": "^12.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "jquery": "^3.4.1",
     "postcss-inline-svg": "^3.1.1",
     "postcss-object-fit-images": "^1.1.2",
     "postcss-pxtorem": "^4.0.1",

@@ -1,0 +1,41 @@
+.authorization-form{
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $screen-md){
+    max-width: 350px;
+  }
+
+  @media (min-width: $screen-xl){
+    max-width: 380px;
+  }
+}
+
+
+.authorization-form__buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.authorization-form__btn{
+  padding: 0 30px;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-md){
+    padding: 0 40px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-lg){
+    padding: 0 45px;
+  }
+
+  @media (min-width: $screen-xl){
+    padding: 0 60px;
+    margin-bottom: 40px;
+  }
+}
+

@@ -1,6 +1,14 @@
 .tabs-authorization{
   @include container();
+  margin-top: 55px;
+  margin-bottom: 55px;
+
+  @media (min-width: $screen-xl){
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
 }
+
 
 .tabs {
 

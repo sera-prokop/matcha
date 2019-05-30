@@ -11,6 +11,7 @@ import 'components/field-num/field-num';
 import 'components/faq/faq';
 import 'components/footer/footer';
 import 'components/tabs/tabs';
+import 'components/form-validation/form-validation';
 
 
 import ready from './documentReady.js';

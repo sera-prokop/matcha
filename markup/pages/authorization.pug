@@ -3,6 +3,11 @@ extends _template.pug
 include ../components/head/head
 
 include ../components/tabs/tabs
+include ../components/form/form
+include ../components/field-text/field-text
+include ../components/authorization-form/authorization-form
+include ../components/registration-form/registration-form
+include ../components/field-toggler/field-toggler
 
 
 
@@ -25,9 +30,10 @@ block content
                 },
             ], 'some-mod')
                 +tabs-item('tab00', true, 'some')
-                    p Форма авторизации
+                    +authorization-form(authorization_form)
+
                 +tabs-item('tab01')
-                    p Форма регистрации
+                    +registration-form(registration_form)
 
         +instagram(instagram)
 

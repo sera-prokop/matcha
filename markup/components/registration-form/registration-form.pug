@@ -1,0 +1,65 @@
+mixin registration-form(data)
+    .registration-form
+        .registration-form__form.form(data-check-form="false")
+            .form__field.form__field--top
+                +field-text({
+                    title: 'Имя',
+                    helpText: 'Не менее 2-х символов. Обязательно.',
+                    attrs: {
+                        require: true,
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+                +field-text({
+                    title: 'Фамилия',
+                    helpText: 'Фамилия. Не менее 2-х символов. Не обязательно.',
+                    attrs: {
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+                +field-text({
+                    title: 'Отчество',
+                    helpText: 'Фамилия. Не менее 2-х символов. Не обязательно.',
+                    attrs: {
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+            .form__field.form__field--down
+                +field-text({
+                    title: 'Телефон',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'tel',
+                        require: true,
+                        placeholder: '+7 (000) 000-00-00',
+                        'data-check-pattern': data.pattern.phone
+                    }
+                })
+                +field-text({
+                    title: 'E-mail',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'info@matchavam.ru',
+                        require: true,
+                        'data-check-pattern': data.pattern.mail
+                    }
+                })
+            +field-toggler([
+                {
+                    title: 'Я даю согласие на обработку моих <a href="#">персональных данных</a>',
+                    attrs: {
+                        name: 'check0',
+                        checked: true,
+                    }
+                },
+                {
+                    title: 'Я согласен получать информацию о специальных предложениях, интересных новинках и акциях',
+                    attrs: {
+                        name: 'check1',
+                    }
+                },
+            ])
+
+            .registration-form__button
+                button(type="submit").registration-form__btn.btn.btn--green Зарегистрироваться

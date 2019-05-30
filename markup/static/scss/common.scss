@@ -79,21 +79,5 @@ main{
     }
 }
 
-.title-h2{
-    font-size: 25px;
-    font-weight: 400;
-    color: $yelgreen;
-    text-align: center;
-    margin: 0 0 40px;
-    @media  (min-width: $screen-md){
-        font-size: 32px;
-        margin-bottom: 50px;
-    }
-    @media  (min-width: $screen-lg){
-        font-size: 47px;
-        margin-bottom: 60px;
-    }
-}
-
 
 

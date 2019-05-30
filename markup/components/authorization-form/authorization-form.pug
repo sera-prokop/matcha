@@ -1,0 +1,30 @@
+mixin authorization-form(data)
+    .authorization-form
+        //init validation
+        //<form data-check-form>
+        .authorization-form__form.form(data-check-form="false")
+            +field-text({
+                title: 'E-mail',
+                helpText: 'Обязательно.',
+                attrs: {
+                    type: 'email',
+                    placeholder: 'info@matchavam.ru',
+                    require: true,
+                    'data-check-pattern': data.pattern.mail
+                }
+            })
+            +field-text({
+                title: 'Пароль',
+                helpText: 'Не менее 6-ти символов.',
+                mods: 'last',
+                attrs: {
+                    placeholder: '********',
+                    require: true,
+                    type: 'password',
+                    'data-check-pattern': data.pattern.password,
+                }
+            })
+
+            .authorization-form__buttons
+                button(type="submit").authorization-form__btn.btn.btn--green Войти
+                a(href="#").authorization-form__link.link Забыли пароль?

@@ -1,0 +1,152 @@
+.field-toggler {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin-bottom: $typo-margin-vertical;
+
+  &__title {
+    //@include field-name;
+  }
+
+  &__input-wrap {
+
+    & + & {
+      margin-top: $typo-margin-vertical;
+    }
+
+    &--error {
+
+      #{$block-name}__name-text,
+      #{$block-name}__help-text {
+        color: $color-danger;
+      }
+
+      #{$block-name}__name-text:after {
+        background: $color-danger;
+      }
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 50px;
+    margin-right: 0.6em;
+    font-weight: 400;
+    line-height: $line-height;
+    @media (min-width: $screen-xl){
+      padding-left: 60px;
+      line-height: 26px;
+    }
+
+  }
+
+  &__name-text {
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    @media (min-width: $screen-xl){
+      font-size: 14px;
+    }
+
+    @at-root input:disabled ~ & {
+      cursor: not-allowed;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 40px;
+      height: 22px;
+      background-color: $gray-lighten;
+      border: 1px solid $gray-lighter;
+      border-radius: 11px;
+
+      @media (min-width: $screen-xl){
+        width: 44px;
+        height: 24px;
+      }
+
+
+      @at-root input:focus ~ & {
+        //@include field-focus;
+      }
+    }
+
+    @at-root input:disabled ~ &:before {
+      border-color: $gray-light;
+      background: $gray-lighter;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 4.5px;
+      left: 20px;
+      width: 18px;
+      height: 18px;
+      background-color: $white;
+      background-image: svg-load('times.svg', fill=$gray);
+      background-size: 9px 7px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      border-radius: 50%;
+      transition: transform 0.3s;
+      @media (min-width: $screen-xl){
+        width: 20px;
+        height: 20px;
+        left: 22px;
+      }
+    }
+
+    @at-root input:checked ~ &:after {
+      transform: translate(-18px, 0);
+      background-image: svg-load('check.svg', fill=$gray);
+      @media (min-width: $screen-xl){
+        transform: translate(-20px, 0);
+      }
+    }
+
+    @at-root input:checked ~ &:before {
+      background-color: $yelgreen-dark;
+      border-color: $yelgreen-dark;
+    }
+
+    @at-root input:disabled ~ &:after {
+      background-color: $gray-light;
+    }
+
+    a{
+      color: inherit;
+
+      &:hover{
+        text-decoration: none;
+      }
+
+      &:focus{
+        color: $gray-light;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__help-text-wrap {
+    padding-left: 3.2em;
+  }
+
+  &__help-text {
+    //@include field-help-text;
+  }
+}
