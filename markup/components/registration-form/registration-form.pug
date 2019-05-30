@@ -1,5 +1,7 @@
 mixin registration-form(data)
     .registration-form
+        //init validation
+        //<form data-check-form>
         .registration-form__form.form(data-check-form="false")
             .form__field.form__field--top
                 +field-text({
@@ -12,14 +14,14 @@ mixin registration-form(data)
                 })
                 +field-text({
                     title: 'Фамилия',
-                    helpText: 'Фамилия. Не менее 2-х символов. Не обязательно.',
+                    helpText: 'Фамилия. Не менее 2-х символов.',
                     attrs: {
                         'data-check-pattern': data.pattern.text
                     }
                 })
                 +field-text({
                     title: 'Отчество',
-                    helpText: 'Фамилия. Не менее 2-х символов. Не обязательно.',
+                    helpText: 'Фамилия. Не менее 2-х символов.',
                     attrs: {
                         'data-check-pattern': data.pattern.text
                     }
@@ -51,6 +53,7 @@ mixin registration-form(data)
                     attrs: {
                         name: 'check0',
                         checked: true,
+                        'data-check-state' : "on"
                     }
                 },
                 {

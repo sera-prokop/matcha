@@ -60,7 +60,7 @@ mixin field-toggler(togglers, title, isRadio)
             allMods = allMods + ' field-toggler__input-wrap--' + modsList[i].trim();
           }
         }
-      .field-toggler__input-wrap(class=allMods)
+      .field-toggler__input-wrap.field-checkbox__input-wrap(class=allMods)
         label.field-toggler__name
           input.field-toggler__input(type=type)&attributes(toggler.attrs)
           span.field-toggler__name-text!= toggler.title

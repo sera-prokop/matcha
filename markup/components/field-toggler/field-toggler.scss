@@ -15,7 +15,9 @@
       margin-top: $typo-margin-vertical;
     }
 
+    &.field-checkbox__input-wrap--error,
     &--error {
+
 
       #{$block-name}__name-text,
       #{$block-name}__help-text {
@@ -23,7 +25,7 @@
       }
 
       #{$block-name}__name-text:after {
-        background: $color-danger;
+        //background: $color-danger;
       }
     }
   }
