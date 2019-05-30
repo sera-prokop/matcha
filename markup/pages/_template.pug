@@ -33,15 +33,16 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         section.page__wrapper
-            +header()
-            +header-sticky()
+            .page__content
+                +header()
+                +header-sticky()
 
-            //- Include your components here
+                //- Include your components here
 
-            block content
+                block content
 
-        .page__footer
-            +footer()
+            .page__footer
+                +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

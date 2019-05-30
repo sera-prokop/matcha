@@ -10,6 +10,9 @@ import 'components/sliders/sliders';
 import 'components/field-num/field-num';
 import 'components/faq/faq';
 import 'components/footer/footer';
+import 'components/tabs/tabs';
+
+
 import ready from './documentReady.js';
 
 const lazyLoadOptions = {

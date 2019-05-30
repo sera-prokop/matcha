@@ -23,7 +23,17 @@ html, body {
 }
 
 .page__wrapper {
-    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.page__content{
+    flex: 1 0 auto;
+}
+
+.page__footer{
+    flex: 0 0 auto;
 }
 
 * html .page__wrapper {

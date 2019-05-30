@@ -1,0 +1,36 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/tabs/tabs
+
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        section.tabs-authorization
+            +tabs([
+                {
+                    'id': 'tab00',
+                    'text': 'Я уже покупал',
+                    'isActive': true,
+                },
+                {
+                    'id': 'tab01',
+                    'text': 'Я новый покупатель',
+                },
+            ], 'some-mod')
+                +tabs-item('tab00', true, 'some')
+                    p Форма авторизации
+                +tabs-item('tab01')
+                    p Форма регистрации
+
+        +instagram(instagram)
+
+
+
+
