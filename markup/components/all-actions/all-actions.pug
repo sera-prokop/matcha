@@ -1,0 +1,19 @@
+mixin all-actions(data)
+    section.all-actions
+        h2.all-actions.title-h2 Все действующие акции
+
+        ul.all-actions__list
+            - for(var i = 0; i < 4; i++) {
+                li.all-actions__item
+                    .main-slider-descr.lazy(data-bg="url(%=static=%img/assets/sliders/main-img.jpg)")
+                        .main-slider-descr__wrapper
+                            h2.main-slider-descr__title С нами выгодно
+                            ul.main-slider-descr__list
+                                li.main-slider-descr__item Оформите заказ от 2 000 рублей и получите упаковку матча в подарок
+                                li.main-slider-descr__item Скидка 10% на первую покупку
+                            .main-slider-descr__button
+                                a(href="#").main-slider-descr__btn.btn.btn--green Перейти к каталогу
+            - }
+
+
+

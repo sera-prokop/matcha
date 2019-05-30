@@ -28,7 +28,7 @@
     padding: 10px 45px;
     text-align: center;
     width: 100%;
-    border: 1px solid $color-danger;
+    border: 1px solid #f7f7f7;
     color: $gray-dark;
     box-sizing: border-box;
     @media (min-width: $screen-xl){
@@ -65,14 +65,14 @@
       right: 1px;
       background: svg-load('plus.svg' fill=$gray-dark) center no-repeat;
       background-size: 8px 8px;
-      border-left: 1px solid $color-danger;
+      border-left: 1px solid #f7f7f7;
     }
 
     &--minus {
       left: 1px;
       background: svg-load('minus.svg' fill=$gray-dark) center no-repeat;
       background-size: 8px 8px;
-      border-right: 1px solid $color-danger;
+      border-right: 1px solid #f7f7f7;
     }
 
     #{$block-name}--disabled & {
@@ -96,11 +96,11 @@
     #{$block-name}__name,
     #{$block-name}__input,
     #{$block-name}__help-text {
-      color: $color-danger;
+      color: #f7f7f7;
     }
 
     #{$block-name}__input {
-      border-color: $color-danger;
+      border-color: #f7f7f7;
       background-color: lighten($color-danger, 35%);
     }
   }

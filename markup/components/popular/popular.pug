@@ -4,3 +4,30 @@ mixin popular(data)
             h2.popular__title.title-h2=data.title
             a(href="#").popular__link Все предложения
         +slider-card(data)
+
+
+
+mixin all-popular(data)
+    section.popular
+        .popular__top
+            h2.popular__title.title-h2 Все специальные предложения
+        ul.popular__list
+            li.popular__item
+                +cart(data.cart)
+            li.popular__item
+                +cart(data.cart2)
+            li.popular__item
+                +cart(data.cart3)
+            li.popular__item
+                +cart(data.cart)
+            li.popular__item
+                +cart(data.cart2)
+            li.popular__item
+                +cart(data.cart3)
+        +pagination()
+            +pagination-item('1', '/1', true)
+            +pagination-item('2', '/2')
+            +pagination-item('3', '/3')
+            +pagination-item('4', '/4')
+            +pagination-item('...')
+            +pagination-item('999', '/999')

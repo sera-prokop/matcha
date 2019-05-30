@@ -1,0 +1,28 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/all-actions/all-actions
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Акции')
+        +cart-day(cart_day)
+        +all-actions(all_actions)
+        +all-popular(popular.popular)
+        +set-banner(set_banner)
+        +text-block()
+        +instagram(instagram)
+
+
+
+

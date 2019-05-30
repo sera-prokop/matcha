@@ -83,3 +83,18 @@
     }
   }
 }
+
+.popular__list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @include row();
+}
+
+.popular__item{
+  @include col();
+  @include col(md, 4, $grid-columns, 20px);
+  @include col(ml, 4, $grid-columns, 26px);
+  @include col(md, 4, $grid-columns, 30px);
+
+}
