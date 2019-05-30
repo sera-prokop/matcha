@@ -98,3 +98,8 @@
   @include col(md, 4, $grid-columns, 30px);
 
 }
+
+.popular__pagination{
+  display: flex;
+  justify-content: center;
+}

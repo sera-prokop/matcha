@@ -1,34 +1,50 @@
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  margin-top: $typo-margin-vertical;
-  margin-bottom: $typo-margin-vertical;
-  //@include container();
+  margin-top: 35px;
+  //margin-bottom: $typo-margin-vertical;
+
+  @media (min-width: $screen-xl){
+    margin-top: 55px;
+  }
 
   &__item {
-    display: block;
-    min-width: 2em;
-    // border: 1px solid $border-color;
-    padding: 0.3em 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $gray-lighten;
+    border-radius: 50%;
     text-decoration: none;
     text-align: center;
-    color: $text-color;
+    color: $gray-lighten;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    &:first-child{
+      margin-left: 0;
+    }
 
     & + & {
-      border-left: 0;
+      //border-left: 0;
     }
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $text-color;
     }
 
     @at-root a#{&} {
 
       &:hover,
       &:focus {
-        background-color: $gray-lightest;
+        border-color: $yelgreen-darken;
+      }
+
+      &:active{
+        color: $yelgreen-darken;
+        border-color: $yelgreen-darken;
       }
     }
 
@@ -37,7 +53,8 @@
     }
 
     &--active {
-      background-color: $gray-lightest;
+      border-color: $yelgreen;
+      color: $yelgreen-darker;
     }
   }
 }
