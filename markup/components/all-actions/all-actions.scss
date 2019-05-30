@@ -1,13 +1,5 @@
 .all-actions{
   @include container();
-
-  .main-slider-descr{
-    padding: 20px;
-  }
-
-  .main-slider-descr__wrapper{
-    margin: 0;
-  }
 }
 
 .all-actions__list{

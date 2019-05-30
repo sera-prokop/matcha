@@ -1,0 +1,34 @@
+// One action page
+
+.action-one{
+  padding-bottom: 35px;
+
+  @media (min-width: $screen-md){
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $screen-xl){
+    padding-bottom: 70px;
+  }
+
+  @include container();
+
+  .action-bg{
+
+    @media (min-width: $screen-md){
+      height: 320px;
+    }
+
+    @media (min-width: $screen-lg){
+      height: 405px;
+    }
+
+    @media (min-width: $screen-xl){
+      height: 491px;
+    }
+
+  }
+}
+
+
+

@@ -9,3 +9,14 @@ mixin action(data)
                         p.action__text=item.text
         .action__button
             a(href="#").action__btn.btn.btn__border.btn__border--green Все акции
+
+
+mixin action-bg(data)
+    .action-bg.lazy(data-bg="url(%=static=%img/assets/sliders/main-img.jpg)")
+        .action-bg__wrapper
+            h2.action-bg__title С нами выгодно
+            ul.action-bg__list
+                li.action-bg__item Оформите заказ от 2 000 рублей и получите упаковку матча в подарок
+                li.action-bg__item Скидка 10% на первую покупку
+            .action-bg__button
+                a(href="#").action-bg__btn.btn.btn--green Перейти к каталогу

@@ -1,0 +1,28 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/all-actions/all-actions
+include ../components/action-one/action-one
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Акции', '/actions')
+            +breadcrumbs-item('Найдете дешевле - вернем разницу')
+        +action-one()
+        +action-one-text()
+        +text-block()
+        +instagram(instagram)
+
+
+
+
