@@ -6,7 +6,7 @@ let mySwiper = new Swiper('.main-slider__container', {
     lazy: true,
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.main-slider__pagination',
         clickable: true,
     },
 
@@ -28,7 +28,7 @@ let SliderCard = new Swiper('.slider-card__container', {
     lazy: true,
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.slider-card__pagination',
         clickable: true,
     },
 

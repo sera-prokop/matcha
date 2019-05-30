@@ -5,11 +5,11 @@ mixin latest(data)
                 h2.latest__title=data.title
             .latest__descr
                 //.lazy(data-bg="url(%=static=%img/assets/latest/bg1.png), url(%=static=%img/assets/latest/bg2.jpg)")
-
-                p.latest__text=data.text
-                ul.latest__list
-                    each item in data.list
-                        li.latest__item=item.text
-                .latest__buttons
-                    a(href="#").latest__btn.latest__btn--green.btn.btn--green Заказать голубой матча
-                    a(href="#").latest__btn.latest__btn--border.btn.btn__border Перейти к каталогу
+                .latest__descr-wrap
+                    p.latest__text=data.text
+                    ul.latest__list
+                        each item in data.list
+                            li.latest__item=item.text
+                    .latest__buttons
+                        a(href="#").latest__btn.latest__btn--green.btn.btn--green Заказать голубой матча
+                        a(href="#").latest__btn.latest__btn--border.btn.btn__border Перейти к каталогу

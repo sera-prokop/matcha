@@ -32,12 +32,13 @@
   margin: 0 0 30px;
   @media  (min-width: $screen-md){
     background-image: none;
-    margin: 0 0 0 auto;
-    width: 60%;
+    //margin: 0 0 0 auto;
+    @include container();
+    //width: 60%;
     height: auto;
   }
   @media  (min-width: $screen-lg){
-    width: 50%;
+    //width: 50%;
   }
 }
 
@@ -50,24 +51,41 @@
   margin: 0;
 
   @media  (min-width: $screen-md){
+    padding-left: 0;
+    padding-right: 0;
     font-size: 32px;
     margin-bottom: 20px;
     background-image: none;
+    width: 60%;
+    margin-left: auto;
   }
 
   @media  (min-width: $screen-lg){
     font-size: 47px;
+    width: 50%;
   }
 }
 
 .set-banner__descr{
   @include container();
   @media  (min-width: $screen-md){
-    width: 60%;
-    margin-left: auto;
-    margin-right: 0;
+    //width: 60%;
+    //margin-left: auto;
+    //margin-right: 0;
   }
   @media  (min-width: $screen-lg){
+    //width: 50%;
+  }
+}
+
+.set-banner__descr-wrap{
+
+  @media (min-width: $screen-md){
+    width: 60%;
+    margin-left: auto;
+  }
+
+  @media (min-width: $screen-lg){
     width: 50%;
   }
 }
