@@ -1,0 +1,14 @@
+mixin favorites(mods, border)
+
+    -
+        var allMods = '';
+        if(typeof(mods) !== 'undefined' && mods) {
+            var modsList = mods.split(',');
+            for (var i = 0; i < modsList.length; i++) {
+                allMods = allMods + ' ' + modsList[i].trim();
+            }
+        }
+        if(typeof(border) !== 'undefined' && border)
+            allMods = allMods + '  favorites--border';
+
+    a.favorites(href="#" aria-label="Избранное" class=allMods)

@@ -7,15 +7,8 @@
     margin-top: 70px;
     margin-bottom: 70px;
   }
-}
 
-
-.tabs {
-
-}
-
-
-.tabs__links {
+  .tabs__links {
 
   margin: 0 0 35px;
   padding: 0;
@@ -39,6 +32,8 @@
   .no-js & {
     display: none;
   }
+
+
 }
 
 
@@ -77,8 +72,7 @@
   }
 }
 
-
-.tabs__link {
+  .tabs__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +115,45 @@
     font-size: 16px;
     min-height: 50px;
   }
+}
+}
+
+
+.tabs {
+
+}
+
+
+.tabs__links {
+
+  margin: 0 0 35px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  .no-js & {
+    display: none;
+  }
+
+
+}
+
+
+.tabs__link-wrap {
+  margin-bottom: 20px;
+
+
+
+  &--active {
+
+    background-color: #ccc;
+  }
+
+}
+
+
+.tabs__link {
+
 }
 
 

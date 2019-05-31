@@ -1,0 +1,29 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/product/product
+include ../components/product-descr/product-descr
+include ../components/product-tabs/product-tabs
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', '/home')
+          +breadcrumbs-item('Каталог', '/catalog')
+          +breadcrumbs-item('Матча церемониальный', '/mt')
+          +breadcrumbs-item('Чай Матча Весенний, 100г')
+        +product()
+        +main-descr(main_descr)
+        +popular(popular.popular)
+        +set-banner(set_banner)
+        +action(action)
+        +text-block()
+        +instagram(instagram)

@@ -1,0 +1,29 @@
+mixin product-tabs(data)
+    .product-tabs
+        +tabs([
+          {
+            'id': 'product-descr',
+            'text': 'Описание',
+            'isActive': true,
+          },
+          {
+            'id': 'product-overview',
+            'text': 'Отзывы',
+          },
+          {
+            'id': 'product-review',
+            'text': 'Обзоры',
+          },
+          {
+            'id': 'product-faq',
+            'text': 'Вопросы и ответы',
+          },
+          ])
+            +tabs-item('product-descr', true)
+                p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.0
+            +tabs-item('product-overview')
+                p За словесными горами в стране, гласных и согласных живут рыбные тексты.1
+            +tabs-item('product-review')
+                p За словесными горами в стране, гласных и согласных живут рыбные тексты.2
+            +tabs-item('product-faq')
+                +faq()
