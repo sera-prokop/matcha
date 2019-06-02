@@ -12,6 +12,15 @@ import 'components/faq/faq';
 import 'components/footer/footer';
 import 'components/tabs/tabs';
 import 'components/form-validation/form-validation';
+import 'components/favorites/favorites';
+
+
+// fix for error (event.target.className || "").indexOf is not a function
+// (SVGAnimatedString.prototype).indexOf = (() => {
+//     return function () {
+//         return this.baseVal.indexOf.apply(this.baseVal, arguments);
+//     };
+// })();
 
 
 import ready from './documentReady.js';

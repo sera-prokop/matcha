@@ -1,1 +1,313 @@
+.product-tabs {
+    background-color: $body-bg;
+    //background-color: #ccc;
+    padding: 30px 0;
 
+    @media (min-width: $screen-md){
+        padding: 45px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+
+
+    .tabs__links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .tabs__link-wrap {
+        margin-right: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+
+        @media (min-width: $screen-md) {
+            margin-right: 20px;
+        }
+
+        @media (min-width: $screen-lg) {
+            margin-right: 25px;
+        }
+
+        @media (min-width: $screen-xl) {
+            margin-right: 45px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--big {
+            position: relative;
+
+            .tabs__link{
+                @include bg($tabs-b-mobile);
+
+                @media (min-width: $screen-lg) {
+                    @include bg($tabs-middle-b);
+                }
+
+                @media (min-width: $screen-xl) {
+                    @include bg($tabs-b);
+                }
+            }
+
+            &.tabs__link-wrap--active {
+                .tabs__link{
+                    @include bg($tabs-b-mobile-a);
+
+                    @media (min-width: $screen-lg) {
+                        @include bg($tabs-middle-b-a);
+                    }
+
+                    @media (min-width: $screen-xl) {
+                        @include bg($tabs-b-a);
+                    }
+                }
+
+                &:after{
+                    color: $yelgreen-dark;
+                    background-color: $white;
+                }
+            }
+
+            &:after{
+                content: attr(data-num);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: 20px;
+                top: -5px;
+                font-size: 9px;
+                font-weight: 700;
+                color: $white;
+                background-color: $yelgreen-dark;
+                border-radius: 50%;
+
+            }
+        }
+
+        &--active {
+
+            .tabs__link{
+                color: $white;
+                @include bg($tabs-mobile-a);
+
+                @media (min-width: $screen-lg){
+                    @include bg($tabs-middle-a);
+                }
+
+                @media (min-width: $screen-xl){
+                    @include bg($tabs-a);
+                }
+            }
+        }
+    }
+
+
+    .tabs__link {
+        display: inline-block;
+        text-decoration: none;
+        color: $gray-darken;
+        text-align: center;
+
+        font-size: 14px;
+        line-height: 33px;
+
+
+        @include bg($tabs-mobile);
+
+        @media (min-width: $screen-lg) {
+            line-height: 38px;
+            @include bg($tabs-middle);
+        }
+
+        @media (min-width: $screen-xl) {
+            font-size: 17px;
+            line-height: 45px;
+            @include bg($tabs);
+        }
+    }
+}
+
+
+.product-tabs__container{
+    @include container();
+}
+
+
+
+// Product tabs description
+
+
+.product-tabs-descr__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    span{
+        display: block;
+        color: #646362;
+        font-weight: 600;
+        margin-bottom: 5px;
+
+        @media (min-width: $screen-md){
+            display: inline-block;
+            width: 250px;
+        }
+
+        @media (min-width: $screen-xl){
+            width: 290px;
+        }
+    }
+}
+
+.product-tabs-descr__text{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+    }
+}
+
+
+
+// Product tabs overview
+
+
+.product-tabs-overview{
+    position: relative;
+}
+
+
+.product-tabs-overview__text-block{
+    background-color: $white;
+    padding: 30px 35px;
+    margin: 0 24px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: $gray;
+    max-width: 815px;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+        padding: 40px 60px;
+        margin: 0 36px 30px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.product-tabs-overview__user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray-lightest;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $gray-lightest;
+    fill: $white;
+
+    position: absolute;
+    left: 0;
+
+    @media (min-width: $screen-xl){
+        width: 72px;
+        height: 72px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50%;
+    }
+}
+
+.product-tabs-overview__svg{
+
+    @media (min-width: $screen-xl){
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+.product-tabs-overview__user-name{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 10px;
+    color: $yelgreen;
+
+    @media (min-width: $screen-xl){
+        font-size: 18px;
+    }
+}
+
+
+.product-tabs-overview__form{
+    margin: 0 24px 15px;
+    max-width: 815px;
+
+    @media (min-width: $screen-xl){
+        margin: 0 36px 30px;
+    }
+}
+
+
+.product-tabs-overview__item{
+    @include row();
+
+}
+
+
+.product-tabs-overview__btn{
+    .btn{
+        max-width: 150px;
+        width: 100%;
+
+        @media (min-width: $screen-xl){
+            max-width: 180px;
+        }
+    }
+}
+
+.tabs__content-item{
+    .recipe{
+        padding: 0;
+        background-color: $body-bg;
+    }
+
+    .faq{
+        padding: 0;
+    }
+}

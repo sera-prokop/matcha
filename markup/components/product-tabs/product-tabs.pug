@@ -1,29 +1,124 @@
 mixin product-tabs(data)
     .product-tabs
-        +tabs([
-          {
-            'id': 'product-descr',
-            'text': 'Описание',
-            'isActive': true,
-          },
-          {
-            'id': 'product-overview',
-            'text': 'Отзывы',
-          },
-          {
-            'id': 'product-review',
-            'text': 'Обзоры',
-          },
-          {
-            'id': 'product-faq',
-            'text': 'Вопросы и ответы',
-          },
-          ])
-            +tabs-item('product-descr', true)
-                p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.0
-            +tabs-item('product-overview')
-                p За словесными горами в стране, гласных и согласных живут рыбные тексты.1
-            +tabs-item('product-review')
-                p За словесными горами в стране, гласных и согласных живут рыбные тексты.2
-            +tabs-item('product-faq')
-                +faq()
+        .product-tabs__container
+            +tabs([
+              {
+                'id': 'product-descr',
+                'text': 'Описание',
+                'isActive': true,
+              },
+              {
+                'id': 'product-overview',
+                'text': 'Отзывы',
+              },
+              {
+                'id': 'product-review',
+                'text': 'Обзоры',
+              },
+              {
+                'id': 'product-faq',
+                'text': 'Вопросы и ответы',
+                'mods': 'big',
+                'data_num': 7
+              },
+              ])
+                +tabs-item('product-descr', true)
+                    +product-tabs-descr
+                +tabs-item('product-overview')
+                    +product-tabs-overwiev(product_tabs)
+                +tabs-item('product-review')
+                    +recipe(recipe)
+                +tabs-item('product-faq')
+                    +faq()
+
+
+mixin product-tabs-descr()
+    .product-tabs-bescr
+        ul.product-tabs-descr__list
+            li.product-tabs-descr__item
+                p
+                    span Состав:
+                    | 100% натуральный зеленый чай Матча (весенний сбор)
+            li.product-tabs-descr__item
+                p
+                    span Производитель:
+                    | ChinhSon Tea Company, Вьетнам
+            li.product-tabs-descr__item
+                p
+                    span Упаковка:
+                    | Фольгированный пакет с замком зип-лок
+            li.product-tabs-descr__item
+                p
+                    span Нетто:
+                    | 100 г
+            li.product-tabs-descr__item
+                p
+                    span Количество порций:
+                    | 50
+            li.product-tabs-descr__item
+                p
+                    span Цена за порцию:
+                    | 17 рублей 80 копеек
+        p.product-tabs-descr__text Задача организации, в особенности же укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития. Таким образом сложившаяся структура организации способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки
+
+
+
+mixin product-tabs-overwiev(data)
+    .product-tabs-overview
+        .product-tabs-overview__text-block
+            .product-tabs-overview__user(aria-label="Иконка")
+                != pugHelpers.Icon.call(locals, {iconName: "user", className: "product-tabs-overview__svg", iconWidth: "23", iconHeight: "23"})
+            h4.product-tabs-overview__user-name Алексей Кандинский
+            .product-tabs-overview__date 01.04.2019
+            p.product-tabs-overview__text Задача организации, в особенности же укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития. Таким образом сложившаяся структура организации способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки
+        .product-tabs-overview__text-block
+            .product-tabs-overview__user
+               img(src="%=static=%img/assets/product/user.jpg" alt="User")
+            h4.product-tabs-overview__user-name Анастасия Абросимова
+            .product-tabs-overview__date 05.01.2019
+            p.product-tabs-overview__text Задача организации, в особенности же укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. С другой стороны дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития. Таким образом сложившаяся структура организации способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также сложившаяся структура организации способствует подготовки
+        .product-tabs-overview__form
+
+            .product-tabs-overview__item
+                +field-text({
+                    title: 'Имя',
+                    helpText: 'Не менее 2-х символов. Обязательно.',
+                    mods: 'product-overview',
+                    attrs: {
+                        placeholder: 'Введите ваше имя',
+                        require: true,
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+
+                +field-text({
+                    title: 'E-mail',
+                    helpText: 'Обязательно.',
+                    mods: 'product-overview',
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'info@matchavam.ru',
+                        require: true,
+                        'data-check-pattern': data.pattern.mail
+                    }
+                })
+
+                +field-text({
+                    title: 'Сообщение',
+                    helpText: 'Не обязательно.',
+                    mods: 'product-textarea',
+                    isTextarea: true,
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'Начните писать',
+                    }
+                })
+
+            .product-tabs-overview__btn
+                button(type="submit").btn.btn--green Отправить
+
+
+
+
+
+

@@ -59,11 +59,12 @@
 
   @media (min-width: $screen-md){
     top: 1px;
-    right: 6px;
+    right: -7px;
   }
 
   @media (min-width: $screen-lg){
-
+      top: 1px;
+      right: 6px;
   }
 
   @media (min-width: $screen-xl){

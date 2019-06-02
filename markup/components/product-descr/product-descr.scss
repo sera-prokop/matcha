@@ -1,1 +1,360 @@
+.product-descr {
+    padding-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+        padding-bottom: 60px;
+    }
+}
+
+
+.product-descr__title {
+    font-size: 25px;
+    font-weight: 400;
+    color: $gray-darken;
+    margin: 0 0 20px;
+
+    @media (min-width: $screen-md) {
+        font-size: 27px;
+    }
+
+    @media (min-width: $screen-lg) {
+        font-size: 35px;
+    }
+
+    @media (min-width: $screen-xl) {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+}
+
+
+.product-desrc__article {
+    color: $gray;
+    font-size: 13px;
+    margin-bottom: 25px;
+    font-weight: 300;
+
+    @media (min-width: $screen-md) {
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+
+.product-descr__cost-block {
+    display: flex;
+}
+
+
+.product-descr__cost {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 25px;
+
+    @media (min-width: $screen-xl) {
+        margin-right: 30px;
+    }
+}
+
+
+.product-descr__cost-real {
+    font-size: 24px;
+    color: $gray-darken;
+    line-height: 22px;
+    display: flex;
+    align-items: flex-start;
+    fill: $gray-darken;
+
+    @media (min-width: $screen-md) {
+        font-size: 21px;
+        line-height: 18px;
+    }
+
+    @media (min-width: $screen-lg) {
+        font-size: 28px;
+        line-height: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+        font-size: 31px;
+    }
+}
+
+
+.product-descr__cost-svg {
+    @media (min-width: $screen-md) {
+        width: 16px;
+        height: 16px;
+    }
+
+    @media (min-width: $screen-lg) {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+.product-descr__cost-before {
+    color: #d8d8d8;
+    font-size: 24px;
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+
+.product-descr__bonus {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 50px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        background-image: svg-load('coins.svg' fill=$yelgreen-dark);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $yelgreen-dark;
+        margin-right: 10px;
+    }
+}
+
+
+.product-descr__bonus-num {
+    color: $yelgreen-dark;
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (min-width: $screen-lg) {
+        font-size: 20px;
+    }
+}
+
+
+.product-descr__bonus-text {
+    font-size: 12px;
+    color: $gray-lighten;
+
+    @media (min-width: $screen-md) {
+        font-size: 13px;
+    }
+
+    @media (min-width: $screen-lg) {
+        font-size: 14px;
+    }
+}
+
+
+.product-descr__cost-profit {
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    color: $crusta;
+    fill: $crusta;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-lg) {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+
+
+.product-descr__avialibility {
+    margin-bottom: 20px;
+}
+
+
+.product-descr__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+.product-descr__item {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #646362;
+
+    @media (min-width: $screen-xl) {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    span {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+}
+
+
+.product-descr__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+        margin-bottom: 45px;
+    }
+}
+
+
+.product-descr__field-num {
+    width: 130px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+        width: 155px;
+        margin-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+        width: 160px;
+        margin-right: 25px;
+    }
+
+    @media (min-width: $screen-xl) {
+        width: 175px;
+    }
+}
+
+
+.product-descr__cart {
+    margin-right: 15px;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+        margin-right: 60px;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin-right: 0;
+    }
+}
+
+
+.product-descr__fast {
+
+    @media (min-width: $screen-lg) {
+        order: 1;
+        width: 100%;
+    }
+}
+
+
+.product_descr__favorites {
+    margin-left: 15px;
+
+    @media (min-width: $screen-lg) {
+        margin-top: 0;
+    }
+}
+
+
+.product-descr__social {
+    color: #646362;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-xl) {
+        font-size: 16px;
+    }
+
+    p {
+        margin: 0 0 15px;
+    }
+}
+
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.social__item {
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+        margin-right: 20px;
+    }
+}
+
+
+.social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: $transition-time - 0.1s;
+    border: 1px solid $gray-lighter;
+    fill: $gray-lighter;
+
+    @media (min-width: $screen-xl) {
+        width: 50px;
+        height: 50px;
+        background-size: 20px 20px;
+    }
+
+    &:hover {
+        border-color: $gray;
+        fill: $gray;
+    }
+
+    &:active {
+        border-color: $gray-light;
+        fill: $gray-light;
+    }
+}
+
+
+.social__svg {
+
+    @media (min-width: $screen-xl) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 

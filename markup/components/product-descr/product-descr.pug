@@ -2,19 +2,21 @@ mixin product-descr(data)
     .product-descr
         h2.product-descr__title Чай Матча Весенний, 100г
         p.product-desrc__article Артикул: 06.418
+
         .product-descr__cost-block
             .product-descr__cost
-                span.product-descr__cost-real 990р
+                span.product-descr__cost-real 990
+                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-r', className: 'product-descr__cost-svg', iconWidth: '20', iconHeight: '20'})
                 span.product-descr__cost-before 3300
-                span.product-descr__cost-profit Выгода 2300р
-
-            a(href="#").product-descr__bonus
+            .product-descr__bonus
                 span.product-descr__bonus-num +100
                 span.product-descr__bonus-text бонусов на счет
-        .product-descr__avialibility.avialibility
-            .avialibility__text.avialibility__text--yes В наличии
-            .avialibility__text.avialibility__text--not Нет в наличии
-            .avialibility__text.avialibility__text--soon Ожидается
+
+        .product-descr__cost-profit Выгода 2300
+            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-b', className: 'customClass', iconWidth: '13', iconHeight: '13'})
+
+        +avialibility(data, 'product-descr__avialibility')
+
         ul.product-descr__list
             li.product-descr__item
                 p
@@ -22,7 +24,7 @@ mixin product-descr(data)
                     | 100% натуральный зеленый чай Матча (весенний сбор)
             li.product-descr__item
                 p
-                    span Производитель
+                    span Производитель:
                     | ChinhSon Tea Company, Вьетнам
             li.product-descr__item
                 p
@@ -41,7 +43,7 @@ mixin product-descr(data)
                     span Цена за порцию:
                     | 17 рублей 80 копеек
 
-        .product-descr
+        .product-descr__btns
             .product-descr__field-num
                 +field-num({
                     mods: '',
@@ -52,13 +54,17 @@ mixin product-descr(data)
                         step: '1',
                     }
                 })
-            a(href="#").product-descr__btn.btn.btn--green.btn--cart-icon В корзину
-            a(href="#" aria-label="Избранное").product-descr__favorites.favorites
+            a(href="#").product-descr__cart.btn.btn--green.btn--cart-icon В корзину
+            .product-descr__fast
+                a(href="#").btn.btn__border.btn__border--green Быстрый заказ
             +favorites('product_descr__favorites', true)
-            a(href="#").product-descr__fast.btn.btn__border.btn__border--green Быстрый заказ
+
         .product-descr__social
-            p Поделиться в социальных сетях
+            p Поделиться в социальных сетях:
             ul.social.social--round
                 li.social__item
-                    a(href="#" aria-label="Вконтакте").social__link.social__link--vk
+                    a(href="javascript:;" aria-label="Вконтакте").social__link.social__link--vk
+                        != pugHelpers.Icon.call(locals, {iconName: 'vk', className: 'social__svg', iconWidth: '18', iconHeight: '18'})
+                li.social__item
                     a(href="#" aria-label="Facebook").social__link.social__link--fb
+                        != pugHelpers.Icon.call(locals, {iconName: 'facebook-f', className: 'social__svg', iconWidth: '18', iconHeight: '18'})

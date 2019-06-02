@@ -58,10 +58,10 @@ let galleryThumbs = new Swiper('.gallery-thumbs', {
 
 let galleryTop = new Swiper('.gallery-top', {
     // spaceBetween: 10,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
     thumbs: {
         swiper: galleryThumbs
     },
@@ -74,9 +74,9 @@ let galleryTop = new Swiper('.gallery-top', {
             let prevSlide = document.querySelector(`.gallery-thumbs .swiper-slide:nth-child(${activeIndex - 1})`);
 
             if (nextSlide && !nextSlide.classList.contains('swiper-slide-visible')) {
-                this.thumbs.swiper.slideNext()
+                this.thumbs.swiper.slideNext();
             } else if (prevSlide && !prevSlide.classList.contains('swiper-slide-visible')) {
-                this.thumbs.swiper.slidePrev()
+                this.thumbs.swiper.slidePrev();
             }
 
         }

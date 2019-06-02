@@ -1,1 +1,3 @@
-var data = {product: {}};
+var data = {product: {
+
+    }};

@@ -40,7 +40,15 @@ mixin tabs(props, mods)
       each tab in props
         -
           var isActive = (typeof(tab.isActive) !== 'undefined' && tab.isActive) ? '  tabs__link-wrap--active' : ''
-        li.tabs__link-wrap(class=isActive, role='presentation')
+
+            var allMods2 = '';
+            if(typeof(tab.mods) !== 'undefined' && tab.mods) {
+                var modsList = tab.mods.split(',');
+                for (var i = 0; i < modsList.length; i++) {
+                    allMods2 = allMods2 + ' tabs__link-wrap--' + modsList[i].trim();
+                }
+            }
+        li.tabs__link-wrap(class=isActive, role='presentation' class=allMods2 data-num=tab.data_num)
           a.tabs__link(href='#'+tab.id, data-toggle='tab', role='tab')!= tab.text
     .tabs__content-wrapper
       block

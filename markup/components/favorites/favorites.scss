@@ -5,7 +5,39 @@
     border-radius: 50%;
     width: 44px;
     height: 44px;
+    transition: $transition-time;
+
+    @media (min-width: $screen-xl){
+        width: 50px;
+        height: 50px;
+    }
+
     &--border{
         border: 1px solid $yelgreen;
+        background-image: svg-load('mug-hot.svg', fill=$yelgreen);
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: 59% 45%;
+
+        @media (min-width: $screen-xl){
+            background-size: 18px 18px;
+            background-position: 56% 48%;
+        }
+
+        &:hover{
+            border-color: $yelgreen-darken;
+            background-image: svg-load('mug-hot.svg', fill=$yelgreen-darken);
+        }
+    }
+
+    &--active{
+        background-color: $yelgreen;
+        border-color: $yelgreen;
+        background-image: svg-load('mug-hot.svg', fill=$white);
+        &:hover{
+            background-image: svg-load('mug-hot.svg', fill=$white);
+            background-color: $yelgreen-darken;
+            border-color: $yelgreen-darken;
+        }
     }
 }
