@@ -1,0 +1,30 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/category/category
+include ../components/category-filter/category-filter
+include ../components/category-card/category-card
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Каталог', '/catalog')
+            +breadcrumbs-item('Матча церемониальный')
+        +category()
+        +set-banner(set_banner)
+        +action(action)
+        +text-block()
+        +instagram(instagram)
+
+
+
+

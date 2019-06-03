@@ -1,0 +1,86 @@
+.category-filter{
+    @include container();
+    position: relative;
+
+    .field-checkbox{
+        margin-bottom: 0;
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .field-checkbox__name{
+        cursor: pointer;
+        padding-left: 25px;
+
+        &:hover, &:focus{
+            .field-checkbox__name-text{
+                &:before{
+                    border-color: $yelgreen;
+                }
+            }
+        }
+
+        input:checked ~ .field-checkbox__name-text:before {
+            border-color: $yelgreen;
+        }
+    }
+
+    .field-checkbox__name-text{
+
+        &:after{
+            width: 11px;
+            height: 11px;
+            border: none;
+            background-color: $yelgreen;
+            border-radius: 50%;
+            top: 5px;
+            transform: none;
+            box-shadow: none;
+        }
+
+        &:before{
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            top: 2px;
+        }
+    }
+}
+
+.category-filter__top-btns{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.category-filter__btn{
+    padding: 0 25px;
+    flex-shrink: 0;
+
+    @media (min-width: $screen-md){
+        display: none;
+    }
+
+    &:before{
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin-right: 12px;
+        background-image: svg-load('sliders-h.svg' fill=$white);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    &--close{
+        &:before{
+            background-image: svg-load('plus.svg' fill=$white);
+            transform: rotate(45deg);
+            background-size: 10px 10px;
+        }
+    }
+}
+
+

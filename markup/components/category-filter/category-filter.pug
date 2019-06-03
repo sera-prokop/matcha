@@ -1,0 +1,250 @@
+mixin category-filter(data)
+    section.category-filter
+        .category-filter__top-btns
+            +field-checkbox([
+                {
+                    title: 'Товары в наличии',
+                    attrs: {
+                        name: 'stock',
+                    }
+                },
+            ])
+
+            button(data-target-id="filter-block" data-target-class-toggle="filter-block--open").category-filter__btn.btn.btn--green Фильтры
+
+        #filter-block.filter-block
+            h3.filter-block__title Фильтр по параметрам
+            a(href="#").filter-block__result Показать 200 товаров
+            .filter-block__wrap
+                h4.filter-block__control.filter-block__control--active Розничная цена
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+                .filter-block__content
+                    .filter-block__btns
+                        label
+                            span от
+                            input(type="number").filter-block__value.filter-block__value--from.field-text__input
+                        label
+                            span до
+                            input(type="number").filter-block__value.filter-block__value--to.field-text__input
+
+                    input(type="text" class="js-range-slider" name="my_range" value=""
+                        data-min="0"
+                        data-max="5000"
+                        data-from="0"
+                        data-to="5000"
+                        )
+
+
+            .filter-block__wrap
+                h4.filter-block__control Состав
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+
+                .filter-block__content
+                    .filter-block__btns
+                        label
+                            span от
+                            input(type="number").filter-block__value.filter-block__value--from.field-text__input
+                        label
+                            span до
+                            input(type="number").filter-block__value.filter-block__value--to.field-text__input
+
+                    input(type="text" class="js-range-slider" name="my_range" value=""
+                        data-min="0"
+                        data-max="2000"
+                        data-from="0"
+                        data-to="2000"
+                        )
+
+            .filter-block__wrap
+                h4.filter-block__control Вес нетто
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+
+                .filter-block__content
+                    .filter-block__btns
+                        label
+                            span от
+                            input(type="number").filter-block__value.filter-block__value--from.field-text__input
+                        label
+                            span до
+                            input(type="number").filter-block__value.filter-block__value--to.field-text__input
+
+                    input(type="text" class="js-range-slider" name="my_range" value=""
+                        data-min="0"
+                        data-max="3000"
+                        data-from="0"
+                        data-to="2000"
+                        )
+
+
+            .filter-block__wrap
+                h4.filter-block__control Рекомендуется для прес-фильтров
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+
+                .filter-block__content
+                    +field-checkbox([
+                        {
+                            title: 'Да',
+                            attrs: {
+                                name: 'stock1',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Нет',
+                            attrs: {
+                                name: 'stock2',
+                                checked: true,
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Не знаю',
+                            attrs: {
+                                name: 'stock3',
+                            }
+                        },
+                    ])
+
+            .filter-block__wrap
+                h4.filter-block__control Здоровое питание(ЗОЖ)
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+                .filter-block__content
+                    +field-checkbox([
+                        {
+                            title: 'Да',
+                            attrs: {
+                                name: 'stock3',
+                                checked: true,
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Нет',
+                            attrs: {
+                                name: 'stock3',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Не знаю',
+                            attrs: {
+                                name: 'stock3',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+
+            .filter-block__wrap
+                h4.filter-block__control Фермерская продукция
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+                .filter-block__content
+                    +field-checkbox([
+                        {
+                            title: 'Да',
+                            attrs: {
+                                name: 'stock4',
+                                checked: true,
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Нет',
+                            attrs: {
+                                name: 'stock4',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Не знаю',
+                            attrs: {
+                                name: 'stock4',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+
+            .filter-block__wrap
+                h4.filter-block__control.filter-block__control--active Товар недели
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+                .filter-block__content
+                    +field-checkbox([
+                        {
+                            title: 'Да',
+                            attrs: {
+                                name: 'stock5',
+                                checked: true,
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Нет',
+                            attrs: {
+                                name: 'stock5',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+                    +field-checkbox([
+                        {
+                            title: 'Не знаю',
+                            attrs: {
+                                name: 'stock5',
+                                type: 'radio',
+                            }
+                        },
+                    ])
+
+
+            .filter-block__wrap
+                h4.filter-block__control.filter-block__control--active Производитель
+                    != pugHelpers.Icon.call(locals, {iconName: "caret-down-l", className: "filter-block__svg", iconWidth: "15", iconHeight: "15"})
+                .filter-block__content
+                    +field-select(
+                        '',
+                        {
+                            name: 'select',
+                            id: 'select'
+                        },
+                        [
+                            {
+                                title: 'Производитель 1',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                            {
+                                title: 'Производитель 2',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                            {
+                                title: 'Производитель 3',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                            {
+                                title: 'Производитель 4',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                        ]
+                    )
+
+            .filter-block__bottom
+                button.filter-block__bottom-btn.btn.btn--green Показать
+                button.filter-block__bottom-btn.btn.btn__border.btn__border--green Сбросить

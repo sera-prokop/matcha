@@ -13,6 +13,8 @@ import 'components/footer/footer';
 import 'components/tabs/tabs';
 import 'components/form-validation/form-validation';
 import 'components/favorites/favorites';
+import 'components/category-filter/category-filter';
+import 'components/field-select/field-select';
 
 
 // fix for error (event.target.className || "").indexOf is not a function

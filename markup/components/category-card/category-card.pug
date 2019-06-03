@@ -1,0 +1,46 @@
+mixin category-card(data)
+    section.category-card
+        ul.category-card__list
+            li.category-card__item
+                +cart(data.cart)
+
+            li.category-card__item
+                +cart(data.cart2)
+
+            li.category-card__item
+                +cart(data.cart3)
+
+            li.category-card__item
+                +cart(data.cart)
+
+            li.category-card__item
+                +cart(data.cart2)
+
+            li.category-card__item
+                +cart(data.cart3)
+
+            li.category-card__item
+                +cart(data.cart)
+
+            li.category-card__item
+                +cart(data.cart2)
+
+            li.category-card__item
+                +cart(data.cart3)
+
+            li.category-card__item
+                +cart(data.cart)
+
+            li.category-card__item
+                +cart(data.cart2)
+
+            li.category-card__item
+                +cart(data.cart3)
+        .category-card__pagination
+            +pagination()
+                +pagination-item('1', '/1', true)
+                +pagination-item('2', '/2')
+                +pagination-item('3', '/3')
+                +pagination-item('4', '/4')
+                +pagination-item('...')
+                +pagination-item('999', '/999')

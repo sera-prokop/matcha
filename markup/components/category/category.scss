@@ -1,0 +1,35 @@
+.category-main{
+    @include container();
+    padding-bottom: 25px;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 35px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 55px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-bottom: 70px;
+    }
+}
+
+
+.category-main__wrapper{
+    @include row();
+}
+
+
+.category-filter{
+    @include col();
+    @include col(md, 4);
+    @include col(lg, 3);
+}
+
+
+.category-card{
+    @include col();
+    @include col(md, 8);
+    @include col(lg, 9);
+}
