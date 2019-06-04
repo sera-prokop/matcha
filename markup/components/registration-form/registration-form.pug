@@ -1,4 +1,4 @@
-mixin registration-form(data)
+mixin registration-form(data, button)
     .registration-form
         //init validation
         //<form data-check-form>
@@ -65,4 +65,6 @@ mixin registration-form(data)
             ])
 
             .registration-form__button
-                button(type="submit").registration-form__btn.btn.btn--green Зарегистрироваться
+                if button
+                    button(type="submit").registration-form__btn.btn.btn__border.btn__border--green Назад
+                button(type="submit").registration-form__btn.btn.btn--green=button ? 'Оформить заказ' : 'Зарегистрироваться'

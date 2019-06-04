@@ -1,0 +1,213 @@
+mixin checkout(data)
+    section.checkout
+        ul.checkout-top
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Корзина
+            li.checkout-top__item.checkout-top__item--active
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'pen', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Оформление заказа
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'truck', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Спасибо
+
+        .checkout__wrapper
+            .checkout__total
+                ul.checkout__total-list
+                    li.checkout__total-item
+                        span.checkout__total-name Товаров на
+                        span.checkout__total-num 531
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item
+                        span.checkout__total-name Общий вес
+                        span.checkout__total-num 512 г
+                    li.checkout__total-item
+                        span.checkout__total-name Доставка
+                        span.checkout__total-num 452
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item
+                        span.checkout__total-name Экономия
+                        span.checkout__total-num 134
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item.checkout__total-item--total
+                        span.checkout__total-name Итого
+                        span.checkout__total-num 1023
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-b', className: 'checkout__total-svg', iconWidth: '13', iconHeight: '15'})
+                    li.checkout__total-item.checkout__total-item--bonus
+                        span.checkout__total-name Бонусов на счету:
+                        span.checkout__total-num.checkout__total-num--bonus 50
+                a(href="#").btn.btn__border.btn__border--green Оплатить бонусами
+
+            .checkout__reg
+                .checkout__region.checkout__block
+                    h3.checkout__region-title.checkout__title Регион доставки
+                    +field-text({
+                        title: 'Город доставки',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                            name: 'comment',
+                            placeholder: 'Москва, Россия'
+                        }
+                    })
+
+                .checkout__payment.checkout__block
+                    h3.checkout__payment-title.checkout__title Оплата
+                    +field-radio([
+                        {
+                            title: 'Оплата при получении',
+                            mods: '',
+                            attrs: {
+                                name: 'payment',
+                                checked: true,
+                            }
+                        },
+                        {
+                            title: 'Оплата картой',
+                            mods: '',
+                            attrs: {
+                                name: 'payment',
+                            }
+                        }
+                    ])
+
+        .checkout__delivery.checkout-delivery.checkout__block
+            h3.checkout__delivery-title.checkout__title Доставка
+            .checkout-delivery__box
+                .checkout-delivery__img
+                    img(src="%=static=%img/assets/checkout/box.png" alt="alt")
+                .checkout-delivery__descr
+                    span.checkout-delivery__text Shiptor(Boxberyy Курьер)
+                    .checkout-delivery__item
+                        span.checkout-delivery__name Стоимость:
+                        span.checkout-delivery__num 531
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: '.checkout-delivery__svg', iconWidth: '10', iconHeight: '13'})
+                    .checkout-delivery__item
+                        span.checkout-delivery__name Срок доставки:
+                        span.checkout-delivery__num 3 рабочих дня
+
+            .checkout-delivery-list
+                +field-radio-img([
+                    {
+                        title: 'Shiptor (Boxberyy Курьер)',
+                        mods: '',
+                        img: 'checkout/box',
+                        attrs: {
+                            name: 'radio',
+                            checked: true,
+                        }
+                    },
+                    {
+                        title: 'Shiptor (CDEK Курьер)',
+                        mods: '',
+                        img: 'checkout/cd',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    },
+                    {
+                        title: 'Shiptor (DPD Курьер)',
+                        mods: '',
+                        img: 'checkout/dpd',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    },
+                    {
+                        title: 'Shiptor (IML Курьер)',
+                        mods: '',
+                        img: 'checkout/iml',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    },
+                    {
+                        title: 'Shiptor (PIC Курьер)',
+                        mods: '',
+                        img: 'checkout/pic',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    }, {
+                        title: 'Shiptor (DPD Курьер)',
+                        mods: '',
+                        img: 'checkout/dpd',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    },
+                    {
+                        title: 'Shiptor (IML Курьер)',
+                        mods: '',
+                        img: 'checkout/iml',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    },
+                    {
+                        title: 'Shiptor (PIC Курьер)',
+                        mods: '',
+                        img: 'checkout/pic',
+                        attrs: {
+                            name: 'radio',
+                        }
+                    }
+                ])
+
+                .checkout-delivery__pagination
+                    +pagination()
+                        +pagination-item('1', '/1', true)
+                        +pagination-item('2', '/2')
+                        +pagination-item('3', '/3')
+
+
+
+
+        .checkout__user.checkout__block
+            h3.checkout__user-title.checkout__title Покупатель
+            +registration-form(registration_form, true)
+            p Нажимая кнопку «Оформить заказ», вы даете согласие на обработку своих персональных данных»
+
+        .goods-order
+            .cart-item
+                .cart-item__img
+                    img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+                .cart-item__descr
+                    .cart-item__descr-text
+                        h3.cart-item__title Чай Матча Весенний, 30г
+                        p.cart-item__text Чай церемониальный
+                    .cart-item__bottom
+                        .cart-item__cost
+                            p.cart-item__total 820
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__svg', iconWidth: '12', iconHeight: '12'})
+                            .cart-item__one
+                                span.cart-item__discount 1200
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__discount-svg', iconWidth: '9', iconHeight: '9'})
+                                span.cart-item__one-item 410
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
+                                    | за одну упаковку
+
+                        .cart-item__num Кол-во 2 шт
+
+            .cart-item
+                .cart-item__img
+                    img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+                .cart-item__descr
+                    .cart-item__descr-text
+                        h3.cart-item__title Чай Матча Весенний, 30г
+                        p.cart-item__text Чай церемониальный
+                    .cart-item__bottom
+                        .cart-item__cost
+                            p.cart-item__total 820
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__svg', iconWidth: '12', iconHeight: '12'})
+                            .cart-item__one
+                                span.cart-item__discount 1200
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__discount-svg', iconWidth: '9', iconHeight: '9'})
+                                span.cart-item__one-item 410
+                                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
+                                    | за одну упаковку
+
+                        .cart-item__num Кол-во 2 шт

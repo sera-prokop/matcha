@@ -1,4 +1,4 @@
-mixin authorization-form(data)
+mixin authorization-form(data, button)
     .authorization-form
         //init validation
         //<form data-check-form>
@@ -27,4 +27,5 @@ mixin authorization-form(data)
 
             .authorization-form__buttons
                 button(type="submit").authorization-form__btn.btn.btn--green Войти
-                a(href="#").authorization-form__link.link Забыли пароль?
+                if !button
+                    a(href="#").authorization-form__link.link Забыли пароль?

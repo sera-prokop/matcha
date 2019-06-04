@@ -1,0 +1,23 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/checkout/checkout
+include ../components/authorization-form/authorization-form
+include ../components/registration-form/registration-form
+include ../components/field-toggler/field-toggler
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +checkout
+        +instagram(instagram)
+
+
+
+
