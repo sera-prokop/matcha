@@ -1,0 +1,86 @@
+mixin cart-block(data)
+    section.cart-block
+        h2.cart-block__title Корзина
+        ul.checkout-top
+            li.checkout-top__item.checkout-top__item--active
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Корзина
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'pen', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Оформление заказа
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'truck', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Спасибо
+
+        .cart-block__wrapper
+            .cart-block__bar
+                +cart-bar()
+            .cart-block__list
+                ul.cart-block-list
+                    li.cart-block-list__item
+                        +cart-item
+                    li.cart-block-list__item
+                        +cart-item
+                    li.cart-block-list__item
+                        +cart-item
+
+
+
+
+
+mixin cart-bar
+    .cart-bar
+        .cart-bar__item.cart-bar__item--total
+            span.cart-bar__total Итого
+            span.cart-bar__num 1023
+                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-r', className: 'cart-bar__svg', iconWidth: '13', iconHeight: '13'})
+        .cart-bar__item
+            span.cart-bar__total Скидка
+            span.cart-bar__num 0
+                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-bar__svg', iconWidth: '13', iconHeight: '13'})
+        .cart-bar__item
+            span.cart-bar__total Бонусы
+            span.cart-bar__num 40
+                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-bar__svg', iconWidth: '13', iconHeight: '13'})
+        .cart-bar__promo
+            input(type="text" placeholder="Введите промокод").cart-bar__input.field-text__input
+        .cart-bar__btns
+            a(href="#").btn.btn--green Оформить заказ
+            a(href="#").btn.btn__border.btn__border--green Быстрый заказ
+
+
+
+mixin cart-item
+    .cart-item
+        .cart-item__img
+            img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+        .cart-item__descr
+            .cart-item__descr-text
+                h3.cart-item__title Чай Матча Весенний, 30г
+                p.cart-item__text Чай церемониальный
+            .cart-item__bottom
+                .cart-item__num
+                    +field-num({
+                        mods: '',
+                        val: '1',
+                        attrs: {
+                            name: 'quantity',
+                            min: '1',
+                            step: '1',
+                        }
+                    })
+                .cart-item__cost
+                    p.cart-item__total 820
+                        != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__svg', iconWidth: '12', iconHeight: '12'})
+                    .cart-item__one
+                        span.cart-item__discount 1200
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__discount-svg', iconWidth: '9', iconHeight: '9'})
+                        span.cart-item__one-item 410
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
+                            | за одну упаковку
+            button.cart-item__close(aria-label="Закрыть")
+                != pugHelpers.Icon.call(locals, {iconName: 'times-l', className: 'cart-item__close-svg', iconWidth: '17', iconHeight: '17'})
+

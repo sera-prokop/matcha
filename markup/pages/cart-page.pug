@@ -1,0 +1,23 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/cart-block/cart-block
+include ../components/present/present
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +cart-block()
+        +present
+        +instagram(instagram)
+
+
+
+

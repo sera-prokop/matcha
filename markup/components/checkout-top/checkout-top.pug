@@ -1,0 +1,14 @@
+mixin checkout-top(data)
+    //-ul.checkout-top
+        li.checkout-top__item.checkout-top__item--active
+            .checkout-top__icon
+                != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+            span Корзина
+        li.checkout-top__item
+            .checkout-top__icon
+                != pugHelpers.Icon.call(locals, {iconName: 'pen', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+            span Оформление заказа
+        li.checkout-top__item
+            .checkout-top__icon
+                != pugHelpers.Icon.call(locals, {iconName: 'truck', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+            span Спасибо
