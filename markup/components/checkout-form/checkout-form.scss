@@ -1,1 +1,75 @@
+.checkout-form{
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        max-width: 600px;
+    }
+
+    @media (min-width: $screen-lg){
+        max-width: 620px;
+    }
+
+    @media (min-width: $screen-xl){
+        max-width: 750px;
+    }
+
+    .field-toggler{
+        @include col();
+        @include col(xs, 12, 12, 10px);
+        @include col(md, 12, 12, 20px);
+        margin-bottom: 35px;
+    }
+
+    .form__field--down{
+        .field-text--textarea{
+            @include col();
+            @include col(xs, 12, 12, 10px);
+            @include col(md, 12, 12, 20px);
+        }
+    }
+
+
+    textarea.field-text__input{
+        resize: none;
+        height: 160px;
+        width: 100%;
+
+        @media (min-width: $screen-md){
+
+        }
+
+        @media (min-width: $screen-lg){
+
+        }
+
+        @media (min-width: $screen-xl){
+
+        }
+    }
+}
+
+
+.checkout-form__button{
+    display: flex;
+    //margin: 0 -5px;
+    padding: 0 5px;
+
+    @media (min-width: $screen-md){
+        justify-content: space-between;
+        margin: 0 -5px;
+        padding: 0;
+    }
+}
+
+
+.checkout-form__btn{
+    padding: 0 40px;
+
+    &.btn--green{
+        padding: 0 25px;
+        margin-left: 20px;
+    }
+
+}
+
 

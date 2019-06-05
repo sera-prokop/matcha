@@ -1,5 +1,8 @@
 mixin goods-order(data)
     .goods-order
+        .goods-order__top
+            h3.goods-order__top-title.checkout__title Товары в заказе
+            a(href="#").goods-order__top-btn.btn.btn__border Изменить
         .cart-item
             .cart-item__img
                 img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
@@ -18,7 +21,8 @@ mixin goods-order(data)
                                 != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
                                 | за одну упаковку
 
-                    .cart-item__num Кол-во 2 шт
+                    .cart-item__num Кол-во
+                        span 2 шт
 
         .cart-item
             .cart-item__img
@@ -38,4 +42,5 @@ mixin goods-order(data)
                                 != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
                                 | за одну упаковку
 
-                    .cart-item__num Кол-во 2 шт
+                    .cart-item__num Кол-во
+                        span 2 шт

@@ -62,9 +62,9 @@ mixin checkout-form(data)
                 ])
 
                 +field-text({
-                    title: 'Сообщение',
+                    title: 'Комментарий к заказу',
                     helpText: 'Не обязательно.',
-                    mods: '',
+                    mods: 'textarea',
                     isTextarea: true,
                     attrs: {
                         type: 'email',
@@ -72,9 +72,9 @@ mixin checkout-form(data)
                     }
                 })
 
-            .checkout-form-form__button
-                button(type="submit").registration-form__btn.btn.btn__border.btn__border--green Назад
-                button(type="submit").registration-form__btn.btn.btn--green Оформить заказ
+            .checkout-form__button
+                button(type="submit").checkout-form__btn.btn.btn__border.btn__border--green Назад
+                button(type="submit").checkout-form__btn.btn.btn--green Оформить заказ
 
 
 
