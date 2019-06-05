@@ -1,2 +1,10 @@
-mixin personal-page(data)
-    .personal-page
+mixin personal-page(data, active, title)
+    section.personal-page
+        h2.personal-page__title Персональные данные
+        .personal-page__wrapper
+            ul.personal-page__menu
+                each item in data.list
+                    li.personal-page__item(class=(item.name === active ? "personal-page__item--active" : ""))
+                        a(href=item.link).personal-page__link=item.name
+
+            block

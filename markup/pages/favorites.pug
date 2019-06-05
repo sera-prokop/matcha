@@ -10,6 +10,7 @@ include ../components/personal-data/personal-data
 include ../components/registration-form/registration-form
 include ../components/field-toggler/field-toggler
 include ../components/field-toggler/field-toggler
+include ../components/personal-favorites/personal-favorites
 
 
 
@@ -21,9 +22,9 @@ block content
         +breadcrumbs()
             +breadcrumbs-item('Главная', 'index.html')
             +breadcrumbs-item('Личный кабинет')
-        +personal-page(personal_page, 'Персональные данные', 'Персональные данные')
+        +personal-page(personal_page, 'Скидки и бонусы', 'Скидки и бонусы')
             .personal-page__descr
-                +personal-tabs
+                +personal-favorites
         +instagram(instagram)
 
 

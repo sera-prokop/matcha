@@ -1,2 +1,104 @@
 mixin personal-tabs(data)
     .personal-tabs
+        +tabs([
+          {
+            'id': 'personal',
+            'text': 'Персональные данные',
+            'isActive': true,
+          },
+          {
+            'id': 'address',
+            'text': 'Адреса доставки',
+          },
+          {
+            'id': 'change-password',
+            'text': 'Изменить пароль',
+          },
+          ], 'some-mod')
+          +tabs-item('personal', true, 'some')
+            +registration-form(registration_form, false, true)
+          +tabs-item('address')
+            +field-radio([
+                {
+                    title: 'Домой',
+                    mods: '',
+                    attrs: {
+                    name: 'where',
+                    checked: true,
+                    }
+                },
+                {
+                    title: 'В офис',
+                    mods: '',
+                    attrs: {
+                    name: 'where',
+                    }
+                },
+                ])
+            +field-text({
+                title: 'Адрес доставки',
+                helpText: 'Не менее 2-х символов. Обязательно.',
+                attrs: {
+                    'data-check-pattern': '^[a-zа-яё]+.+'
+                }
+            })
+            +field-text({
+                title: 'Офис',
+                helpText: 'Не менее 2-х символов. Обязательно.',
+                attrs: {
+                    'data-check-pattern': '^[a-zа-яё]+.+'
+                }
+            })
+            +field-text({
+                title: 'Подъезд',
+                helpText: 'Не менее 2-х символов. Обязательно.',
+                attrs: {
+                    'data-check-pattern': '^[a-zа-яё]+.+'
+                }
+            })
+            +field-text({
+                title: 'Этах',
+                helpText: 'Не менее 2-х символов. Обязательно.',
+                attrs: {
+                    'data-check-pattern': '^[a-zа-яё]+.+'
+                }
+            })
+            +field-text({
+                title: 'Дополнительный телефон',
+                helpText: 'Обязательно.',
+                attrs: {
+                    type: 'tel',
+                    placeholder: '+7 (000) 000-00-00',
+                    'data-check-pattern': '[\\+]?\\d?[\\s|-]?[(]?\\d{0,3}[)]?[\\s|-]?\\d{3}[\\s|-]?\\d{2}[\\s|-]?\\d{2}'
+                }
+            })
+            button.btn.btn--green Сохранить изменения
+
+          +tabs-item('change-password')
+            h3 Смените пароль на тот, который вы легко запомните
+            p Новый пароль должен содержать не менее 6-ти цифр и латинских букв
+            +field-text({
+                title: 'Новый пароль',
+                helpText: 'Не менее 6-ти символов.',
+                mods: 'last',
+                attrs: {
+                    placeholder: '********',
+                    require: true,
+                    type: 'password',
+                    'data-check-pattern': '[0-9a-zA-Z!@#$%^&*]{6,}',
+                }
+            })
+            +field-text({
+                title: 'Новый пароль еще раз',
+                helpText: 'Не менее 6-ти символов.',
+                mods: 'last',
+                attrs: {
+                    placeholder: '********',
+                    require: true,
+                    type: 'password',
+                    'data-check-pattern': '[0-9a-zA-Z!@#$%^&*]{6,}',
+                }
+            })
+
+            button.btn.btn--green Сохранить изменения
+

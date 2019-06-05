@@ -1,0 +1,59 @@
+mixin personal-bonus(data)
+    .personal-bonus
+        .personal-bonus__top
+            p.personal-bonus__top-points У вас есть
+                span +100
+                | бонусных баллов
+
+            p.personal-bonus__top-percent Ваша скидка постоянного клиента:
+                span 3%
+        .personal-bonus__check
+            +field-toggler([
+                {
+                    title: 'Оповещать меня о приближении даты сгорания бонусов',
+                    attrs: {
+                    name: 'check0',
+                    }
+                },
+            ])
+        ul.personal-bonus__list
+            li.personal-bonus__item
+                .personal-bonus__right
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Источник
+                        p.personal-bonus__text Ручное начисление
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Дата
+                        p.personal-bonus__text 03.06.2018
+                .personal-bonus__left
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Бонусы
+                        p.personal-bonus__text +50
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Срок действия
+                        p.personal-bonus__text До 01.01.2019
+            li.personal-bonus__item
+                .personal-bonus__right
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Источник
+                        p.personal-bonus__text Ручное начисление
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Дата
+                        p.personal-bonus__text 03.06.2018
+                .personal-bonus__left
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Бонусы
+                        p.personal-bonus__text +50
+                    .personal-bonus__descr
+                        h5.personal-bonus__caption Срок действия
+                        p.personal-bonus__text До 01.01.2019
+
+        .personal-bonus__bottom
+            h3.personal-bonus__bottom-title Условия бонусной программы:
+            p Копите бонусы за каждую покупку
+            p Оплачивайте покупки бонусами: до 10% от общей стоимости покупки
+            .personal-bonus__cost
+                span.personal-bonus__bonus 1 бонус
+                span.personal-bonus__equally =
+                span.personal-bonus__rub 1
+                    != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-r', className: 'personal-bonus__rub-svg', iconWidth: '20', iconHeight: '20'})

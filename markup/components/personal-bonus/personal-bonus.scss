@@ -1,0 +1,48 @@
+.personal-bonus{
+
+}
+
+
+.personal-bonus__list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+.personal-bonus__item{
+    @include row();
+
+    // @media (min-width: $screen-md){
+    //     display: flex;
+    // }
+
+}
+
+
+.personal-bonus__right{
+    @include row();
+    @include col();
+    @include col(md, 6)
+
+    // display: flex;
+    // justify-content: space-between;
+}
+
+
+.personal-bonus__left{
+    @include row();
+    @include col();
+    @include col(md, 6)
+
+    // display: flex;
+    // justify-content: space-between;
+}
+
+
+.personal-bonus__descr{
+     @include col();
+     @include col(xs, 6);
+}
+
+

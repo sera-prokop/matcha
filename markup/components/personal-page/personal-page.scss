@@ -1,1 +1,22 @@
+.personal-page{
+    @include container();
+}
 
+
+.personal-page__wrapper{
+    @include row();
+}
+
+
+.personal-page__menu{
+    @include col();
+    @include col(md, 3);
+    @include col(lg, 12);
+}
+
+
+.personal-page__descr{
+    @include col();
+    @include col(md, 9);
+    @include col(lg, 12);
+}

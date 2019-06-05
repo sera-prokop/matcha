@@ -15,6 +15,7 @@ import 'components/form-validation/form-validation';
 import 'components/favorites/favorites';
 import 'components/category-filter/category-filter';
 import 'components/field-select/field-select';
+import 'components/personal-order/personal-order';
 
 
 // fix for error (event.target.className || "").indexOf is not a function
