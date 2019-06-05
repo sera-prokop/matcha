@@ -271,7 +271,7 @@
     .field-radio__input-wrap{
         margin-bottom: 10px;
         @include col();
-        @include col(xs, 6, $grid-columns, 10px)
+        @include col(xs, 6, $grid-columns, 10px);
         flex: 0 0 47%;
         max-width: 47%;
 

@@ -84,7 +84,7 @@ let galleryTop = new Swiper('.gallery-top', {
 });
 
 
-//Checkout delivery slider
+// Checkout delivery slider
 
 let checkoutDeliverySlider = new Swiper('.checkout-delivery-list__container', {
     loop: true,

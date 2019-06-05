@@ -1,1 +1,283 @@
+.personal-tabs{
+    .tabs__links{
+        margin-left: -15px;
+        margin-right: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+
+        @media (min-width: $screen-md){
+            margin: 0 0 35px;
+        }
+
+        @media (min-width: $screen-xl){
+            margin-bottom: 50px;
+        }
+    }
+
+    .tabs__link-wrap{
+        padding: 0 15px;
+
+        @media (min-width: $screen-md){
+            padding: 0;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        &:last-child{
+            .tabs__link{
+                margin-right: 0;
+            }
+        }
+
+        &--active{
+            .tabs__link{
+                color: $yelgreen;
+                border-color: $yelgreen;
+
+                &:after{
+                    @media (min-width: $screen-md){
+                        content: '';
+                        height: 2px;
+                        width: 100%;
+                        position: absolute;
+                        background-color: $yelgreen;
+                        bottom: -2px;
+                        left: 0;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs__link{
+        position: relative;
+        display: inline-block;
+        border-bottom: 2px solid #e5e5e5;
+        padding: 14px 0;
+        color: $gray;
+        text-decoration: none;
+        font-size: 14px;
+
+        @media (min-width: $screen-md){
+            padding: 14px 0;
+            border-bottom: none;
+            margin-right: 30px;
+        }
+
+        @media (min-width: $screen-xl){
+            font-size: 16px;
+        }
+    }
+
+}
+
+
+.tabs__content-item{
+    &--personal-user{
+        padding-bottom: 50px;
+
+
+        @media (min-width: $screen-md){
+            padding-bottom: 60px;
+        }
+
+        @media (min-width: $screen-lg){
+            padding-bottom: 70px;
+            max-width: 615px;
+        }
+
+        @media (min-width: $screen-xl){
+            max-width: 750px;
+        }
+    }
+
+
+    &--personal-address{
+        padding-bottom: 50px;
+
+
+        @media (min-width: $screen-md){
+            padding-bottom: 60px;
+        }
+
+        @media (min-width: $screen-lg){
+            padding-bottom: 70px;
+            max-width: 615px;
+        }
+
+        @media (min-width: $screen-xl){
+            max-width: 750px;
+        }
+
+        .field-radio{
+            display: flex;
+            margin-bottom: 35px;
+            margin-right: 20px;
+
+            @media (min-width: $screen-xl){
+                margin-right: 40px;
+            }
+        }
+
+        .field-radio__input-wrap{
+            margin-right: 30px;
+
+            + .field-radio__input-wrap{
+                margin: 0;
+            }
+        }
+
+        .field-radio__name{
+            cursor: pointer;
+            padding-left: 32px;
+
+            &:hover, &:focus{
+                .field-radio__name-text{
+                    &:before{
+                        border-color: $yelgreen;
+                    }
+                }
+            }
+
+            input:checked ~ .field-radio__name-text:before {
+                border-color: $yelgreen;
+            }
+        }
+
+        .field-radio__name-text{
+            font-size: 14px;
+
+            @media (min-width: $screen-xl){
+                font-size: 17px;
+            }
+
+            &:after{
+                width: 11px;
+                height: 11px;
+                border: none;
+                background-color: $yelgreen;
+                border-radius: 50%;
+                top: 5px;
+                left: 3px;
+                transform: none;
+                box-shadow: none;
+
+                @media (min-width: $screen-xl){
+                    top: 6px;
+                }
+            }
+
+            &:before{
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                border: 1px solid #d8d8d8;
+                top: 2px;
+
+                @media (min-width: $screen-xl){
+                    top: 3px;
+                }
+            }
+        }
+    }
+
+    &--personal-password{
+        padding-bottom: 50px;
+
+
+        @media (min-width: $screen-md){
+            padding-bottom: 60px;
+        }
+
+        @media (min-width: $screen-lg){
+            padding-bottom: 70px;
+        }
+
+        h3{
+            font-size: 25px;
+            margin: 0 0 20px;
+            color: $yelgreen;
+            font-weight: 400;
+
+            @media (min-width: $screen-xl){
+                font-size: 27px;
+                margin-bottom: 25px;
+            }
+        }
+
+        p{
+            font-size: 14px;
+            margin: 0 0 35px;
+
+            @media (min-width: $screen-md){
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+.personal-tabs__address-form{
+    @include row();
+
+    .field-text{
+        @include col();
+        @include col(md, 6);
+
+        &--second{
+            @include col(lg, 4);
+        }
+    }
+}
+
+
+.personal-tabs__address-button{
+    @include col();
+    text-align: center;
+
+    @media (min-width: $screen-md){
+        text-align: left;
+    }
+}
+
+
+.personal-tabs__address-btn{
+    padding: 0 30px;
+}
+
+
+.personal-tabs__password-form{
+
+
+    @media (min-width: $screen-md){
+        max-width: 220px;
+    }
+
+    @media (min-width: $screen-lg){
+        max-width: 300px;
+    }
+
+    @media (min-width: $screen-xl){
+        max-width: 360px;
+    }
+}
+
+
+.personal-tabs__password-button{
+    text-align: center;
+
+    @media (min-width: $screen-md){
+        text-align: left;
+    }
+}
+
+
+.personal-tabs__password-btn{
+    padding: 0 30px;
+}
 

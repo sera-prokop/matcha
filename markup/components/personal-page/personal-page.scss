@@ -9,14 +9,87 @@
 
 
 .personal-page__menu{
+    margin: 0 0 45px;
+    padding: 0;
+    list-style-type: none;
     @include col();
-    @include col(md, 3);
+    @include col(md, 4);
     @include col(lg, 12);
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
 }
 
 
 .personal-page__descr{
     @include col();
-    @include col(md, 9);
+    @include col(md, 8);
     @include col(lg, 12);
+}
+
+
+.personal-page__item{
+    border-bottom: 1px solid $gray-lightest;
+
+    @media (min-width: $screen-lg){
+        border-bottom: none;
+        flex-grow: 1;
+    }
+
+    &:last-child{
+        border-bottom: none;
+    }
+
+    &--active{
+        border-color: $yelgreen-dark;
+
+        .personal-page__link{
+            background-color: $yelgreen-dark;
+            color: $white;
+            font-weight: 600;
+
+        }
+    }
+}
+
+
+.personal-page__link{
+    display: inline-block;
+    width: 100%;
+    background-color: $white;
+    font-size: 14px;
+    color: $gray-darken;
+    text-decoration: none;
+    padding: 20px 35px;
+
+    @media (min-width: $screen-md){
+        text-align: center;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+
+    &:hover{
+        background-color: $yelgreen-lighter;
+    }
+
+    &:active{
+        background-color: $yelgreen;
+        color: $white;
+    }
 }
