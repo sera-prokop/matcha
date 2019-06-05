@@ -1,0 +1,26 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/personal-page/personal-page
+include ../components/personal-tabs/personal-tabs
+include ../components/personal-data/personal-data
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', 'index.html')
+            +breadcrumbs-item('Личный кабинет')
+
+        +instagram(instagram)
+
+
+
+

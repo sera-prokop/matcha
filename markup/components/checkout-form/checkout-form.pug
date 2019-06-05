@@ -1,0 +1,112 @@
+mixin checkout-form(data)
+    .checkout-form
+        //init validation
+        //<form data-check-form>
+        .checkout-form__form.form(data-check-form="false")
+            .form__field.form__field--down
+                +field-text({
+                    title: 'ФИО',
+                    helpText: 'Не менее 2-х символов. Обязательно.',
+                    attrs: {
+                        require: true,
+                        placeholder: 'Иванов Иван Иванович',
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+
+                +field-text({
+                    title: 'Телефон',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'tel',
+                        require: true,
+                        placeholder: '+7 (000) 000-00-00',
+                        'data-check-pattern': data.pattern.phone
+                    }
+                })
+            .form__field.form__field--down
+                +field-text({
+                    title: 'E-mail',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'info@matchavam.ru',
+                        require: true,
+                        'data-check-pattern': data.pattern.mail
+                    }
+                })
+                +field-text({
+                    title: 'Адрес доставки',
+                    helpText: 'Не менее 2-х символов. Обязательно.',
+                    attrs: {
+                        require: true,
+                        placeholder: 'Москва, Россия',
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+                +field-toggler([
+                    {
+                        title: 'Я даю согласие на обработку моих <a href="#">персональных данных</a>',
+                        attrs: {
+                            name: 'check0',
+                            checked: true,
+                            'data-check-state' : "on"
+                        }
+                    },
+                    {
+                        title: 'Я согласен получать информацию о специальных предложениях, интересных новинках и акциях',
+                        attrs: {
+                            name: 'check1',
+                        }
+                    },
+                ])
+
+                +field-text({
+                    title: 'Сообщение',
+                    helpText: 'Не обязательно.',
+                    mods: '',
+                    isTextarea: true,
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'Начните писать',
+                    }
+                })
+
+            .checkout-form-form__button
+                button(type="submit").registration-form__btn.btn.btn__border.btn__border--green Назад
+                button(type="submit").registration-form__btn.btn.btn--green Оформить заказ
+
+
+
+
+mixin checkout-authorization(data)
+    .checkout-authorization-form
+        //init validation
+        //<form data-check-form>
+        .checkout-authorization-form__form.form(data-check-form="false")
+            +field-text({
+                title: 'E-mail',
+                helpText: 'Обязательно.',
+                attrs: {
+                    type: 'email',
+                    placeholder: 'info@matchavam.ru',
+                    require: true,
+                    'data-check-pattern': data.pattern.mail
+                }
+            })
+            +field-text({
+                title: 'Пароль',
+                helpText: 'Не менее 6-ти символов.',
+                mods: 'last',
+                attrs: {
+                    placeholder: '********',
+                    require: true,
+                    type: 'password',
+                    'data-check-pattern': data.pattern.password,
+                }
+            })
+
+            .checkout-authorization-form__buttons
+                button(type="submit").authorization-form__btn.btn.btn--green Войти
+
+

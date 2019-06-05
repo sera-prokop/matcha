@@ -84,4 +84,30 @@ let galleryTop = new Swiper('.gallery-top', {
 });
 
 
+//Checkout delivery slider
+
+let checkoutDeliverySlider = new Swiper('.checkout-delivery-list__container', {
+    loop: true,
+    lazy: true,
+
+    pagination: {
+        el: '.checkout-delivery-list-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    },
+
+    navigation: {
+        nextEl: '.checkout-delivery-list-next',
+        prevEl: '.checkout-delivery-list-prev',
+    },
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
+});
+
+
 /* eslint-enable no-unused-vars */

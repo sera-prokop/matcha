@@ -26,9 +26,16 @@ ready(function () {
 
     const Choices = require('choices.js');
 
-    new Choices('.field-select__select', {
-        searchEnabled: false,
-        placeholderValue: 'Выберите',
-    });
+    const fields = document.querySelectorAll('.field-select__select');
+
+    if (fields.length) {
+
+        new Choices('.field-select__select', {
+            searchEnabled: false,
+            placeholderValue: 'Выберите',
+        });
+
+    }
+
 
 });

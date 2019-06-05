@@ -1,0 +1,41 @@
+mixin goods-order(data)
+    .goods-order
+        .cart-item
+            .cart-item__img
+                img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+            .cart-item__descr
+                .cart-item__descr-text
+                    h3.cart-item__title Чай Матча Весенний, 30г
+                    p.cart-item__text Чай церемониальный
+                .cart-item__bottom
+                    .cart-item__cost
+                        p.cart-item__total 820
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__svg', iconWidth: '12', iconHeight: '12'})
+                        .cart-item__one
+                            span.cart-item__discount 1200
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__discount-svg', iconWidth: '9', iconHeight: '9'})
+                            span.cart-item__one-item 410
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
+                                | за одну упаковку
+
+                    .cart-item__num Кол-во 2 шт
+
+        .cart-item
+            .cart-item__img
+                img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+            .cart-item__descr
+                .cart-item__descr-text
+                    h3.cart-item__title Чай Матча Весенний, 30г
+                    p.cart-item__text Чай церемониальный
+                .cart-item__bottom
+                    .cart-item__cost
+                        p.cart-item__total 820
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__svg', iconWidth: '12', iconHeight: '12'})
+                        .cart-item__one
+                            span.cart-item__discount 1200
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__discount-svg', iconWidth: '9', iconHeight: '9'})
+                            span.cart-item__one-item 410
+                                != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'cart-item__one-item-svg', iconWidth: '9', iconHeight: '9'})
+                                | за одну упаковку
+
+                    .cart-item__num Кол-во 2 шт

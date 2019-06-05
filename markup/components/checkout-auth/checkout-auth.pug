@@ -1,0 +1,54 @@
+mixin checkout-auth(data)
+    .checkout.checkout-auth
+        ul.checkout-top
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'shopping-cart', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Корзина
+            li.checkout-top__item.checkout-top__item--active
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'pen', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Оформление заказа
+            li.checkout-top__item
+                .checkout-top__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'truck', className: 'checkout-top__svg', iconWidth: '17', iconHeight: '17'})
+                span Спасибо
+
+        .checkout__wrapper
+            .checkout__total
+                ul.checkout__total-list
+                    li.checkout__total-item
+                        span.checkout__total-name Товаров на
+                        span.checkout__total-num 531
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item
+                        span.checkout__total-name Общий вес
+                        span.checkout__total-num 512 г
+                    li.checkout__total-item
+                        span.checkout__total-name Доставка
+                        span.checkout__total-num 452
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item
+                        span.checkout__total-name Экономия
+                        span.checkout__total-num 134
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign', className: 'checkout__total-svg', iconWidth: '10', iconHeight: '13'})
+                    li.checkout__total-item.checkout__total-item--total
+                        span.checkout__total-name Итого
+                        span.checkout__total-num 1023
+                            != pugHelpers.Icon.call(locals, {iconName: 'ruble-sign-b', className: 'checkout__total-svg', iconWidth: '13', iconHeight: '15'})
+                    li.checkout__total-item.checkout__total-item--bonus
+                        span.checkout__total-name Бонусов на счету:
+                        span.checkout__total-num.checkout__total-num--bonus 50
+                a(href="#").btn.btn__border.btn__border--green Оплатить бонусами
+
+            .checkout__reg.checkout__reg--auth
+                h3.checkout__auth.checkout__title Авторизация
+                +checkout-authorization(authorization_form)
+                .checkout__reg-descr
+                    p Если вы впервые на сайте, и хотите чтобы мы вас помнили, и все ваши заказы сохранились, заполните регистрационную форму
+                    a(href="#").btn.btn--green Зарегистрироваться
+
+
+
+
+        +goods-order
