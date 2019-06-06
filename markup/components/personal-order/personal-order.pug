@@ -1,7 +1,72 @@
 mixin personal-order(data)
     .personal-order
+        .personal-order__item
+            .personal-order__control.personal-order__control--active
+                .personal-order__control-top
+                    .personal-order__control-left
+                        .personal-order__control-item
+                            span.personal-order__control-caption Заказ
+                            span.personal-order__control-text №21234412
+                        .personal-order__control-item.personal-order__control-item--center
+                            span.personal-order__control-caption Дата
+                            span.personal-order__control-text 25.03.2019
+                    .personal-order__control-right
+                        //-.personal-order__control-item
+                        .personal-order__control-btn.btn.btn__border
+                            span Скрыть
+                            != pugHelpers.Icon.call(locals, {iconName: "caret-down", className: "personal-order__control-svg", iconWidth: "15", iconHeight: "14"})
+                        span.personal-order__control-status.personal-order__control-status--delivery В доставке
+                        //span.personal-order__control-status.personal-order__control-status--cancel Отменен
+                        //span.personal-order__control-status.personal-order__control-status--received Получен
+                .personal-order__control-bottom
+                    a(href="/").btn.btn--green Отследить заказ
+                    a(href="/").btn.btn__border.btn__border--green Повторить заказ
+            .personal-order__content
+                +goods-order(data, true)
+        .personal-order__item
+            .personal-order__control
+                .personal-order__control-top
+                    .personal-order__control-left
+                        .personal-order__control-item
+                            span.personal-order__control-caption Заказ
+                            span.personal-order__control-text №21234412
+                        .personal-order__control-item.personal-order__control-item--center
+                            span.personal-order__control-caption Дата
+                            span.personal-order__control-text 25.03.2019
+                    .personal-order__control-right
+                        //-.personal-order__control-item
+                        .personal-order__control-btn.btn.btn__border
+                            span Показать
+                            != pugHelpers.Icon.call(locals, {iconName: "caret-down", className: "personal-order__control-svg", iconWidth: "15", iconHeight: "14"})
+                        //span.personal-order__control-status.personal-order__control-status--delivery В доставке
+                        //span.personal-order__control-status.personal-order__control-status--cancel Отменен
+                        span.personal-order__control-status.personal-order__control-status--received Получен
+                .personal-order__control-bottom
+                    a(href="#").btn.btn--green Отследить заказ
+                    a(href="#").btn.btn__border.btn__border--green Повторить заказ
+            .personal-order__content
+                +goods-order(data, true)
+        .personal-order__item
+            .personal-order__control
+                .personal-order__control-top
+                    .personal-order__control-left
+                        .personal-order__control-item
+                            span.personal-order__control-caption Заказ
+                            span.personal-order__control-text №21234412
+                        .personal-order__control-item.personal-order__control-item--center
+                            span.personal-order__control-caption Дата
+                            span.personal-order__control-text 25.03.2019
+                    .personal-order__control-right
+                        //-.personal-order__control-item
+                        .personal-order__control-btn.btn.btn__border
+                            span Показать
+                            != pugHelpers.Icon.call(locals, {iconName: "caret-down", className: "personal-order__control-svg", iconWidth: "15", iconHeight: "14"})
+                        //span.personal-order__control-status.personal-order__control-status--delivery В доставке
+                        span.personal-order__control-status.personal-order__control-status--cancel Отменен
+                        //span.personal-order__control-status.personal-order__control-status--received Получен
+                .personal-order__control-bottom
+                    a(href="#").btn.btn--green Отследить заказ
+                    a(href="#").btn.btn__border.btn__border--green Повторить заказ
+            .personal-order__content
+                +goods-order(data, true)
 
-        h4.personal-order__control.personal-order__control--active test
-        .personal-order__content content
-        h4.personal-order__control test2
-        .personal-order__content content2

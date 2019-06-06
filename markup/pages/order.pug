@@ -11,6 +11,7 @@ include ../components/registration-form/registration-form
 include ../components/field-toggler/field-toggler
 include ../components/field-toggler/field-toggler
 include ../components/personal-order/personal-order
+include ../components/goods-order/goods-order
 
 
 
@@ -22,7 +23,7 @@ block content
         +breadcrumbs()
             +breadcrumbs-item('Главная', 'index.html')
             +breadcrumbs-item('Личный кабинет')
-        +personal-page(personal_page, 'Скидки и бонусы', 'Скидки и бонусы')
+        +personal-page(personal_page, 'Мои заказы', 'Мои заказы')
             .personal-page__descr
                 +personal-order
         +instagram(instagram)

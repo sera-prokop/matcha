@@ -8,6 +8,29 @@
 }
 
 
+.personal-page__title{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: $gray-darken;
+
+    @media (min-width: $screen-md){
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 47px;
+        margin-bottom: 40px;
+    }
+}
+
+
 .personal-page__menu{
     margin: 0 0 45px;
     padding: 0;

@@ -1,8 +1,223 @@
+.personal-order__item{
+    background-color: $white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+
 .personal-order__control{
     margin: 0;
+
+    @media (min-width: $screen-lg){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &--active{
+
+        .personal-order__control-svg{
+            transform: rotate(-180deg);
+        }
+
+        .personal-order__control-right{
+            &:after{
+                transform: rotate(-180deg);
+                //transform-origin: 50% 50%;
+            }
+        }
+    }
 }
 
 
 .personal-order__content{
     display: none;
+
+    .goods-order{
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .cart-item{
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+
+.personal-order__control-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+.personal-order__control-left{
+    @media (min-width: $screen-md){
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+.personal-order__control-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-md){
+        padding-right: 60px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-right: 0;
+        position: static;
+    }
+
+    &:after{
+
+
+        @media (min-width: $screen-md){
+            content: '';
+            position: absolute;
+            background-image: svg-load('caret-down.svg' fill=$gray-darken);
+            width: 20px;
+            height: 20px;
+            display: flex;
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 9px;
+            right: 0;
+            transition: transform $transition-time;
+        }
+
+
+
+        @media (min-width: $screen-xl){
+            top: 15px;
+        }
+
+
+    }
+
+}
+
+
+.personal-order__control-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: $gray-darken;
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 0;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &--center{
+        @media (min-width: $screen-md){
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: $screen-lg){
+
+        }
+
+        @media (min-width: $screen-xl){
+
+        }
+    }
+}
+
+
+.personal-order__control-caption{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+.personal-order__control-text{
+    font-size: 13px;
+}
+
+
+.personal-order__control-btn{
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 20px 0 30px;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+
+}
+
+
+.personal-order__control-svg{
+    //margin-left: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+
+.personal-order__control-status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: $white;
+
+    &--delivery{
+        @include bg($soon)
+    }
+
+    &--cancel{
+        @include bg($not)
+    }
+
+    &--received{
+        @include bg($yes)
+    }
+
+}
+
+
+.personal-order__control-bottom{
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $screen-lg){
+        padding-right: 60px;
+    }
+
+    .btn{
+        @media (min-width: $screen-lg){
+            margin-left: 50px;
+        }
+
+        @media (min-width: $screen-xl){
+            margin-left: 80px;
+        }
+    }
+
 }

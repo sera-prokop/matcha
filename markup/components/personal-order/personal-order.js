@@ -9,15 +9,22 @@ ready(function () {
 
         if (el.classList.contains('personal-order__control--active')) {
             $(this).next('div').slideToggle(200);
+            // $(this).siblings('.personal-order__content').slideToggle(200);
         }
 
     });
 
-    $('.personal-order__control').on('click', function () {
-        console.log('====================================');
-        console.log('sldfjsdlfj');
-        console.log('====================================');
-        $(this).toggleClass('personal-order__control--active');
-        $(this).next('div').slideToggle(200);
+    acc.on('click', function () {
+        let $this = $(this);
+
+        $this.toggleClass('personal-order__control--active');
+        $this.next('div').slideToggle(200);
+        // $this.siblings('.personal-order__content').slideToggle(200);
+        if ($('.personal-order__control-btn span').length) {
+            $this.find('.personal-order__control-btn span').text(function (i, text) {
+                return text === 'Показать' ? 'Скрыть' : 'Показать';
+            });
+        }
+
     });
 });
