@@ -2,157 +2,165 @@
 // For example, styles of the links, buttons and so on.
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow: hidden;
-  margin: 0;
-  border: 0;
-  padding: 0 10px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  user-select: none;
-  text-align: center;
-  font-size: 14px;
-  font-family: inherit;
-  line-height: 40px;
-  text-decoration: none;
-  text-transform: none;
-  color: $text-color;
-  background-color: $gray-lightest;
-  background-image: none;
-  cursor: pointer;
-  min-height: 40px;
-  transition: $transition-time;
-
-  @media (min-width: $screen-xl) {
-    font-size: 16px;
-    min-height: 50px;
-  }
-
-
-  &--disabled,
-  &:disabled {
-    opacity: $opacity;
-    cursor: not-allowed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: none;
     color: $text-color;
     background-color: $gray-lightest;
+    background-image: none;
+    cursor: pointer;
+    min-height: 40px;
+    transition: $transition-time;
 
-    @at-root a.btn--disabled {
-      pointer-events: none;
+    @media (min-width: $screen-xl) {
+        font-size: 16px;
+        min-height: 50px;
+        line-height: 50px;
     }
 
-  }
+
+    &--disabled,
+    &:disabled {
+        opacity: $opacity;
+        cursor: not-allowed;
+        color: $text-color;
+        background-color: $gray-lightest;
+
+        @at-root a.btn--disabled {
+            pointer-events: none;
+        }
+
+    }
 }
 
 
 .btn--green {
-  background-color: $yelgreen;
-  color: $white;
-
-  &:hover, &:focus {
-    background-color: $yelgreen-darken;
+    background-color: $yelgreen;
     color: $white;
-    outline: none;
-  }
-
-  &:active {
-    background-color: $yelgreen-dark;
-    color: $white;
-  }
-}
-
-.btn__border {
-  border: 1px solid $gray-lightest;
-  color: $gray;
-  background-color: transparent;
-
-  &:hover, &:focus {
-    border-color: $gray-light;
-    color: $gray-dark;
-  }
-
-  &:active {
-    border-color: $gray;
-    color: $gray;
-  }
-
-  &--green {
-    border: 1px solid $yelgreen-darken;
-    color: $yelgreen-dark;
-    background-color: transparent;
 
     &:hover, &:focus {
-      border-color: $yelgreen;
-      color: $white;
-      background-color: $yelgreen;
-      outline: none;
+        background-color: $yelgreen-darken;
+        color: $white;
+        outline: none;
     }
 
     &:active {
-      border-color: $yelgreen-darken;
-      color: $white;
-      background-color: $yelgreen-darken;
+        background-color: $yelgreen-dark;
+        color: $white;
     }
-  }
+}
+
+.btn__border {
+    border: 1px solid $gray-lightest;
+    color: $gray;
+    background-color: transparent;
+    min-height: 38px;
+    line-height: 38px;
+
+    @media (min-width: $screen-xl) {
+        min-height: 48px;
+        line-height: 48px;
+    }
+
+    &:hover, &:focus {
+        border-color: $gray-light;
+        color: $gray-dark;
+    }
+
+    &:active {
+        border-color: $gray;
+        color: $gray;
+    }
+
+    &--green {
+        border: 1px solid $yelgreen-darken;
+        color: $yelgreen-dark;
+        background-color: transparent;
+
+        &:hover, &:focus {
+            border-color: $yelgreen;
+            color: $white;
+            background-color: $yelgreen;
+            outline: none;
+        }
+
+        &:active {
+            border-color: $yelgreen-darken;
+            color: $white;
+            background-color: $yelgreen-darken;
+        }
+    }
 }
 
 .btn--cart-icon {
-  position: relative;
+    position: relative;
 
-  &:before {
-    content: '';
-    background-image: svg-load('shopping-cart-r.svg' fill=$white);
-    background-size: cover;
-    width: 16px;
-    height: 14px;
-    margin-right: 5px;
+    &:before {
+        content: '';
+        background-image: svg-load('shopping-cart-r.svg' fill=$white);
+        background-size: cover;
+        width: 16px;
+        height: 14px;
+        margin-right: 5px;
+
+        @media (min-width: $screen-xl) {
+            width: 20px;
+            height: 18px;
+            margin-right: 8px;
+        }
+    }
+}
+
+
+.title-h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: $yelgreen;
+    text-align: center;
+    margin: 0 0 40px;
+    padding: 0 10px;
+    @media (min-width: $screen-md) {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    @media (min-width: $screen-lg) {
+        font-size: 47px;
+        margin-bottom: 60px;
+    }
+}
+
+
+.link {
+    color: $yelgreen-darker;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color $transition-time;
 
     @media (min-width: $screen-xl) {
-      width: 20px;
-      height: 18px;
-      margin-right: 8px;
+        font-size: 16px;
     }
-  }
-}
 
+    &:hover, &:focus {
+        color: $yelgreen-lighten;
+        text-decoration: underline;
+    }
 
-.title-h2{
-  font-size: 25px;
-  font-weight: 400;
-  color: $yelgreen;
-  text-align: center;
-  margin: 0 0 40px;
-  padding: 0 10px;
-  @media  (min-width: $screen-md){
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
-  @media  (min-width: $screen-lg){
-    font-size: 47px;
-    margin-bottom: 60px;
-  }
-}
-
-
-.link{
-  color: $yelgreen-darker;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color $transition-time;
-
-  @media (min-width: $screen-xl){
-    font-size: 16px;
-  }
-
-  &:hover, &:focus{
-    color: $yelgreen-lighten;
-    text-decoration: underline;
-  }
-
-  &:active{
-    color: $yelgreen-darken;
-  }
+    &:active {
+        color: $yelgreen-darken;
+    }
 }

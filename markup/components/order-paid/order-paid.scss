@@ -1,4 +1,4 @@
-.order-finish{
+.order-paid{
     padding: 40px 0;
 
     @media (min-width: $screen-md){
@@ -15,7 +15,7 @@
 }
 
 
-.order-finish__container{
+.order-paid__container{
     @include container();
     text-align: center;
     font-size: 14px;
@@ -34,12 +34,12 @@
 }
 
 
-.order-finish__title{
+.order-paid__title{
     margin-bottom: 25px;
 }
 
 
-.order-finish__text{
+.order-paid__text{
     margin: 0 0 25px;
 
     @media (min-width: $screen-md){
@@ -48,7 +48,7 @@
 }
 
 
-.order-finish__list{
+.order-paid__list{
     margin-bottom: 40px;
 
     @media (min-width: $screen-lg){
@@ -57,8 +57,8 @@
 }
 
 
-.order-finish__btns{
-    display: inline-flex;
+.order-paid__btns{
+    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -72,7 +72,7 @@
 }
 
 
-.order-finish__btn-top{
+.order-paid__btn-top{
     margin-bottom: 20px;
 
     @media (min-width: $screen-md){
@@ -80,3 +80,4 @@
         margin-right: 20px;
     }
 }
+

@@ -1,0 +1,21 @@
+extends _template.pug
+
+include ../components/head/head
+
+
+include ../components/order-paid/order-paid
+
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +order-paid
+        +instagram(instagram)
+
+
+
+
