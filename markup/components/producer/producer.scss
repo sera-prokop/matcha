@@ -1,0 +1,35 @@
+.producer{
+    padding: 40px 0;
+
+    @media (min-width: $screen-md){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 60px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+}
+
+
+.producer__container{
+    @include container();
+}
+
+
+.producer__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include row();
+}
+
+
+.producer__item{
+    @include col();
+    @include col(md, 4);
+    margin-bottom: 30px;
+}

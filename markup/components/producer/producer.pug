@@ -1,0 +1,32 @@
+mixin producer(data)
+    section.producer
+        .producer__container
+            h2.producer__title.title-h2 231 - все товары производителя
+            ul.producer__list
+                li.producer__item
+                    +cart(popular.popular.cart)
+                li.producer__item
+                    +cart(popular.popular.cart2)
+                li.producer__item
+                    +cart(popular.popular.cart3)
+                li.producer__item
+                    +cart(popular.popular.cart)
+                li.producer__item
+                    +cart(popular.popular.cart2)
+                li.producer__item
+                    +cart(popular.popular.cart3)
+                li.producer__item
+                    +cart(popular.popular.cart)
+                li.producer__item
+                    +cart(popular.popular.cart2)
+                li.producer__item
+                    +cart(popular.popular.cart3)
+            .producer__pagination
+                +pagination()
+                    +pagination-item('1', '/1', true)
+                    +pagination-item('2', '/2')
+                    +pagination-item('3', '/3')
+                    +pagination-item('4', '/4')
+                    +pagination-item('...')
+                    +pagination-item('999', '/999')
+
