@@ -1,0 +1,42 @@
+mixin quick-order(data)
+    .quick-order
+        .quick-order__container
+            h2.quick-order__title.title-h2 Быстрый заказ
+            p.quick-order__text Введите свои контактные данные, и над менеджет свяжется с Вами для согласования заказа
+
+            .quick-order__form(data-check-form="false")
+                +field-text({
+                    title: 'Имя',
+                    helpText: 'Не менее 2-х символов. Обязательно.',
+                    attrs: {
+                        require: true,
+                        placeholder: 'Иван',
+                        'data-check-pattern': data.pattern.text
+                    }
+                })
+
+                +field-text({
+                    title: 'Телефон',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'tel',
+                        require: true,
+                        placeholder: '+7 (000) 000-00-00',
+                        'data-check-pattern': data.pattern.phone
+                    }
+                })
+
+                +field-text({
+                    title: 'E-mail',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'info@matchavam.ru',
+                        require: true,
+                        'data-check-pattern': data.pattern.mail
+                    }
+                })
+
+                button(type="submit").quick-order__btn.btn.btn--green Сделать заказ
+                p.quick-order__bottom-text Нажимая кнопку «Сделать заказ», вы даете согласие на обработку своих
+                    a(href="#") персональных данных»

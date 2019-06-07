@@ -1,0 +1,23 @@
+extends _template.pug
+
+include ../components/head/head
+
+
+include ../components/form/form
+include ../components/quick-order/quick-order
+
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+
+        +quick-order(registration_form)
+        +instagram(instagram)
+
+
+
+

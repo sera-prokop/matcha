@@ -1,0 +1,23 @@
+extends _template.pug
+
+include ../components/head/head
+
+
+include ../components/form/form
+include ../components/recovery-pass/recovery-pass
+
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+
+        +recovery-pass(registration_form)
+        +instagram(instagram)
+
+
+
+

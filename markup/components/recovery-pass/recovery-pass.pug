@@ -1,0 +1,19 @@
+mixin recovery-pass(data)
+    section.recovery-pass
+        .recovery-pass__container
+            h2.recovery-pass__title.title-h2 Восстановление пароля
+            p.recovery-pass__text Введите ваш e-mail и вам будет отправлен обновленный пароль
+
+            .recovery-pass__form(data-check-form="false")
+                +field-text({
+                    title: 'E-mail',
+                    helpText: 'Обязательно.',
+                    attrs: {
+                        type: 'email',
+                        placeholder: 'info@matchavam.ru',
+                        require: true,
+                        'data-check-pattern': data.pattern.mail
+                    }
+                })
+                .recovery-pass__button
+                    button(type="submit").recovery-pass__btn.btn.btn--green Напомнить пароль

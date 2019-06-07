@@ -1,0 +1,81 @@
+.recovery-pass{
+    padding: 40px 0;
+
+    @media (min-width: $screen-md){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 60px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+
+}
+
+.recovery-pass__container{
+    @include container();
+}
+
+.recovery-pass__text{
+    font-size: 14px;
+    margin: 0 auto 40px;
+    text-align: center;
+
+    @media (min-width: $screen-lg){
+        font-size: 17px;
+        margin-bottom: 60px;
+    }
+}
+
+
+.recovery-pass__form{
+    @include row($grid-gutter-width, $grid-gutter-width, 15px, 15px, 15px);
+    justify-content: center;
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+
+    }
+
+    @media (min-width: $screen-xl){
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .field-text{
+        @include col();
+        @include col(md, 8, $grid-columns, 15px);
+        @include col(xl, 8, $grid-columns, 20px);
+    }
+}
+
+
+.recovery-pass__button{
+    display: flex;
+    justify-content: center;
+}
+
+
+.recovery-pass__btn{
+    flex-basis: auto;
+    padding: 0 45px;
+    margin: 25px auto 0;
+    justify-content: center;
+
+    @media (min-width: $screen-md){
+        margin-top: 30px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-top: 35px;
+    }
+}
+
