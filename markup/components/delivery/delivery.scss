@@ -1,0 +1,147 @@
+.delivery{
+    background-color: $white;
+}
+
+.delivery__top{
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $screen-md){
+        padding: 120px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 150px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 180px 0;
+    }
+}
+
+.delivery__title{
+    margin: 0;
+    @include container();
+    font-size: 37px;
+
+
+    @media (min-width: $screen-md){
+        text-align: left;
+        font-size: 48px;
+    }
+
+    @media (min-width: $screen-lg){
+
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 67px;
+    }
+}
+
+
+.delivery__container{
+    @include container();
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+.delivery__subtitle{
+    font-size: 23px;
+    margin: 0 0 30px;
+    font-weight: 400;
+    color: $yelgreen;
+
+    @media (min-width: $screen-md){
+        font-size: 27px;
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 33px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 39px;
+        margin-bottom: 55px;
+    }
+}
+
+
+.delivery__block{
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 60px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+.delivery__text{
+    font-size: 14px;
+
+    @media (min-width: $screen-lg){
+        font-size: 18px;
+    }
+
+    p{
+        margin: 0;
+        line-height: 1.5;
+        color: #838383;
+
+
+    }
+
+    a{
+        color: #838383;
+        display: block;
+        margin-bottom: 10px;
+
+        @media (min-width: $screen-lg){
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: $screen-xl){
+            margin-bottom: 20px;
+        }
+
+        &:hover, &:active{
+            color: #404040;
+        }
+    }
+}
+

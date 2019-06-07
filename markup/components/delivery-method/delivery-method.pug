@@ -1,0 +1,42 @@
+mixin delivery-method(data)
+    section.delivery-method
+        h2.delivery-method__title.title-h2 Выберите способ доставки:
+        .delivery-method__input
+            h4.delivery-method__subitem Название населенного пункта
+            +field-text({
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'comment',
+                    placeholder: 'Москва, Россия'
+                }
+            })
+
+        .delivery-method__check
+            h4.delivery-method__subitem Способ доставки
+            +field-radio([
+                {
+                    title: '<b><span class="delivery-method__radio-title">Курьером до двери</span><span class="delivery-method__radio-cost">от 458</span><span class="delivery-method__radio-day">1 рабочий день</span></b>',
+                    mods: '',
+                    attrs: {
+                        name: 'payment',
+                        checked: true,
+                    }
+                },
+                {
+                    title: '<b><span class="delivery-method__radio-title">Пункт выдачи заказов</span><span class="delivery-method__radio-cost">от 131</span><span class="delivery-method__radio-day">1 рабочий день</span></b>',
+                    mods: '',
+                    attrs: {
+                        name: 'payment',
+                    }
+                },
+                {
+                    title: '<b><span class="delivery-method__radio-title">Отделение почты РФ</span><span class="delivery-method__radio-cost">от 458</span><span class="delivery-method__radio-day">1 рабочий день</span></b>',
+                    mods: '',
+                    attrs: {
+                        name: 'payment',
+                    }
+                }
+            ])
+        .delivery-method__text
+            p Стоимость заказа рассчитана для тестового заказа с параметрами _________ , и носит информационный характер.

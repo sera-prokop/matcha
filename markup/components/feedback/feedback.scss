@@ -21,13 +21,11 @@
             @media (min-width: $screen-md){
                 order: 0;
             }
+        }
 
-            @media (min-width: $screen-lg){
-
-            }
-
-            @media (min-width: $screen-xl){
-
+        .tabs__links{
+            @media (min-width: $screen-md){
+                justify-content: flex-start;
             }
         }
     }
@@ -79,6 +77,7 @@
     line-height: 25px;
     color: #838383;
     margin: 0 0 25px;
+    max-width: 690px;
 
     @media (min-width: $screen-md){
         margin-bottom: 30px;

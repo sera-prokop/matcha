@@ -1,0 +1,24 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/delivery/delivery
+include ../components/delivery-method/delivery-method
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Доставка')
+        +delivery
+        +delivery-method
+        +instagram(instagram)
+
+
+
+
