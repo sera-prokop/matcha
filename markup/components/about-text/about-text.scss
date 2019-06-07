@@ -1,0 +1,235 @@
+.about-text{
+
+}
+
+
+.about-text__title{
+    font-size: 25px;
+    color: $yelgreen;
+    margin: 0 0 25px;
+    font-weight: 400;
+
+    @media (min-width: $screen-md){
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 38px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 47px;
+    }
+}
+
+
+.about-text__top{
+    @include container();
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 15px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 40px;
+    }
+}
+
+
+.about-text__top-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include row($grid-gutter-width, $grid-gutter-width, 60px, 30px, 40px, 40px);
+}
+
+
+.about-text__top-item{
+    @include col();
+    @include col(md, 6, $grid-columns, 60px);
+    @include col(lg, 3, $grid-columns, 30px);
+    @include col(xl, 3, $grid-columns, 40px);
+    margin-bottom: 30px;
+}
+
+
+.about-text__top-num{
+    font-size: 50px;
+    font-weight: 600;
+    color: $yelgreen;
+    margin: 0 0 20px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 71px;
+    }
+}
+
+
+.about-text__top-text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #959595;
+    font-weight: 400;
+    margin: 0;
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    span{
+        color: $yelgreen;
+        margin: 0 5px;
+    }
+}
+
+
+.about-text__wrapper{
+    background-color: $white;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md){
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-bottom: 70px;
+    }
+}
+
+
+.about-text__middle{
+    @include container();
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+.about-text__middle-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include row();
+}
+
+
+.about-text__middle-item{
+    @include col();
+    @include col(md, 6);
+}
+
+
+.about-text__middle-text{
+    font-size: 14px;
+    line-height: 25px;
+    color: #838383;
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 18px;
+    }
+}
+
+
+.about-text__bottom-wrap{
+    @include container();
+}
+
+
+.about-text__bottom{
+    @include row();
+}
+
+
+.about-text__bottom-item{
+    @include col();
+    @include col(md, 6);
+}
+
+
+.about-text__sublist{
+    counter-reset: about;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.about-text__sublist-item{
+    &:before{
+        counter-increment: about;
+        content: '0'counter(about);
+        color: $yelgreen;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 15px;
+        display: inline-block;
+
+        @media (min-width: $screen-lg){
+            font-size: 20px;
+        }
+
+        @media (min-width: $screen-xl){
+            font-size: 25px;
+        }
+    }
+
+}
+
+
+.about-text__sublist-text{
+    margin: 0 0 30px;
+    color: #838383;
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+
+    span{
+        display: block;
+    }
+}
+
+
+

@@ -1,0 +1,27 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/about-top/about-top
+include ../components/about-text/about-text
+include ../components/about-sert/about-sert
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +about-top
+        .about-feature
+            +features(features, true)
+        +about-text
+        +about-sert
+        +faq(faq, true)
+        +set-banner(set_banner)
+        +text-block()
+        +instagram(instagram)
+
+
+
+
