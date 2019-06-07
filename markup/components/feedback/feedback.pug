@@ -1,0 +1,159 @@
+mixin feedback(data)
+    .feedback
+        .feedback__container
+            h2.feedback__title.title-h2 Обратная связь
+            p.feedback__text Мы всегда готовы ответить на любой интересующий Вас вопрос, а также услышать отзывы и предложения по работе магазина. Для связи воспользуйтесь формой обращения ниже.
+            section.tabs-authorization
+                +tabs([
+                    {
+                        'id': 'client',
+                        'text': 'Физическое лицо',
+                        'isActive': true,
+                    },
+                    {
+                        'id': 'organisation',
+                        'text': 'Организация',
+                    },
+                ], 'some-mod')
+                    +tabs-item('client', true, 'some')
+                        +feedback-client(registration_form)
+
+                    +tabs-item('organisation')
+                        +feedback-organisation(registration_form)
+                        //+registration-form(registration_form)
+
+mixin feedback-client(data)
+    .feedback__form.form(data-check-form="false")
+
+        +field-text({
+            title: 'Имя',
+            helpText: 'Не менее 2-х символов. Обязательно.',
+            mods: 'top',
+            attrs: {
+                require: true,
+                placeholder: 'Иван',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+        +field-text({
+            title: 'Телефон',
+            helpText: 'Обязательно.',
+            mods: 'top',
+            attrs: {
+                type: 'tel',
+                require: true,
+                placeholder: '+7 (000) 000-00-00',
+                'data-check-pattern': data.pattern.phone
+            }
+        })
+        +field-text({
+            title: 'E-mail',
+            helpText: 'Обязательно.',
+            mods: 'top',
+            attrs: {
+                type: 'email',
+                placeholder: 'info@matchavam.ru',
+                require: true,
+                'data-check-pattern': data.pattern.mail
+            }
+        })
+
+        +field-text({
+            title: 'Тема вопроса',
+            helpText: 'Не менее 2-х символов.',
+            mods: 'themes',
+            attrs: {
+                placeholder: 'Иванович',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+        +field-text({
+            title: 'Сообщение',
+            helpText: 'Не менее 2-х символов.',
+            mods: 'first',
+            isTextarea: true,
+            attrs: {
+                placeholder: 'Начните писать',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+
+
+        .feedback__button
+            button(type="submit").feedback__btn.btn.btn--green Отправить
+        p.feedback__form-text Нажимая кнопку Отправить, вы даете свое согласие на обработку
+            a(href="#") персональных данных
+
+
+
+
+mixin feedback-organisation(data)
+    .feedback__form.form(data-check-form="false")
+
+        +field-text({
+            title: 'Организация',
+            helpText: 'Не менее 2-х символов. Обязательно.',
+            mods: 'top',
+            attrs: {
+                require: true,
+                placeholder: 'Иван',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+        +field-text({
+            title: 'Телефон',
+            helpText: 'Обязательно.',
+            mods: 'top',
+            attrs: {
+                type: 'tel',
+                require: true,
+                placeholder: '+7 (000) 000-00-00',
+                'data-check-pattern': data.pattern.phone
+            }
+        })
+        +field-text({
+            title: 'E-mail',
+            helpText: 'Обязательно.',
+            mods: 'top',
+            attrs: {
+                type: 'email',
+                placeholder: 'info@matchavam.ru',
+                require: true,
+                'data-check-pattern': data.pattern.mail
+            }
+        })
+
+        +field-text({
+            title: 'Тема вопроса',
+            helpText: 'Не менее 2-х символов.',
+            mods: 'themes',
+            attrs: {
+                placeholder: 'Иванович',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+        +field-text({
+            title: 'Сообщение',
+            helpText: 'Не менее 2-х символов.',
+            mods: 'first',
+            isTextarea: true,
+            attrs: {
+                placeholder: 'Начните писать',
+                'data-check-pattern': data.pattern.text
+            }
+        })
+
+
+
+        .feedback__button
+            button(type="submit").feedback__btn.btn.btn--green Отправить
+        p.feedback__form-text Нажимая кнопку Отправить, вы даете свое согласие на обработку
+            a(href="#") персональных данных
+
+
+

@@ -1,0 +1,276 @@
+.contacts{
+    background-color: $white;
+}
+
+.contacts__top{
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $screen-md){
+        padding: 120px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 150px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 180px 0;
+    }
+}
+
+.contacts__title{
+    margin: 0;
+    @include container();
+    font-size: 37px;
+
+
+    @media (min-width: $screen-md){
+        text-align: left;
+        font-size: 48px;
+    }
+
+    @media (min-width: $screen-lg){
+
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 67px;
+    }
+}
+
+
+.contacts__container{
+    @include container();
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $screen-md){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+.contacts__subtitle{
+    font-size: 23px;
+    margin: 0 0 30px;
+    font-weight: 400;
+    color: $yelgreen;
+
+    @media (min-width: $screen-md){
+        font-size: 27px;
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 33px;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 39px;
+        margin-bottom: 55px;
+    }
+}
+
+
+.contacts__block{
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 60px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.contacts__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.contacts__item{
+    @include row();
+    margin-bottom: 30px;
+    color: $gray-darken;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 35px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 40px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.contacts__name{
+    @include col();
+    @include col(md, 6);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+    @media (min-width: $screen-lg){
+        font-size: 18px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 20px;
+    }
+}
+
+
+.contacts__data{
+    @include col();
+    @include col(md, 6);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 19px;
+    }
+}
+
+
+.contacts__extra-one{
+    font-size: 16px;
+
+    @media (min-width: $screen-xl){
+        font-size: 19px;
+    }
+}
+
+
+.contacts__extra-two{
+    display: block;
+    color: #afaead;
+}
+
+
+.contacts__social-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+
+.contacts__social-link{
+    width: 37px;
+    height: 37px;
+    background-color: $yelgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+    fill: $white;
+
+    @media (min-width: $screen-md){
+        margin-top: 0;
+    }
+
+    @media (min-width: $screen-lg){
+        width: 44px;
+        height: 44px;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+
+    &:hover{
+        background-color: $yelgreen-dark;
+    }
+
+    &:active{
+        background-color: $yelgreen-darker;
+    }
+}
+
+
+.contacts__social-svg{
+
+    @media (min-width: $screen-lg){
+        width: 17px;
+        height: 17px;
+    }
+}
+
+
+.contacts__text{
+    font-size: 14px;
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    p{
+        margin: 0;
+        line-height: 1.5;
+        color: #838383;
+
+
+    }
+
+    a{
+        color: #838383;
+        display: block;
+        margin-bottom: 10px;
+
+        @media (min-width: $screen-lg){
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: $screen-xl){
+            margin-bottom: 20px;
+        }
+
+        &:hover, &:active{
+            color: #404040;
+        }
+    }
+}

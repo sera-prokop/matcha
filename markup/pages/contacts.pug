@@ -1,0 +1,24 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/contacts/contacts
+include ../components/feedback/feedback
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Контакты')
+        +contacts
+        +feedback
+        +instagram(instagram)
+
+
+
+

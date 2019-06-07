@@ -1,0 +1,137 @@
+.feedback{
+    padding: 40px 0;
+
+    @media (min-width: $screen-md){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 60px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+
+    .tabs-authorization{
+        margin: 0;
+        padding: 0;
+
+        .tabs__link-wrap:first-child{
+            @media (min-width: $screen-md){
+                order: 0;
+            }
+
+            @media (min-width: $screen-lg){
+
+            }
+
+            @media (min-width: $screen-xl){
+
+            }
+        }
+    }
+
+    .feedback__form{
+        @include row();
+    }
+
+    .field-text{
+        @include col();
+
+        &--top{
+            @include col(md, 4);
+        }
+
+        &--themes{
+            @include col(md, 8)
+        }
+    }
+
+    textarea.field-text__input{
+        resize: none;
+        height: 140px;
+    }
+}
+
+.feedback__container{
+    @include container();
+}
+
+
+.feedback__title{
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 0;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 30px;
+    }
+}
+
+
+.feedback__text{
+    font-size: 14px;
+    line-height: 25px;
+    color: #838383;
+    margin: 0 0 25px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 35px;
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 40px;
+    }
+}
+
+
+.feedback__button{
+    @include col();
+    margin-bottom: 25px;
+
+    .btn{
+        padding: 0 40px;
+    }
+}
+
+
+.feedback__form-text{
+    @include col();
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #838383;
+    max-width: 320px;
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+
+    a{
+        margin-left: 5px;
+        color: #838383;
+
+        &:hover{
+            color: $gray-darken;
+        }
+
+    }
+}

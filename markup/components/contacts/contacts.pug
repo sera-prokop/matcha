@@ -1,0 +1,56 @@
+mixin contacts(data)
+    section.contacts
+        .contacts__top(style="background-image: url(%=static=%img/assets/contacts/bg.jpg)")
+            h2.contacts__title.title-h2 Контакты
+        .contacts__container
+
+            .contacts__block.contacts__info
+                h3.contacts__subtitle Контактная информация
+                ul.contacts__list
+                    li.contacts__item
+                        span.contacts__name Многоканальный телефон
+                        .contacts__data.contacts__extra
+                            span.contacts__extra-one 8 (499) 288-03-85
+                            span.contacts__extra-two 09:00 - 20:00(без выходных)
+                    li.contacts__item
+                        span.contacts__name По общим вопросам
+                        span.contacts__data info@matchavam.com
+                    li.contacts__item
+                        span.contacts__name По сформированным заказам
+                        span.contacts__data zakaz@matchavam.com
+                    li.contacts__item
+                        span.contacts__name По вопросам оптовых закупок и партнерства
+                        span.contacts__data partner@matchavam.com
+                    li.contacts__item
+                        span.contacts__name Мы в социальных сетях
+                        .contacts__data.contacts__social
+                            ul.contacts__social-list
+                                li.contacts__social-item
+                                    a(href="#" aria-label="Вконтакте").contacts__social-link
+                                        != pugHelpers.Icon.call(locals, {iconName: "vk", className: "contacts__social-svg", iconWidth: "15", iconHeight: "15"})
+                                li.contacts__social-item
+                                    a(href="#" aria-label="Facebook").contacts__social-link
+                                        != pugHelpers.Icon.call(locals, {iconName: "facebook-f", className: "contacts__social-svg", iconWidth: "15", iconHeight: "15"})
+                                li.contacts__social-item
+                                    a(href="#" aria-label="Одноклассники").contacts__social-link
+                                        != pugHelpers.Icon.call(locals, {iconName: "odnoklassniki", className: "contacts__social-svg", iconWidth: "15", iconHeight: "15"})
+                                li.contacts__social-item
+                                    a(href="#" aria-label="Инстаграм").contacts__social-link
+                                        != pugHelpers.Icon.call(locals, {iconName: "instagram", className: "contacts__social-svg", iconWidth: "15", iconHeight: "15"})
+
+            .contacts__block.contacts__about
+                h3.contacts__subtitle Информация о продавце
+                .contacts__text
+                    p ИП Левина Елена Алексеевна, ИНН 503010687663 ОГРН 318774600104449
+                    p Юридический адрес: г. Москва, ул. Тарусская д. 13 кор.1
+                    p Расчетный счет: 40802810300000447052 в АО «Тинькофф Банк», г. Москва, БИК 044525974
+
+            .contacts__block.contacts__about
+                h3.contacts__subtitle Информация о продавце
+                .contacts__text
+                    a(href="#") Политика конфиденциальности
+                    a(href="#") Согласие на обработку персональный данных
+                    a(href="#") Обмер и возврат товара
+
+
+
