@@ -1,5 +1,17 @@
 .personal-bonus{
+    padding-bottom: 40px;
 
+    @media (min-width: $screen-md){
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg){
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl){
+        padding-bottom: 70px;
+    }
 }
 
 
@@ -215,3 +227,115 @@
 }
 
 
+.personal-bonus__bottom{
+    text-align: center;
+
+    p{
+        font-size: 14px;
+        margin: 0 auto 15px;
+        max-width: 275px;
+        color: #838383;
+
+        @media (min-width: $screen-md){
+            max-width: 320px;
+        }
+
+        @media (min-width: $screen-lg){
+            font-size: 16px;
+            margin-bottom: 25px;
+            max-width: 370px;
+        }
+
+        @media (min-width: $screen-xl){
+            font-size: 18px;
+            max-width: 410px;
+        }
+
+        &:last-of-type{
+            margin-bottom: 30px;
+
+            @media (min-width: $screen-lg){
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+.personal-bonus__bottom-title{
+    font-size: 22px;
+    color: #acd53d;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0 0 15px;
+
+    @media (min-width: $screen-md){
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+
+}
+
+
+.personal-bonus__cost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+    fill: $white;
+
+    @media (min-width: $screen-lg){
+        font-size: 22px;
+    }
+
+}
+
+
+.personal-bonus__bonus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+   @include bg($bonus-bg);
+    padding: 10px 18px;
+}
+
+
+.personal-bonus__equally{
+    font-size: 22px;
+    font-weight: 700;
+    color: #a7cf3c;
+    margin: 0 20px;
+}
+
+
+.personal-bonus__rub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include bg($bonus-bg-2);
+    padding: 10px 18px;
+    line-height: 1.5;
+}
+
+
+.personal-bonus__rub-svg{
+    display: inline-block;
+    vertical-align: top;
+
+    @media (min-width: $screen-lg){
+        width: 20px;
+        height: 18px;
+    }
+}
