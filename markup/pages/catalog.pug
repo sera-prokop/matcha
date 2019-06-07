@@ -1,0 +1,26 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +main-catalog(main_catalog)
+        +set-banner(set_banner)
+        +popular(popular.special)
+        +action(action)
+        +popular(popular.popular)
+        +text-block()
+        +main-descr(main_descr)
+        +instagram(instagram)
+
+
+
+
