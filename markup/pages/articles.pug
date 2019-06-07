@@ -1,0 +1,28 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/product/product
+include ../components/product-descr/product-descr
+include ../components/product-tabs/product-tabs
+include ../components/avialibility/avialibility
+include ../components/field-text/field-text
+include ../components/articles/articles
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', '/home')
+          +breadcrumbs-item('Блог', '/catalog')
+          +breadcrumbs-item('Статьи, обзоры и рецепты')
+        +articles
+        +set-banner(set_banner)
+        +text-block()
+        +instagram(instagram)

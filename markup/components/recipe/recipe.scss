@@ -85,3 +85,81 @@
   max-width: 150px;
   width: 100%;
 }
+
+
+// Recipe text mixin style
+
+
+.recipe__link-title{
+    display: inline-block;
+    color: $gray-darken;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-md){
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 19px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+
+.recipe__item-title{
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.recipe__item-text{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    margin: 0 0 20px;
+    color: #838383;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+    }
+
+    a{
+        margin-left: 5px;
+        color: #838383;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+.recipe__link{
+    color: $yelgreen;
+    text-decoration: none;
+    font-size: 14px;
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+    }
+
+    &:hover{
+        color: $yelgreen-dark;
+    }
+
+    &:active{
+        color: $yelgreen-darker;
+    }
+}
+
+
+.recipe__pagination{
+    display: flex;
+    justify-content: center;
+}

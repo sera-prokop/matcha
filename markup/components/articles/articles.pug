@@ -1,0 +1,118 @@
+mixin articles(data)
+    section.articles
+        .articles__container
+            h2.articles__title.title-h2 Статьи, Обзоры и Рецепты
+            +tabs([
+                {
+                    'id': 'articles',
+                    'text': 'Статьи',
+                    'isActive': true,
+                },
+                {
+                    'id': 'recipe',
+                    'text': 'Рецепты',
+                },
+                {
+                    'id': 'review',
+                    'text': 'Обзоры',
+                }
+            ])
+
+                .articles__select
+                    +field-select(
+                        'Сортировать по: ',
+                        {
+                            name: 'select',
+                            id: 'select'
+                        },
+                        [
+                            {
+                                title: 'Популярности',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                            {
+                                title: 'Дате публикации',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                            {
+                                title: 'Приоритетности',
+                                attrs: {
+                                    value: '',
+                                }
+                            },
+                        ]
+                    )
+                +tabs-item('articles', true)
+                    +recipe-text(recipe.list2)
+                +tabs-item('recipe')
+                    +recipe-text(recipe.list3)
+                +tabs-item('review')
+                    +recipe(recipe)
+                    +recipe(recipe)
+                    .recipe__pagination
+                        +pagination()
+                            +pagination-item('1', '/1', true)
+                            +pagination-item('2', '/2')
+                            +pagination-item('3', '/3')
+                            +pagination-item('4', '/4')
+                            +pagination-item('...')
+                            +pagination-item('999', '/999')
+
+
+
+mixin articles2(data)
+    section.articles
+        .articles__container
+            .articles__top
+                h2.articles__top-title.title-h2 Новости
+                a(href="#").articles__top-link Все новости
+                    != pugHelpers.Icon.call(locals, {iconName: "arrow-right", className: "articles__top-svg", iconWidth: "13", iconHeight: "13"})
+            ul.news__list
+                li.news__item
+                    .news__item-date 04.03.2019
+                    h4.news__item-title Полезный чай матча с молоком - польза или вред?
+                    p.news__item-text Использование компьютера требует специальных навыков. Людей, достигших в этом мастерства, иногда называют «хакерами».
+                        a(href="#") Читать дальше...
+                    a(href="#").news__item-link Подробнее
+                li.news__item
+                    .news__item-date 04.03.2019
+                    h4.news__item-title Полезный чай матча с молоком - польза или вред?
+                    p.news__item-text Использование компьютера требует специальных навыков. Людей, достигших в этом мастерства, иногда называют «хакерами».
+                        a(href="#") Читать дальше...
+                    a(href="#").news__item-link Подробнее
+            +tabs([
+                {
+                    'id': 'articles',
+                    'text': 'Статьи',
+                    'isActive': true,
+                },
+                {
+                    'id': 'recipe',
+                    'text': 'Рецепты',
+                },
+                {
+                    'id': 'review',
+                    'text': 'Обзоры',
+                }
+            ])
+
+                +tabs-item('articles', true)
+                    +recipe-text(recipe.list2)
+                +tabs-item('recipe')
+                    +recipe-text(recipe.list3)
+                +tabs-item('review')
+                    +recipe(recipe)
+                    +recipe(recipe)
+                    .recipe__pagination
+                        +pagination()
+                            +pagination-item('1', '/1', true)
+                            +pagination-item('2', '/2')
+                            +pagination-item('3', '/3')
+                            +pagination-item('4', '/4')
+                            +pagination-item('...')
+                            +pagination-item('999', '/999')
+

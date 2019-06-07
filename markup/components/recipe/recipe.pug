@@ -13,3 +13,28 @@ mixin recipe(data, title, button)
             if button
                 .recipe__button
                     a(href="#").recipe__btn.btn.btn__border.btn__border--green Узнать больше
+
+
+mixin recipe-text(data, title, button)
+    section.recipe
+        .recipe__wrapper
+            if title
+                h2.recipe__title.title-h2 Рецепты и статьи
+            ul.recipe__list
+                each item in data
+                    li.recipe__item
+                        a(href="#").recipe__link-img
+                            img.recipe__picture.lazy(data-src=`%=static=%img/assets/recipe/${item.img}` alt="img")
+                        a(href="#").recipe__link-title
+                            h4.recipe__item-title Полезный чай матча с молоком - польза или вред?
+                        p.recipe__item-text Использование компьютера требует специальных навыков. Людей, достигших в этом  мастерства, иногда
+                            a(href="#") Читать дальше...
+                        a(href="#").recipe__link Подробнее
+            .recipe__pagination
+                +pagination()
+                    +pagination-item('1', '/1', true)
+                    +pagination-item('2', '/2')
+                    +pagination-item('3', '/3')
+                    +pagination-item('4', '/4')
+                    +pagination-item('...')
+                    +pagination-item('999', '/999')
