@@ -1,0 +1,24 @@
+mixin search(data)
+    section.search
+        .search__container
+            h2.search__title Поиск по сайту
+                span "Голубой матча"
+
+            ul.search__list
+                li.search__item
+                    +cart(popular.popular.cart)
+                li.search__item
+                    +cart(popular.popular.cart2)
+                li.search__item
+                    +cart(popular.popular.cart3)
+                li.search__item
+                    +cart(popular.popular.cart3)
+
+
+mixin search-not(data)
+    section.search
+        .search__container
+            h2.search__title Поиск по сайту
+                span "Голубой матча"
+            p.search__text По запросу "Голубой матча" ничего не найдено
+            a(href="#").search__btn.btn.btn__border.btn__border--green Каталог товаров
