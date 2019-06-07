@@ -4,7 +4,7 @@ mixin action-one(data)
 
 
 
-mixin action-one-text(data)
+mixin action-one-text(data, title)
     section.action-one-text
         h2.action-one-text__title.title-h2 Найдете дешевле - вернем разницу
         .action-one-text__date 04.03.2019
@@ -12,5 +12,9 @@ mixin action-one-text(data)
         p Чай матча содержит в 100 раз больше мощнейших антиоксидантов (эпигаллокат ехина галлат-3 (EGCG)), чем любой другой зеленый чай. И ему действительно нет аналогов. Эпигаллокатехин оказывает положительное воздействие практичес ки на весь организм: защищает сердечно-сосудистую систему и печнь, уравновешивает нервную систему, ускоряет обмен веществ, способствует сжиганию жиров и нейтрализации токсинов, а так же изменяет метаболизм раковых клеток за счет подавления ферментов, поддерживающих их жизнедеятельность, снижает проявление аллергических реакций.
         .action-one-text__buttons
             a(href="#").action-one-text__btn.btn.btn__border--green В каталог
-            a(href="#").action-one-text__btn.btn.btn--green Другие акции
+            +action-btn(title)
+
+
+mixin action-btn(title)
+    a(href="#").action-one-text__btn.btn.btn--green=title
 

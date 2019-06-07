@@ -12,6 +12,9 @@ block head
 
 block content
     main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', 'index.html')
+            +breadcrumbs-item('Каталог')
         +main-catalog(main_catalog)
         +set-banner(set_banner)
         +popular(popular.special)
