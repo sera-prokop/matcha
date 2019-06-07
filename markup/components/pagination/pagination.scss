@@ -1,60 +1,65 @@
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 35px;
-  //margin-bottom: $typo-margin-vertical;
-
-  @media (min-width: $screen-xl){
-    margin-top: 55px;
-  }
-
-  &__item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid $gray-lighten;
-    border-radius: 50%;
-    text-decoration: none;
-    text-align: center;
-    color: $gray-lighten;
-    font-size: 14px;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    &:first-child{
-      margin-left: 0;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    //margin-bottom: $typo-margin-vertical;
+
+    @media (min-width: $screen-xl) {
+        margin-top: 55px;
     }
 
-    & + & {
-      //border-left: 0;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid $gray-lighten;
+        border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+        color: $gray-lighten;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: $screen-md){
+            margin-left: 15px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        & + & {
+            //border-left: 0;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        @at-root a#{&} {
+
+            &:hover,
+            &:focus {
+                border-color: $yelgreen-darken;
+            }
+
+            &:active {
+                color: $yelgreen-darken;
+                border-color: $yelgreen-darken;
+            }
+        }
+
+        @at-root span#{&} {
+            cursor: default;
+        }
+
+        &--active {
+            border-color: $yelgreen;
+            color: $yelgreen-darker;
+        }
     }
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-
-    @at-root a#{&} {
-
-      &:hover,
-      &:focus {
-        border-color: $yelgreen-darken;
-      }
-
-      &:active{
-        color: $yelgreen-darken;
-        border-color: $yelgreen-darken;
-      }
-    }
-
-    @at-root span#{&} {
-      cursor: default;
-    }
-
-    &--active {
-      border-color: $yelgreen;
-      color: $yelgreen-darker;
-    }
-  }
 }

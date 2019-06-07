@@ -1,0 +1,28 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/main-descr/main-descr
+include ../components/main-catalog/main-catalog
+include ../components/all-actions/all-actions
+include ../components/action-one/action-one
+include ../components/news/news
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Блог', '/home')
+            +breadcrumbs-item('Новости')
+        +news
+        +text-block()
+        +instagram(instagram)
+
+
+
+
