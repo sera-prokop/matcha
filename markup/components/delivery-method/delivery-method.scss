@@ -1,3 +1,50 @@
+.delivery-method{
+    padding: 40px 0;
+
+    @media (min-width: $screen-md){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 60px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+}
+
+
+.delivery-method__container{
+    @include container();
+}
+
+
+.delivery-method__title{
+    text-align: left;
+    padding: 0;
+}
+
+
+.delivery-method__subtitle{
+    font-weight: 400;
+    font-size: 14px;
+
+    @media (min-width: $screen-xl){
+        font-size: 17px;
+    }
+}
+
+
+.delivery-method__block{
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 40px;
+    }
+}
+
+
 .delivery-method__input{
     max-width: 360px;
     .field-text__name{
@@ -14,19 +61,46 @@
 
     .field-radio{
         display: flex;
+        flex-direction: column;
+
+        @media (min-width: $screen-md){
+            flex-direction: row;
+        }
+
+        @media (min-width: $screen-lg){
+
+        }
+
+        @media (min-width: $screen-xl){
+
+        }
     }
 
-    .field-radio__input-wrap + .field-radio__input-wrap{
-        margin: 0;
+    .field-radio__input-wrap{
+
+
+        + .field-radio__input-wrap{
+            margin: 0;
+        }
     }
 
     .field-radio__name{
         padding: 0;
+        margin-bottom: 15px;
+
+        @media (min-width: $screen-md){
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+
+        @media (min-width: $screen-xl){
+            margin-right: 25px;
+        }
     }
 
     .field-radio__name-text{
         display: inline-block;
-        padding: 15px 15px 15px 50px;
+        padding: 10px 10px 10px 50px;
         border: 1px solid $yelgreen-dark;
         border-radius: 6px;
         cursor: pointer;
@@ -60,6 +134,21 @@
     input:checked ~ .field-radio__name-text{
         background-color: $yelgreen-dark;
         color: $white;
+        .delivery-method__radio-title,
+        .delivery-method__radio-cost,
+        .delivery-method__radio-day{
+            color: $white;
+
+
+        }
+
+        .delivery-method__radio-cost{
+            &:after{
+                background-image: svg-load('ruble-sign.svg', fill=$white);
+            }
+        }
+
+
 
         &:before{
             border-color: $yelgreen-dark;
@@ -71,3 +160,74 @@
     //}
 
 }
+
+
+.delivery-method__radio-title{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+
+    @media (min-width: $screen-xl){
+        font-size: 17px;
+    }
+}
+
+
+.delivery-method__radio-cost{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    color: $yelgreen;
+
+    @media (min-width: $screen-xl){
+        font-size: 20px;
+    }
+
+    &:after{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background-image: svg-load('ruble-sign.svg', fill=$yelgreen);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+        margin-bottom: 2px;
+        margin-left: 3px;
+
+
+    }
+}
+
+
+.delivery-method__radio-day{
+    font-size: 13px;
+    font-weight: 300;
+    color: $gray-light;
+    line-height: 25px;
+
+    @media (min-width: $screen-xl){
+        font-size: 15px;
+    }
+}
+
+
+.delivery-method__text{
+    font-size: 14px;
+    line-height: 25px;
+
+    @media (min-width: $screen-md){
+        max-width: 440px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 15px;
+    }
+
+    @media (min-width: $screen-xl){
+
+    }
+}
+
