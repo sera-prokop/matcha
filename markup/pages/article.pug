@@ -1,0 +1,24 @@
+extends _template.pug
+
+include ../components/head/head
+
+include ../components/article/article
+
+
+
+block head
+    +head(head.index)
+
+block content
+    main
+        +breadcrumbs()
+            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Блог', '/home')
+            +breadcrumbs-item('Статьи', '/home')
+            +breadcrumbs-item('Целебная сила лотоса из вьетнама')
+        +article
+        +instagram(instagram)
+
+
+
+

@@ -1,0 +1,113 @@
+.article{
+    padding: 40px 0;
+
+    @media (min-width: $screen-md){
+        padding: 50px 0;
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 60px 0;
+    }
+
+    @media (min-width: $screen-xl){
+        padding: 70px 0;
+    }
+}
+
+
+.article__container{
+    @include container();
+}
+
+
+.article__title{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 25px;
+
+    @media (min-width: $screen-md){
+        font-size: 32px;
+    }
+
+    @media (min-width: $screen-lg){
+        font-size: 38px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 47px;
+        margin-bottom: 30px;
+    }
+}
+
+
+.article__date{
+    font-size: 14px;
+    margin: 0 0 30px;
+    color: #838383;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+        margin-bottom: 55px;
+    }
+}
+
+
+.article__img{
+    max-height: 490px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 55px;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+.article__text{
+    font-size: 14px;
+    line-height: 1.5;
+
+
+    @media (min-width: $screen-md){
+
+    }
+
+    @media (min-width: $screen-lg){
+        padding: 0 8%;
+    }
+
+    @media (min-width: $screen-xl){
+        font-size: 16px;
+    }
+}
+
+
+.article__btn{
+    margin-top: 30px;
+    text-align: center;
+
+    @media (min-width: $screen-md){
+        text-align: left;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-top: 40px;
+    }
+
+    .btn{
+        padding: 0 30px;
+    }
+}
