@@ -33,6 +33,9 @@ html(class="no-js", lang="ru")
     include ../components/field-radio/field-radio
     include ../components/field-select/field-select
     include ../components/field-text/field-text
+    include ../components/modal/modal
+    include ../components/quick-order/quick-order
+    include ../components/modals/modals
 
     head
         block head
@@ -51,6 +54,8 @@ html(class="no-js", lang="ru")
 
             .page__footer
                 +footer()
+
+        +modals
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

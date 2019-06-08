@@ -7,9 +7,11 @@ mixin cart(data)
                 if item.new
                     .cart__icon.cart__icon--new(aria-label="Новый товар")
 
-                a(href="#" aria-label="Добавить в избранное").cart__top-link
+                //- a(href="#" aria-label="Добавить в избранное").cart__top-link
 
-                .cart__img.cart-img
+                a.cart__favorites.favorites.favorites--bg(href="#modal-favorites-add" data-toggle="modal" aria-label="Избранное")
+
+                a(href="product.html").cart__img.cart-img
                     img.cart-img__picture.lazy(data-src=`%=static=%img/assets/cart/${item.img}` alt="Товар")
 
                     if item.discount
@@ -22,7 +24,8 @@ mixin cart(data)
                         .cart-img__text.cart-img__text--soon Ожидается
 
                 .cart__descr
-                    h3.cart__title=item.title
+                    a(href="product.html").cart__title-link
+                        h3.cart__title=item.title
                     p.cart__text=item.text
                     .cart__cost-block
                         if item.discount
@@ -41,6 +44,6 @@ mixin cart(data)
                             step: '1',
                         }
                     })
-                a(href="#").cart__btn.btn.btn--green.btn--cart-icon В корзину
+                a(href="#modal-add-cart" data-toggle="modal").cart__btn.btn.btn--green.btn--cart-icon В корзину
 
-// Сверстать 'кружку'
+

@@ -19,8 +19,8 @@ mixin personal-order(data)
                         //span.personal-order__control-status.personal-order__control-status--cancel Отменен
                         //span.personal-order__control-status.personal-order__control-status--received Получен
                 .personal-order__control-bottom
-                    a(href="/").btn.btn--green Отследить заказ
-                    a(href="/").btn.btn__border.btn__border--green Повторить заказ
+                    a(href="#modal-tracking" data-toggle="modal").btn.btn--green Отследить заказ
+                    a(href="checkout.html").btn.btn__border.btn__border--green Повторить заказ
             .personal-order__content
                 +goods-order(data, true)
         .personal-order__item
@@ -42,8 +42,8 @@ mixin personal-order(data)
                         //span.personal-order__control-status.personal-order__control-status--cancel Отменен
                         span.personal-order__control-status.personal-order__control-status--received Получен
                 .personal-order__control-bottom
-                    a(href="#").btn.btn--green Отследить заказ
-                    a(href="#").btn.btn__border.btn__border--green Повторить заказ
+                    a(href="#modal-tracking" data-toggle="modal").btn.btn--green Отследить заказ
+                    a(href="checkout.html").btn.btn__border.btn__border--green Повторить заказ
             .personal-order__content
                 +goods-order(data, true)
         .personal-order__item
@@ -65,8 +65,8 @@ mixin personal-order(data)
                         span.personal-order__control-status.personal-order__control-status--cancel Отменен
                         //span.personal-order__control-status.personal-order__control-status--received Получен
                 .personal-order__control-bottom
-                    a(href="#").btn.btn--green Отследить заказ
-                    a(href="#").btn.btn__border.btn__border--green Повторить заказ
+                    a(href="#modal-tracking" data-toggle="modal").btn.btn--green Отследить заказ
+                    a(href="checkout.html").btn.btn__border.btn__border--green Повторить заказ
             .personal-order__content
                 +goods-order(data, true)
 

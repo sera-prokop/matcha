@@ -17,6 +17,7 @@ import 'components/category-filter/category-filter';
 import 'components/field-select/field-select';
 import 'components/personal-order/personal-order';
 import 'components/about-text/about-text';
+import 'components/modal/modal';
 
 
 // fix for error (event.target.className || "").indexOf is not a function

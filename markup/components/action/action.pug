@@ -3,12 +3,12 @@ mixin action(data)
         ul.action__list
             each item in data.list
                 li.action__item
-                    a(href="" data-bg=`url(%=static=%img/assets/action/${item.img})`).action__link.lazy
+                    a(href="action.html" data-bg=`url(%=static=%img/assets/action/${item.img})`).action__link.lazy
                         //- img.action__picture.lazy(src=`%=static=%img/assets/action/${item.img}`, alt="alt")
                         h3.action__title=item.title
                         p.action__text=item.text
         .action__button
-            a(href="#").action__btn.btn.btn__border.btn__border--green Все акции
+            a(href="actions.html").action__btn.btn.btn__border.btn__border--green Все акции
 
 
 mixin action-bg(data)
@@ -19,4 +19,4 @@ mixin action-bg(data)
                 li.action-bg__item Оформите заказ от 2 000 рублей и получите упаковку матча в подарок
                 li.action-bg__item Скидка 10% на первую покупку
             .action-bg__button
-                a(href="#").action-bg__btn.btn.btn--green Перейти к каталогу
+                a(href="catalog.html").action-bg__btn.btn.btn--green Перейти к каталогу

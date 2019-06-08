@@ -7,14 +7,14 @@ include ../components/article/article
 
 
 block head
-    +head(head.index)
+    +head(head.article)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
-            +breadcrumbs-item('Блог', '/home')
-            +breadcrumbs-item('Статьи', '/home')
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Блог', 'blog.html')
+            +breadcrumbs-item('Статьи', 'articles.html')
             +breadcrumbs-item('Целебная сила лотоса из вьетнама')
         +article
         +instagram(instagram)

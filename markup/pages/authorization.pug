@@ -12,26 +12,26 @@ include ../components/field-toggler/field-toggler
 
 
 block head
-    +head(head.index)
+    +head(head.auth)
 
 block content
     main
         section.tabs-authorization
             +tabs([
                 {
-                    'id': 'tab00',
+                    'id': 'auth',
                     'text': 'Я уже покупал',
                     'isActive': true,
                 },
                 {
-                    'id': 'tab01',
+                    'id': 'reg',
                     'text': 'Я новый покупатель',
                 },
             ], 'some-mod')
-                +tabs-item('tab00', true, 'some')
+                +tabs-item('auth', true, 'some')
                     +authorization-form(authorization_form)
 
-                +tabs-item('tab01')
+                +tabs-item('reg')
                     +registration-form(registration_form)
 
         +instagram(instagram)

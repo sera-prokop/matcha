@@ -4,7 +4,7 @@ mixin features(data, about)
             .features__top-wrapper
                 h2.features__top-title Полезные свойства чая Матча
                 .features__top-button
-                    a(href="#").features__top-link Узнайте об изготовлении и полезных свойствах чая Матча за 2 минуты
+                    a(href="article.html").features__top-link Узнайте об изготовлении и полезных свойствах чая Матча за 2 минуты
         if !about
             .features__wrapper
                 ul.features__list
@@ -17,5 +17,5 @@ mixin features(data, about)
                                     h3.features__title=item.title
                                     p.features__text=item.text
             .features__buttons
-                a(href="#").features__btn.btn.btn--green Перейти к каталогу
-                a(href="#").features__btn.btn.btn__border Посмотреть рецепты
+                a(href="catalog.html").features__btn.btn.btn--green Перейти к каталогу
+                a(href="articles.html#recipe").features__btn.btn.btn__border Посмотреть рецепты

@@ -11,13 +11,13 @@ include ../components/news/news
 
 
 block head
-    +head(head.index)
+    +head(head.news)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
-            +breadcrumbs-item('Блог', '/home')
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Блог', 'blog.html')
             +breadcrumbs-item('Новости')
         +news
         +text-block()

@@ -14,13 +14,13 @@ include ../components/producer/producer
 
 
 block head
-    +head(head.index)
+    +head(head.personal)
 
 block content
     main
         +breadcrumbs()
-          +breadcrumbs-item('Главная', '/home')
-          +breadcrumbs-item('Каталог', '/catalog')
+          +breadcrumbs-item('Главная', '/')
+          +breadcrumbs-item('Каталог', 'catalog.html')
           +breadcrumbs-item('Производитель')
         +producer
         +action(action)

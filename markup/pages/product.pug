@@ -13,14 +13,14 @@ include ../components/field-text/field-text
 
 
 block head
-    +head(head.index)
+    +head(head.product)
 
 block content
     main
         +breadcrumbs()
-          +breadcrumbs-item('Главная', '/home')
-          +breadcrumbs-item('Каталог', '/catalog')
-          +breadcrumbs-item('Матча церемониальный', '/mt')
+          +breadcrumbs-item('Главная', '/')
+          +breadcrumbs-item('Каталог', 'catalog.html')
+          +breadcrumbs-item('Матча церемониальный', 'category.html')
           +breadcrumbs-item('Чай Матча Весенний, 100г')
         +product()
         +main-descr(main_descr)

@@ -30,6 +30,31 @@
         }
     }
 
+
+    &--bg{
+        background-image: svg-load('mug-hot.svg', fill=$yelgreen);
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: 59% 45%;
+        background-color: #fafafa;
+        z-index: 10;
+
+        @media (min-width: $screen-xl){
+            width: 45px;
+            height: 45px;
+        }
+
+        @media (min-width: $screen-xl){
+            background-size: 18px 18px;
+            background-position: 56% 48%;
+        }
+
+        &:hover{
+            border-color: $yelgreen-darken;
+            background-image: svg-load('mug-hot.svg', fill=$yelgreen-darken);
+        }
+    }
+
     &--active{
         background-color: $yelgreen;
         border-color: $yelgreen;

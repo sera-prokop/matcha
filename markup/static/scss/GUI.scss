@@ -53,7 +53,7 @@
     background-color: $yelgreen;
     color: $white;
 
-    &:hover, &:focus {
+    &:hover {
         background-color: $yelgreen-darken;
         color: $white;
         outline: none;
@@ -77,7 +77,7 @@
         line-height: 48px;
     }
 
-    &:hover, &:focus {
+    &:hover {
         border-color: $gray-light;
         color: $gray-dark;
     }
@@ -92,7 +92,7 @@
         color: $yelgreen-dark;
         background-color: transparent;
 
-        &:hover, &:focus {
+        &:hover {
             border-color: $yelgreen;
             color: $white;
             background-color: $yelgreen;
@@ -155,7 +155,7 @@
         font-size: 16px;
     }
 
-    &:hover, &:focus {
+    &:hover {
         color: $yelgreen-lighten;
         text-decoration: underline;
     }

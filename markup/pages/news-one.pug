@@ -10,14 +10,14 @@ include ../components/action-one/action-one
 
 
 block head
-    +head(head.index)
+    +head(head.news_one)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
-            +breadcrumbs-item('Блог', '/home')
-            +breadcrumbs-item('Новости', '/home')
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Блог', 'blog.html')
+            +breadcrumbs-item('Новости', 'news.html')
             +breadcrumbs-item('Найдете дешевле - вернем разницу')
         +action-one()
         +action-one-text('action-one-text', 'Другие новости')

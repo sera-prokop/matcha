@@ -4,8 +4,8 @@ mixin present(data)
             .present__img
                 img(src="%=static=%img/assets/present/bg.png", alt="alt")
             .present__left
-                a(href="#").present__btn.btn.btn--green Выбрать подарок
+                a(href="#modal-present" data-toggle="modal").present__btn.btn.btn--green Выбрать подарок
                 p.present__text Вы выбрали 2 пробника
-                    a(href="#") Изменить
+                    a(href="#modal-present" data-toggle="modal") Изменить
             .present__right
                 p Под «Выбрать пробник» будем понимать все возможности Битрикс – пробники, подарки. Подарком может быть или товар, или опция (например, скидка на доставку).

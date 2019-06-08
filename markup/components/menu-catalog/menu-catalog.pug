@@ -7,11 +7,11 @@ mixin menu-catalog(data)
                 a(href=item.link)= item.name
     ul.menu-catalog__down.menu-down
         li.menu-down__item
-            a(href="#").menu-down__link.menu-down__link--action %Акции
+            a(href="actions.html").menu-down__link.menu-down__link--action %Акции
         li.menu-down__item
-            a(href="#").menu-down__link Доставка и оплата
+            a(href="delivery.html").menu-down__link Доставка и оплата
         li.menu-down__item
-            a(href="#").menu-down__link Контакты
+            a(href="contacts.html").menu-down__link Контакты
 
 mixin loop-menu-catalog(list)
     each item in list

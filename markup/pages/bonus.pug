@@ -15,12 +15,12 @@ include ../components/personal-bonus/personal-bonus
 
 
 block head
-    +head(head.index)
+    +head(head.bonus)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', 'index.html')
+            +breadcrumbs-item('Главная', '/')
             +breadcrumbs-item('Личный кабинет')
         +personal-page(personal_page, 'Скидки и бонусы', 'Скидки и бонусы')
             .personal-page__descr

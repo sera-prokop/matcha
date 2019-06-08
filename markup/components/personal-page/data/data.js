@@ -2,19 +2,19 @@ var data = {personal_page: {
     list: [
         {
             name: 'Персональные данные',
-            link: '/'
+            link: 'personal.html'
         },
         {
             name: 'Мои заказы',
-            link: '/'
+            link: 'order.html'
         },
         {
             name: 'Избранные товары',
-            link: '/'
+            link: 'favorites.html'
         },
         {
             name: 'Скидки и бонусы',
-            link: '/'
+            link: 'bonus.html'
         },
         {
             name: 'Выход',

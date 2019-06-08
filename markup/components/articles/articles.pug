@@ -69,21 +69,21 @@ mixin articles2(data)
         .articles__container
             .articles__top
                 h2.articles__top-title.title-h2 Новости
-                a(href="#").articles__top-link Все новости
+                a(href="news.html").articles__top-link Все новости
                     != pugHelpers.Icon.call(locals, {iconName: "arrow-right", className: "articles__top-svg", iconWidth: "13", iconHeight: "13"})
             ul.news__list
                 li.news__item
                     .news__item-date 04.03.2019
                     h4.news__item-title Полезный чай матча с молоком - польза или вред?
                     p.news__item-text Использование компьютера требует специальных навыков. Людей, достигших в этом мастерства, иногда называют «хакерами».
-                        a(href="#") Читать дальше...
-                    a(href="#").news__item-link Подробнее
+                        a(href="news-one.html") Читать дальше...
+                    a(href="news-one.html").news__item-link Подробнее
                 li.news__item
                     .news__item-date 04.03.2019
                     h4.news__item-title Полезный чай матча с молоком - польза или вред?
                     p.news__item-text Использование компьютера требует специальных навыков. Людей, достигших в этом мастерства, иногда называют «хакерами».
-                        a(href="#") Читать дальше...
-                    a(href="#").news__item-link Подробнее
+                        a(href="news-one.html") Читать дальше...
+                    a(href="news-one.html").news__item-link Подробнее
             +tabs([
                 {
                     'id': 'articles',

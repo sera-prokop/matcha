@@ -11,13 +11,13 @@ include ../components/category-card/category-card
 
 
 block head
-    +head(head.index)
+    +head(head.category)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
-            +breadcrumbs-item('Каталог', '/catalog')
+            +breadcrumbs-item('Главная', '/')
+            +breadcrumbs-item('Каталог', 'catalog.html')
             +breadcrumbs-item('Матча церемониальный')
         +category()
         +set-banner(set_banner)

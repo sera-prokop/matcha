@@ -39,14 +39,14 @@ mixin checkout-auth(data)
                     li.checkout__total-item.checkout__total-item--bonus
                         span.checkout__total-name Бонусов на счету:
                         span.checkout__total-num.checkout__total-num--bonus 50
-                a(href="#").btn.btn__border.btn__border--green Оплатить бонусами
+                a(href="bonus.html").btn.btn__border.btn__border--green Оплатить бонусами
 
             .checkout__reg.checkout__reg--auth
                 h3.checkout__reg-title.checkout__title Авторизация
                 +checkout-authorization(authorization_form)
                 .checkout__reg-descr
                     p Если вы впервые на сайте, и хотите чтобы мы вас помнили, и все ваши заказы сохранились, заполните регистрационную форму
-                    a(href="#").btn.btn--green Зарегистрироваться
+                    a(href="authorization.html#reg").btn.btn--green Зарегистрироваться
 
 
 

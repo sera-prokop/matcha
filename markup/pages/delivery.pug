@@ -8,12 +8,12 @@ include ../components/delivery-method/delivery-method
 
 
 block head
-    +head(head.index)
+    +head(head.delivery)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Главная', '/')
             +breadcrumbs-item('Доставка')
         +delivery
         +delivery-method

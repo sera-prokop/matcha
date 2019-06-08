@@ -1,0 +1,83 @@
+mixin modals(data)
+    .modals
+        +modal('modal-favorites-add', '', 'favorites')
+          .modal__body
+            p Товар добавлен в избранное
+        //-   .modal__footer
+            button.btn(type='button', data-dismiss='modal') Закрыть
+
+
+        +modal('modal-favorites-del', '', 'favorites')
+          .modal__body
+            p Товар убран из избранных
+
+
+        +modal('modal-add-cart', '', 'add-cart')
+          .modal__body
+            .modal__img
+                img(src="%=static=%img/assets/cart/cart-img-1.jpg" alt="alt")
+            p.modal__text Товар добавлен в корзину
+            .modal__btns
+                button(type='button', data-dismiss='modal').btn.btn__border.btn__border--green Продолжить покупки
+                a(href="cart-page.html").btn.btn--green Перейти в корзину
+
+
+        +modal('modal-quick-order', '', 'quick-order')
+            +quick-order(registration_form)
+
+
+        +modal('modal-pass', '', 'text')
+            .modal__body
+                h3 Спасибо
+                p Ваш пароль отправлен вам на почту
+
+
+        +modal('modal-call', '', 'call')
+            .modal__body
+                h3.modal__title Заказать звонок
+                p.modal__text Заполните форму и мы перезвоним в ближайшее вермя
+                .modal__form.form(data-check-form="false")
+                    +field-text({
+                        title: 'Имя',
+                        helpText: 'Не менее 2-х символов. Обязательно.',
+                        attrs: {
+                            require: true,
+                            placeholder: 'Иван',
+                            'data-check-pattern': '^[a-zа-яё]+.+'
+                        }
+                    })
+                    +field-text({
+                        title: 'Телефон',
+                        helpText: 'Обязательно.',
+                        attrs: {
+                            type: 'tel',
+                            require: true,
+                            placeholder: '+7 (000) 000-00-00',
+                            'data-check-pattern': '[\\+]?\\d?[\\s|-]?[(]?\\d{0,3}[)]?[\\s|-]?\\d{3}[\\s|-]?\\d{2}[\\s|-]?\\d{2}'
+                        }
+                    })
+                    .modal__bottom
+                        button(type="submit" href="#modal-order" data-dismiss='modal' data-toggle="modal").modal__form-btn.btn.btn--green Заказать звонок
+                        p.modal__bottom-text Нажимая кнопку заказать звонок, вы даете свое согласие на обработку
+                            a(href="#") персональных данных
+
+
+        +modal('modal-order', '', 'text')
+            .modal__body
+                h3 Спасибо за заявку
+                p Наш менеджер свяжется с вами в ближайшее время
+
+
+        +modal('modal-tracking', '', 'tracking')
+            .modal__body
+                h3 Спасибо за заявкуОТСЛЕЖИВАНИЕ
+                p Наш менеджер свяжется с вами в ближайшее время
+
+
+
+        +modal('modal-present', '', 'present')
+            .modal__body
+                h3 Спасибо за заявкуПОДАРОК
+                p Наш менеджер свяжется с вами в ближайшее время
+
+

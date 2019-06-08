@@ -11,4 +11,4 @@ mixin favorites(mods, border)
         if(typeof(border) !== 'undefined' && border)
             allMods = allMods + '  favorites--border';
 
-    a.favorites(href="#" aria-label="Избранное" class=allMods)
+    a.favorites(href="#modal-favorites-add" data-toggle="modal" aria-label="Избранное" class=allMods)

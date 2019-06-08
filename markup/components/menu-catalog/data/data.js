@@ -3,37 +3,37 @@ var data = {'menu_catalog': {
             {
                 name: 'Матча церемониальный',
                 svg: 'cup-of-hot-coffee',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Матча премиальный',
                 svg: 'coffee',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Матча традиционный',
                 svg: 'coffee-togo',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Напитки',
                 svg: 'lemonade',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Десерты',
                 svg: 'birthday-cake',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Аксессуары',
                 svg: 'ico',
-                link: '#'
+                link: 'product.html'
             },
             {
                 name: 'Наборы',
                 svg: 'box-open',
-                link: '#'
+                link: 'product.html'
             },
         ]
     }

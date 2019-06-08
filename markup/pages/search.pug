@@ -9,13 +9,13 @@ include ../components/search/search
 
 
 block head
-    +head(head.index)
+    +head(head.search)
 
 block content
     main
         +breadcrumbs()
             +breadcrumbs-item('Главная', 'index.html')
-            +breadcrumbs-item('Поиск по сайту', 'index.html')
+            +breadcrumbs-item('Поиск по сайту', 'search.html')
             +breadcrumbs-item('Голубой матча')
         +search
         +instagram(instagram)

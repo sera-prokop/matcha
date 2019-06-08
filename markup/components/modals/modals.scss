@@ -1,0 +1,319 @@
+.modal{
+    &--favorites{
+        .modal__body{
+            font-size: 25px;
+            color: $gray-darken;
+            padding: 70px 50px;
+
+            @media (min-width: $screen-md){
+                font-size: 32px;
+                padding: 105px 50px;
+            }
+
+            @media (min-width: $screen-lg){
+                font-size: 38px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 47px;
+                padding: 130px 50px;
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+
+    &--add-cart{
+        .modal__title{
+            margin: 0;
+        }
+
+        .modal__body{
+            padding: 35px 20px;
+
+            @media (min-width: $screen-md){
+                padding: 35px 35px;
+            }
+
+            @media (min-width: $screen-lg){
+                padding: 50px 60px;
+            }
+
+            @media (min-width: $screen-xl){
+                padding: 50px 70px;
+            }
+        }
+
+        .modal__img{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            @media (min-width: $screen-md){
+                margin-bottom: 25px;
+            }
+
+            @media (min-width: $screen-lg){
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: $screen-xl){
+                margin-bottom: 45px;
+            }
+
+            img{
+                max-width: 100%;
+                height: 125px;
+                object-fit: contain;
+
+                @media (min-width: $screen-xl){
+                    height: 160px;
+                }
+            }
+
+        }
+
+        .modal__text{
+            font-size: 20px;
+            color: $gray-darken;
+            margin: 0 0 25px;
+            text-align: center;
+
+            @media (min-width: $screen-md){
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: $screen-lg){
+                font-size: 34px;
+                margin-bottom: 40px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 39px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .modal__btns{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 auto;
+            align-items: center;
+
+            @media (min-width: $screen-md){
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            @media (min-width: $screen-lg){
+            }
+
+            @media (min-width: $screen-xl){
+            }
+
+
+            .btn{
+                padding: 0 30px;
+
+                &:first-child{
+                    margin-bottom: 10px;
+                    @media (min-width: $screen-md){
+                        margin-bottom: 0;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    &--quick-order{
+
+        .quick-order{
+            padding: 30px 0;
+        }
+
+        .quick-order__container{
+            width: auto;
+        }
+
+        .quick-order__title{
+            color: $gray-darken;
+        }
+    }
+
+    &--text{
+
+        .modal__dialog{
+            max-width: 555px;
+        }
+
+        .modal__body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+
+            @media (min-width: $screen-md){
+                padding: 95px 20px;
+            }
+
+            @media (min-width: $screen-lg){
+
+            }
+
+            @media (min-width: $screen-xl){
+                padding: 120px 20px;
+            }
+        }
+        h3{
+            font-size: 25px;
+            color: $gray-darken;
+            margin: 0 0 20px;
+            font-weight: 400;
+
+            @media (min-width: $screen-md){
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: $screen-lg){
+                font-size: 38px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 47px;
+                margin-bottom: 40px;
+            }
+        }
+
+        p{
+            margin: 0;
+            font-size: 14px;
+            color: #838383;
+
+            @media (min-width: $screen-lg){
+                font-size: 16px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 18px;
+            }
+        }
+    }
+
+    &--call{
+
+        .modal__body{
+            padding: 20px;
+
+            @media (min-width: $screen-md){
+                padding: 50px;
+            }
+
+            @media (min-width: $screen-lg){
+                padding: 60px;
+            }
+
+            @media (min-width: $screen-xl){
+                padding: 70px;
+            }
+
+        }
+
+        .modal__title{
+            font-size: 25px;
+            color: $gray-darken;
+            margin: 0 0 20px;
+            font-weight: 400;
+            text-align: center;
+
+            @media (min-width: $screen-md){
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: $screen-lg){
+                font-size: 38px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 47px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .modal__text{
+            margin: 0 0 25px;
+            font-size: 14px;
+            color: #838383;
+            text-align: center;
+
+            @media (min-width: $screen-lg){
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+        }
+
+        .modal__form{
+            @include row();
+        }
+
+        .field-text{
+            @include col();
+            @include col(md, 6)
+        }
+
+
+        .modal__bottom{
+            @include col();
+            text-align: center;
+
+        }
+
+        .modal__form-btn{
+            padding: 0 30px;
+            margin-bottom: 25px;
+        }
+
+        .modal__bottom-text{
+            margin: 0;
+            font-size: 14px;
+            color: #838383;
+            text-align: center;
+
+            @media (min-width: $screen-lg){
+                font-size: 16px;
+            }
+
+            @media (min-width: $screen-xl){
+                font-size: 18px;
+            }
+
+            a{
+                color: #838383;
+                margin-left: 5px;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+

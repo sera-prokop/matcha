@@ -8,12 +8,12 @@ include ../components/feedback/feedback
 
 
 block head
-    +head(head.index)
+    +head(head.contacts)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Главная', '/')
             +breadcrumbs-item('Контакты')
         +contacts
         +feedback

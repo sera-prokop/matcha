@@ -9,12 +9,12 @@ include ../components/all-actions/all-actions
 
 
 block head
-    +head(head.index)
+    +head(head.actions)
 
 block content
     main
         +breadcrumbs()
-            +breadcrumbs-item('Главная', '/home')
+            +breadcrumbs-item('Главная', '/')
             +breadcrumbs-item('Акции')
         +cart-day(cart_day)
         +all-actions(all_actions)

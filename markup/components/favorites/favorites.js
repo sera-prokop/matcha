@@ -9,9 +9,15 @@ ready(function () {
             favorite.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                console.log(e.target);
-
                 e.target.classList.toggle('favorites--active');
+
+                $('#modal-favorites-add').on('show.nth.modal', function () {
+                    e.target.href = "#modal-favorites-del";
+                });
+
+                $('#modal-favorites-del').on('show.nth.modal', function () {
+                    e.target.href = "#modal-favorites-add";
+                });
             });
         });
     }
