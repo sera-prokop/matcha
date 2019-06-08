@@ -70,14 +70,65 @@ mixin modals(data)
 
         +modal('modal-tracking', '', 'tracking')
             .modal__body
-                h3 Спасибо за заявкуОТСЛЕЖИВАНИЕ
-                p Наш менеджер свяжется с вами в ближайшее время
+                h3 Отследи свою посылку:
+                .modal__post
+                    +field-text({
+                        title: '',
+                        helpText: 'Не менее 2-х символов. Обязательно.',
+                        attrs: {
+                            require: true,
+                            placeholder: 'Номер посылки',
+                            'data-check-pattern': '^[a-zа-яё]+.+'
+                        }
+                    })
+                    button().btn.btn--green Отследить
+                .modal__post-data
+                    p.modal__post-top Посылка
+                        span RG4545
+                        | найдена
+                    p Посылка доставлена получателю
+
 
 
 
         +modal('modal-present', '', 'present')
             .modal__body
-                h3 Спасибо за заявкуПОДАРОК
-                p Наш менеджер свяжется с вами в ближайшее время
+                h3.modal__body-title Вы можете выбрать 2 подарочных пробника
+                .cart__list
+                    .cart-item
+                        .cart-item__img
+                            img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+                        .cart-item__descr
+                            .cart-item__descr-text
+                                p.cart-item__text Пробник
+                                h3.cart-item__title Чай Матча Весенний, 30г
+                            .cart-item__bottom
+                                a(href="#").cart-item__btn.btn.btn__border.btn__border--green Выбрать пробник
+                    .cart-item
+                        .cart-item__img
+                            img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+                        .cart-item__descr
+                            .cart-item__descr-text
+                                p.cart-item__text Пробник
+                                h3.cart-item__title Чай Матча Весенний, 30г
+
+                            .cart-item__bottom
+                                a(href="#").cart-item__btn.btn.btn__border.btn__border--green Выбрать пробник
+                    .cart-item
+                        .cart-item__img
+                            img(src="%=static=%img/assets/cart-block/1.png", alt="alt")
+                        .cart-item__descr
+                            .cart-item__descr-text
+                                p.cart-item__text Пробник
+                                h3.cart-item__title Чай Матча Весенний, 30г
+                            .cart-item__bottom
+                                a(href="#").cart-item__btn.btn.btn__border.btn__border--green Выбрать пробник
+                .modal__btn
+                    a(href="#" data-dismiss="modal").cart-item__btn.btn.btn--green Добавить в корзину
 
 
+
+
+        +modal('modal-video', '', 'video')
+            +embed-responsive()
+                iframe(src='https://www.youtube.com/embed/B0Q1rKpDNE4', frameborder='0', allowfullscreen='')

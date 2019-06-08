@@ -14,8 +14,14 @@ ready(function () {
 
     });
 
-    acc.on('click', function () {
+    acc.on('click', function (e) {
         let $this = $(this);
+
+        if ($(event.target).data('toggle')){
+            $('#modal-tracking').modal()
+            return false;
+        }
+
 
         $this.toggleClass('personal-order__control--active');
         $this.next('div').slideToggle(200);
@@ -27,4 +33,8 @@ ready(function () {
         }
 
     });
+
+    // $('.personal-order__control-bottom .btn').on('click', function (e) {
+    //     e.stopPropagation();
+    // })
 });
