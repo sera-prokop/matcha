@@ -210,6 +210,11 @@
     }
 
     &--call{
+        .modal__header{
+            h4{
+                margin: 0;
+            }
+        }
 
         .modal__body{
             padding: 20px;
@@ -466,6 +471,12 @@
                 margin: 0 5px;
                 font-weight: 600;
             }
+        }
+    }
+
+    &--video{
+        .embed-responsive{
+            margin: 0;
         }
     }
 }

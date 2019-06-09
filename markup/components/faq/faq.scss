@@ -24,10 +24,15 @@
 
     &:hover {
         //outline: 0;
-        color: darken($yelgreen-dark, 15%);
+        //color: darken($yelgreen-dark, 15%);
 
-        .faq__svg{
-            fill: darken($yelgreen-dark, 15%);
+        //.faq__svg{
+        //    fill: darken($yelgreen-dark, 15%);
+        //}
+
+        &:after{
+            background-color: $yelgreen;
+            color: $white;
         }
     }
 
@@ -50,8 +55,41 @@
 
 
     &.akkordeon-active {
+
+        &:after{
+            border-color: $yelgreen-darken;
+            background-color: $yelgreen-darken;
+            color: $body-bg;
+            transform: rotate(45deg);
+        }
         .faq__svg{
             transform: rotate(45deg);
+        }
+    }
+
+    &:after{
+        content: '+';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        padding-top: 2px;
+        font-size: 35px;
+        font-weight: 100;
+        color: $yelgreen;
+
+        border: 1px solid $yelgreen;
+        border-radius: 50%;
+
+        transition: $transition-time;
+
+        @media (min-width: $screen-xl) {
+            border: 2px solid $yelgreen;
+            width: 50px;
+            height: 50px;
+            font-size: 49px;
+            padding-left: 1px;
         }
     }
 }

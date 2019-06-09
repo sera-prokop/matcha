@@ -33,6 +33,19 @@
 
 .product__container{
     @include container();
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .product__wrapper{

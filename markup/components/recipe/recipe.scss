@@ -1,165 +1,195 @@
-.recipe{
-  background-color: $white;
-  padding-bottom: 30px;
-  padding-top: 40px;
+.recipe {
+    background-color: $white;
+    padding-bottom: 30px;
+    padding-top: 40px;
 
-  @media (min-width: $screen-lg){
-    padding-bottom: 40px;
-    padding-top: 50px;
-  }
+    @media (min-width: $screen-lg) {
+        padding-bottom: 40px;
+        padding-top: 50px;
+    }
 
-  @media (min-width: $screen-xl){
-    padding-bottom: 50px;
-    padding-top: 70px;
-  }
+    @media (min-width: $screen-xl) {
+        padding-bottom: 50px;
+        padding-top: 70px;
+    }
 }
 
-.recipe__wrapper{
-  @include container();
+.recipe__wrapper {
+    @include container();
 }
 
-.recipe__list{
-  @include row();
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
+.recipe__list {
+    @include row();
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.recipe__item{
-  @include col();
-  @include col(md, 4, $grid-columns, 20px);
-  @include col(lg, 4, $grid-columns, 25px);
-  @include col(xl, 4, $grid-columns, 30px);
-  margin-bottom: 35px;
+.recipe__item {
+    @include col();
+    @include col(md, 4, $grid-columns, 20px);
+    @include col(lg, 4, $grid-columns, 25px);
+    @include col(xl, 4, $grid-columns, 30px);
+    margin-bottom: 35px;
 }
 
-.recipe__link-img{
-  display: inline-block;
-  margin-bottom: 20px;
+.recipe__link-img {
+    display: inline-block;
+    margin-bottom: 20px;
+    overflow: hidden;
 
-  @media (min-width: $screen-xl){
-    margin-bottom: 25px;
-  }
+    @media (min-width: $screen-xl) {
+        margin-bottom: 25px;
+    }
+
+    img{
+        vertical-align: middle;
+        transition: $transition-time;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
 }
 
-.recipe__picture{
-  width: 100%;
-  height: 235px;
-  object-fit: cover;
+.recipe__picture {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
 
-  @media (min-width: $screen-md){
-    height: 160px;
-  }
+    @media (min-width: $screen-md) {
+        height: 160px;
+    }
 
-  @media (min-width: $screen-lg){
-    height: 220px;
-  }
+    @media (min-width: $screen-lg) {
+        height: 220px;
+    }
 
-  @media (min-width: $screen-xl){
-    height: 265px;
-  }
+    @media (min-width: $screen-xl) {
+        height: 265px;
+    }
 }
 
-.recipe__link-text{
-  text-decoration: none;
+.recipe__link-text {
+    text-decoration: none;
+    position: relative;
+
+
+    &:hover{
+        .recipe__text{
+            box-shadow:
+                inset 0 -0.175em white, 0 0.06em $gray-lighter;
+        }
+    }
+
 }
 
-.recipe__text{
-  margin: 0;
-  color: $gray-darken;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
+.recipe__text {
+    margin: 0;
+    color: $gray-darken;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: box-shadow $transition-time;
 
-  @media (min-width: $screen-xl){
-    font-size: 20px;
-  }
+
+    background-size: 1px 1em;
+
+    display: inline;
+
+
+
+    @media (min-width: $screen-xl) {
+        font-size: 20px;
+    }
 }
 
-.recipe__button{
-  text-align: center;
+.recipe__button {
+    text-align: center;
 }
 
-.recipe__btn{
-  max-width: 150px;
-  width: 100%;
+.recipe__btn {
+    max-width: 150px;
+    width: 100%;
 }
 
 
 // Recipe text mixin style
 
 
-.recipe__link-title{
+.recipe__link-title {
     display: inline-block;
     color: $gray-darken;
     text-decoration: none;
     font-size: 15px;
     margin-bottom: 15px;
 
-    @media (min-width: $screen-md){
+    @media (min-width: $screen-md) {
         font-size: 16px;
     }
 
-    @media (min-width: $screen-lg){
+    @media (min-width: $screen-lg) {
         font-size: 19px;
     }
 
-    @media (min-width: $screen-xl){
+    @media (min-width: $screen-xl) {
         font-size: 20px;
         margin-bottom: 25px;
     }
 }
 
 
-.recipe__item-title{
+.recipe__item-title {
     margin: 0;
     font-weight: 600;
 }
 
 
-.recipe__item-text{
+.recipe__item-text {
     font-size: 14px;
     line-height: 18px;
     font-weight: 300;
     margin: 0 0 20px;
     color: #838383;
 
-    @media (min-width: $screen-xl){
+    @media (min-width: $screen-xl) {
         font-size: 16px;
     }
 
-    a{
+    a {
         margin-left: 5px;
         color: #838383;
 
-        &:hover{
+        &:hover {
             text-decoration: none;
         }
     }
 }
 
 
-.recipe__link{
+.recipe__link {
     color: $yelgreen;
     text-decoration: none;
     font-size: 14px;
 
-    @media (min-width: $screen-xl){
+    @media (min-width: $screen-xl) {
         font-size: 16px;
     }
 
-    &:hover{
+    &:hover {
         color: $yelgreen-dark;
     }
 
-    &:active{
+    &:active {
         color: $yelgreen-darker;
     }
 }
 
 
-.recipe__pagination{
+.recipe__pagination {
     display: flex;
     justify-content: center;
 }
