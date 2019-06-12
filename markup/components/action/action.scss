@@ -9,6 +9,19 @@
     @media (min-width: $screen-xl){
         padding-bottom: 40px;
     }
+
+    &--padding{
+        padding-top: 30px;
+
+        @media (min-width: $screen-lg){
+            padding-top: 40px;
+        }
+
+        @media (min-width: $screen-xl){
+            padding-top: 50px;
+        }
+
+    }
 }
 
 .action__list{

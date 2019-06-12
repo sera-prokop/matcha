@@ -51,6 +51,18 @@
     color: transparent;
     background: transparent;
 
+      @media (min-width: $screen-md){
+          width: 45px;
+      }
+
+      @media (min-width: $screen-lg){
+          width: 40px;
+      }
+
+      @media (min-width: $screen-xl){
+          width: 45px;
+      }
+
     &:hover,
     &:focus {
       background-color: $gray-lightest;

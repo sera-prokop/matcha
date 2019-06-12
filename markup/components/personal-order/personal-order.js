@@ -14,11 +14,11 @@ ready(function () {
 
     });
 
-    acc.on('click', function (e) {
+    acc.on('click', function () {
         let $this = $(this);
 
-        if ($(event.target).data('toggle')){
-            $('#modal-tracking').modal()
+        if ($(event.target).data('toggle')) {
+            $('#modal-tracking').modal();
             return false;
         }
 

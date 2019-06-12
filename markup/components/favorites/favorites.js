@@ -12,11 +12,11 @@ ready(function () {
                 e.target.classList.toggle('favorites--active');
 
                 $('#modal-favorites-add').on('show.nth.modal', function () {
-                    e.target.href = "#modal-favorites-del";
+                    e.target.href = '#modal-favorites-del';
                 });
 
                 $('#modal-favorites-del').on('show.nth.modal', function () {
-                    e.target.href = "#modal-favorites-add";
+                    e.target.href = '#modal-favorites-add';
                 });
             });
         });

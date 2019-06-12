@@ -1,9 +1,10 @@
 .set-banner {
     padding-bottom: 40px;
     padding-top: 40px;
+    background-color: #fdfefe;
     //overflow: hidden;
     background-repeat: no-repeat;
-    background-color: $white;
+    //background-color: $white;
     @media (min-width: $screen-md) {
         background-image: url(%=static=%assets/set-banner/set.png);
         background-position: -300px 0;

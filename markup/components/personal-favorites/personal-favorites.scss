@@ -2,13 +2,26 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    @include row();
+    @include row(30px, 30px, 15px, 20px, 30px);
 }
 
 
 .personal-favorites__item{
     @include col();
-    @include col(md, 6);
-    @include col(lg, 3);
+    @include col(md, 6, $grid-columns, 15px);
+    @include col(lg, 3, $grid-columns, 20px);
+    @include col(xl, 3, $grid-columns, 30px);
     margin-bottom: 30px;
+
+    @media (min-width: $screen-md){
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: $screen-lg){
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-xl){
+        margin-bottom: 30px;
+    }
 }

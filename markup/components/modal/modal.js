@@ -1,4 +1,5 @@
 /* global document window console */
+/* eslint-disable */
 
 const $ = require('jquery');
 

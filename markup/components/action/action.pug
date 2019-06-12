@@ -1,5 +1,5 @@
-mixin action(data)
-    section.action
+mixin action(data, padding)
+    section.action(class=padding ? 'action--padding' : '')
         ul.action__list
             each item in data.list
                 li.action__item

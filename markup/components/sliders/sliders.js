@@ -40,6 +40,9 @@ let SliderCard = new Swiper('.slider-card__container', {
     breakpoints: {
         768: {
             slidesPerView: 1
+        },
+        991: {
+            spaceBetween: 20
         }
     }
 });
