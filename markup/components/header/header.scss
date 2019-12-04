@@ -12,8 +12,12 @@
 
 .header__logo-svg{
   @media (min-width: $screen-lg){
-    width: 185px;
-    height: 48px;
+    width: 200px;
+    height: 64px;
+  }
+  @media (min-width: $screen-xl){
+    width: 250px;
+    height: 70px;
   }
 }
 
