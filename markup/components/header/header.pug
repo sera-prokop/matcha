@@ -2,7 +2,7 @@ mixin header(data)
     header.header
         .header__top
             a(href="/").header__logo
-                != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '130', iconHeight: '35'})
+                != pugHelpers.Icon.call(locals, {iconName: 'matcha', className: 'header__logo-svg', iconWidth: '180', iconHeight: '50'})
             .header__user-mobile
                 +user-nav()
             .header__nav
