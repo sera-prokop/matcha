@@ -12,7 +12,8 @@ mixin cart(data)
                 a.cart__favorites.favorites.favorites--bg(href="#modal-favorites-add" data-toggle="modal" aria-label="Избранное")
 
                 a(href="product.html").cart__img.cart-img
-                    img.cart-img__picture.lazy(data-src=`%=static=%img/assets/cart/${item.img}` alt="Товар")
+                    .cart-img__picture
+                        img.lazy(data-src=`%=static=%img/assets/cart/${item.img}` alt="Товар")
 
                     if item.discount
                         .cart-img__text.cart-img__text--discount -20%
